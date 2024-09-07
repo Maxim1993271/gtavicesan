@@ -1391,6 +1391,12 @@ body {
         <p>© 2024 Grand Theft Auto San Andreas. Все права защищены. | <a href="privacy.html">Политика конфиденциальности</a></p>
     </footer>
 <script>
+
+		document.addEventListener('contextmenu', function(e) {
+    e.preventDefault();
+		});
+	
+			
         // Отключаем правый клик по изображениям для предотвращения открытия контекстного меню
         document.addEventListener('contextmenu', function(event) {
             if (event.target.tagName === 'IMG') {
