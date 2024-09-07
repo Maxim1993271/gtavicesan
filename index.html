@@ -1,0 +1,897 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Официальная страница посвященная игре Grand Theft Auto San Andreas. Узнайте все о геймплейе, персонажах и мире игры.">
+    <meta name="keywords" content="GTA San Andreas, Grand Theft Auto, видеоигра, геймплей, персонажи, мир игры">
+    <meta name="author" content="Ваше Имя">
+    <meta property="og:title" content="Grand Theft Auto San Andreas">
+    <meta property="og:description" content="Официальная страница посвященная игре Grand Theft Auto San Andreas. Узнайте все о геймплейе, персонажах и мире игры.">
+    <meta property="og:image" content="https://example.com/images/gta-san-andreas-cover.jpg">
+    <meta property="og:url" content="https://example.com">
+    <meta property="og:type" content="website">
+    <title>Grand Theft Auto San Andreas</title>
+    
+    <!-- Favicon -->
+    <link rel="icon" href="images/Rockstar Games Logo.png" type="image/x-icon">
+
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@300;400&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <!-- CSS Stylesheets -->
+    <link rel="stylesheet" href="css/styles.css">
+    
+    <!-- JavaScript Libraries -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+    <style>
+    /* Основные стили для body */
+    body {
+        font-family: 'Roboto', sans-serif; /* Шрифт для всего текста */
+        margin: 0; /* Убираем отступы по умолчанию */
+        padding: 0; /* Убираем внутренние отступы */
+        background: url('https://kartinki.pics/uploads/posts/2021-04/1617609533_13-p-gta-san-andreas-fon-13.jpg') no-repeat center center fixed; /* Фоновое изображение */
+        background-size: cover; /* Масштабирование фона по размеру экрана */
+        color: #333; /* Цвет текста */
+        overflow-x: hidden; /* Убираем горизонтальную прокрутку */
+        padding-top: 200px; /* Отступ сверху для избежания перекрытия фиксированного header */
+    }
+    
+    /* Стили для header */
+    header {
+        background: rgba(0, 0, 0, 0.9); /* Полупрозрачный черный фон */
+        padding: 20px 0; /* Вертикальные отступы */
+        margin: 0; /* Убираем внешние отступы */
+        text-align: center; /* Выравнивание текста по центру */
+        color: #fff; /* Цвет текста */
+        position: fixed; /* Фиксированное положение */
+        top: 0; /* Приклеиваем к верхней части экрана */
+        left: 0; /* Приклеиваем к левой части экрана */
+        width: 100%; /* Занимает всю ширину экрана */
+        box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Тень для создания эффекта глубины */
+        z-index: 1000; /* Обеспечиваем, что header будет поверх других элементов */
+        backdrop-filter: blur(12px); /* Размытие фона под header */
+        box-sizing: border-box; /* Включаем отступы и границы в размер элемента */
+    }
+    
+    /* Анимация для мигания текста */
+    @keyframes blink {
+        0%, 100% {
+            color: #ffd700; /* Золотой цвет текста */
+            text-shadow: 0 0 20px #ffd700, 0 0 30px #ffd700; /* Тень текста */
+        }
+        50% {
+            color: #fff; /* Белый цвет текста */
+            text-shadow: none; /* Без тени */
+        }
+    }
+
+    /* Анимация для свечения текста */
+    @keyframes textGlow {
+        0% { text-shadow: 0 0 20px #ffd700, 0 0 30px #ffd700; }
+        50% { text-shadow: 0 0 30px #ffd700, 0 0 40px #ffd700; }
+        100% { text-shadow: 0 0 20px #ffd700, 0 0 30px #ffd700; }
+    }
+
+    /* Стили для заголовка в header */
+    header h1 {
+        margin: 0; /* Убираем внешние отступы */
+        font-size: 3em; /* Размер шрифта */
+        font-weight: 700; /* Жирное начертание */
+        color: #ffd700; /* Цвет текста */
+        text-shadow: 0 0 20px #ffd700, 0 0 30px #ffd700; /* Тень текста */
+        font-family: 'Oswald', sans-serif; /* Шрифт для заголовка */
+        animation: textGlow 1.5s ease-in-out infinite, blink 1s step-start infinite; /* Применение анимаций */
+    }
+
+    /* Стили для навигационного меню */
+    nav {
+        display: flex; /* Используем flexbox для выравнивания элементов */
+        justify-content: center; /* Выравнивание элементов по центру */
+        margin-top: 10px; /* Отступ сверху */
+    }
+    nav ul {
+        list-style: none; /* Убираем маркеры списка */
+        padding: 0; /* Убираем внутренние отступы */
+        margin: 0; /* Убираем внешние отступы */
+        display: flex; /* Используем flexbox для расположения элементов */
+        background: rgba(0, 0, 0, 0.7); /* Полупрозрачный черный фон для списка */
+        border-radius: 15px; /* Скругляем углы */
+        box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Тень для создания эффекта глубины */
+    }
+    nav ul li {
+        margin: 0; /* Убираем внешние отступы для элементов списка */
+    }
+    nav ul li a {
+        display: block; /* Применяем блочное отображение для ссылки */
+        padding: 16px 30px; /* Внутренние отступы */
+        color: #fff; /* Цвет текста */
+        text-decoration: none; /* Убираем подчеркивание */
+        font-size: 1.2em; /* Размер шрифта */
+        transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Анимация переходов */
+        border-radius: 15px; /* Скругляем углы */
+        margin: 5px; /* Отступы между элементами */
+        box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4); /* Тень для создания эффекта глубины */
+    }
+    nav ul li a:hover {
+        background: #ffd700; /* Цвет фона при наведении */
+        color: #000; /* Цвет текста при наведении */
+        transform: translateY(-5px); /* Эффект поднятия при наведении */
+        box-shadow: 0 6px 15px rgba(0, 0, 0, 0.6); /* Увеличенная тень при наведении */
+    }
+
+    /* Стили для контейнера */
+    .container {
+        padding: 40px; /* Внутренние отступы */
+        max-width: 1200px; /* Максимальная ширина */
+        margin: 0 auto; /* Центрирование по горизонтали */
+        background: rgba(255, 255, 255, 0.9); /* Полупрозрачный белый фон */
+        border-radius: 20px; /* Скругляем углы */
+        box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Тень для создания эффекта глубины */
+        animation: fadeIn 1s ease-out; /* Применение анимации появления */
+    }
+    @keyframes fadeIn {
+        from { opacity: 0; } /* Начальное состояние */
+        to { opacity: 1; } /* Конечное состояние */
+    }
+
+    /* Стили для секций */
+    .section {
+        margin-bottom: 60px; /* Отступ снизу */
+        text-align: center; /* Выравнивание текста по центру */
+    }
+    .section h2 {
+        border-bottom: 4px solid #ffd700; /* Нижняя граница */
+        padding-bottom: 12px; /* Отступ снизу */
+        margin-bottom: 30px; /* Отступ снизу */
+        font-size: 2.8em; /* Размер шрифта */
+        font-weight: 700; /* Жирное начертание */
+        color: #333; /* Цвет текста */
+        font-family: 'Oswald', sans-serif; /* Шрифт для заголовка */
+        position: relative; /* Относительное позиционирование для псевдоэлемента */
+        display: inline-block; /* Блочное отображение для псевдоэлемента */
+    }
+    .section h2::after {
+        content: ""; /* Пустое содержимое для псевдоэлемента */
+        position: absolute; /* Абсолютное позиционирование */
+        bottom: -10px; /* Позиция снизу */
+        left: 0; /* Позиция слева */
+        width: 100%; /* Ширина 100% */
+        height: 2px; /* Высота линии */
+        background: #ffd700; /* Цвет линии */
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Тень для создания эффекта глубины */
+        transform: scaleX(0); /* Начальное состояние: скрыто */
+        transform-origin: bottom right; /* Точка трансформации */
+        transition: transform 0.3s ease; /* Переход трансформации */
+    }
+    .section h2:hover::after {
+        transform: scaleX(1); /* Конечное состояние: отображается */
+        transform-origin: bottom left; /* Точка трансформации при наведении */
+    }
+
+    /* Стили для параграфов в секциях */
+    .section p {
+        line-height: 1.8; /* Высота строки */
+        font-size: 1.3em; /* Размер шрифта */
+        color: #555; /* Цвет текста */
+        max-width: 850px; /* Максимальная ширина */
+        margin: 0 auto; /* Центрирование по горизонтали */
+    }
+
+  /* Стили для кнопок */
+.btn {
+    display: inline-block; /* Блочное отображение */
+    padding: 14px 28px; /* Внутренние отступы */
+    color: #ffd700; /* Желтый цвет текста */
+    background: linear-gradient(135deg, #000, #444); /* Градиентный фон */
+    text-decoration: none; /* Убираем подчеркивание */
+    border-radius: 100px; /* Скругляем углы */
+    font-size: 1.2em; /* Размер шрифта */
+    transition: background 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Анимации переходов */
+    margin: 12px; /* Отступы между кнопками */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4); /* Тень для создания эффекта глубины */
+    border: 2px solid #ffd700; /* Желтая граница для визуального акцента */
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #444, #000); /* Изменение градиента при наведении */
+    transform: scale(1.05); /* Эффект увеличения при наведении */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Увеличенная тень при наведении */
+}
+
+.btn:hover::before {
+    opacity: 0; /* Прозрачность при наведении */
+}
+
+.btn:hover {
+    background: linear-gradient(135deg, #182848, #4b6cb7); /* Изменение градиента при наведении */
+    transform: scale(1.05); /* Эффект увеличения при наведении */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.5); /* Увеличенная тень при наведении */
+}
+
+
+    /* Стили для списка загрузок */
+    .download-list {
+        list-style: none; /* Убираем маркеры списка */
+        padding: 0; /* Убираем внутренние отступы */
+        margin: 0; /* Убираем внешние отступы */
+    }
+    .download-list li {
+        margin-bottom: 10px; /* Отступ снизу */
+        font-size: 1.2em; /* Размер шрифта */
+        font-weight: 700; /* Жирное начертание */
+    }
+    .download-list a {
+        color: #ffd700; /* Цвет текста */
+        text-decoration: none; /* Убираем подчеркивание */
+    }
+    .download-list a:hover {
+        text-decoration: underline; /* Подчеркивание текста при наведении */
+    }
+
+    /* Стили для блока системных требований */
+    .system-requirements {
+        margin-top: 20px; /* Отступ сверху */
+        padding: 20px; /* Внутренние отступы */
+        border-radius: 12px; /* Скругляем углы */
+        background: rgba(0, 0, 0, 0.8); /* Полупрозрачный черный фон */
+        color: #fff; /* Цвет текста */
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5); /* Тень для создания эффекта глубины */
+    }
+    .system-requirements table {
+        width: 100%; /* Ширина таблицы */
+        border-collapse: collapse; /* Убираем промежутки между ячейками */
+    }
+    .system-requirements th, .system-requirements td {
+        padding: 10px; /* Внутренние отступы */
+        border: 1px solid #ffd700; /* Граница ячеек */
+        text-align: left; /* Выравнивание текста в ячейках */
+    }
+    .system-requirements th {
+        background: #333; /* Фон для заголовков столбцов */
+        color: #ffd700; /* Цвет текста заголовков столбцов */
+    }
+    .system-requirements td {
+        background: #444; /* Фон для ячеек */
+    }
+    .system-requirements caption {
+        margin: 10px 0; /* Отступы сверху и снизу */
+        font-size: 1.5em; /* Размер шрифта */
+        font-weight: 700; /* Жирное начертание */
+    }
+
+    /* Стили для footer */
+    footer {
+        background: rgba(0, 0, 0, 0.9); /* Полупрозрачный черный фон */
+        color: #fff; /* Цвет текста */
+        padding: 20px 0; /* Вертикальные отступы */
+        text-align: center; /* Выравнивание текста по центру */
+        box-shadow: 0 -4px 15px rgba(0, 0, 0, 0.5); /* Тень для создания эффекта глубины */
+        position: fixed; /* Фиксированное положение */
+        bottom: 0; /* Приклеиваем к нижней части экрана */
+        left: 0; /* Приклеиваем к левой части экрана */
+        width: 100%; /* Занимает всю ширину экрана */
+        box-sizing: border-box; /* Включаем отступы и границы в размер элемента */
+    }
+    footer p {
+        margin: 0; /* Убираем внешние отступы */
+        font-size: 1.1em; /* Размер шрифта */
+    }
+    footer a {
+        color: #ffd700; /* Цвет текста ссылок */
+        text-decoration: none; /* Убираем подчеркивание */
+        font-weight: 700; /* Жирное начертание */
+    }
+    footer a:hover {
+        text-decoration: underline; /* Подчеркивание ссылок при наведении */
+    }
+
+    /* Стили для социальных иконок */
+.social-icons {
+    position: fixed; /* Фиксированное положение */
+    bottom: 120px; /* Расстояние от нижнего края экрана */
+    right: 20px; /* Расстояние от правого края экрана */
+    display: flex; /* Используем flexbox для выравнивания элементов */
+    gap: 8px; /* Отступ между иконками */
+}
+
+.social-icons a {
+    display: flex; /* Используем flexbox для выравнивания содержимого */
+    align-items: center; /* Вертикальное выравнивание по центру */
+    justify-content: center; /* Горизонтальное выравнивание по центру */
+    width: 30px; /* Ширина контейнера иконки */
+    height: 30px; /* Высота контейнера иконки */
+    background: linear-gradient(145deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)); /* Градиентный фон */
+    color: #ffd700; /* Цвет иконок */
+    border-radius: 100%; /* Круглая форма иконок */
+    padding: 6px; /* Внутренние отступы */
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Анимации переходов */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Тень */
+    font-size: 16px; /* Уменьшенный размер шрифта для иконок */
+    text-decoration: none; /* Убираем подчеркивание */
+}
+
+.social-icons a:hover {
+    background: #ffd700; /* Цвет фона при наведении */
+    color: #000; /* Цвет иконок при наведении */
+    transform: scale(1.05); /* Эффект увеличения при наведении */
+}
+	
+	/* Основные стили для body */
+body {
+    font-family: Arial, sans-serif; /* Устанавливаем шрифт для всего текста на странице */
+}
+
+/* Стили для кнопки "Scroll to Top" */
+#scrollToTopBtn {
+    position: fixed; /* Фиксируем кнопку в правом нижнем углу экрана */
+    bottom: 30px; /* Отступ от нижнего края окна браузера */
+    right: 30px; /* Отступ от правого края окна браузера */
+    display: none; /* Скрываем кнопку по умолчанию */
+    background-color: #FE8B16; /* Основной цвет фона кнопки */
+    color: white; /* Цвет текста кнопки */
+    border: none; /* Убираем границу кнопки */
+    border-radius: 50%; /* Делаем кнопку круглой */
+    width: 60px; /* Ширина кнопки */
+    height: 60px; /* Высота кнопки */
+    text-align: center; /* Центрируем текст внутри кнопки */
+    line-height: 60px; /* Выравнивание текста по вертикали */
+    font-size: 24px; /* Размер шрифта */
+    cursor: pointer; /* Изменяем курсор на указатель при наведении */
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3); /* Тень для кнопки */
+    transition: opacity 0.3s, transform 0.3s, box-shadow 0.3s; /* Плавный переход для изменения прозрачности, трансформации и тени */
+    z-index: 1000; /* Убедитесь, что кнопка будет поверх других элементов */
+}
+
+/* Стили для кнопки при наведении */
+#scrollToTopBtn:hover {
+    background-color: #F57C00; /* Немного темнее цвет при наведении */
+    box-shadow: 0 6px 16px rgba(0, 0, 0, 0.4); /* Усиление тени при наведении */
+    transform: scale(1.1); /* Увеличение кнопки при наведении */
+}
+
+/* Стили для кнопки при фокусировке (когда она активна) */
+#scrollToTopBtn:focus {
+    outline: none; /* Убираем контур при фокусировке */
+}
+</style>
+</head>
+<body>
+    <header>
+        <h1>Grand Theft Auto San Andreas</h1>
+        <nav>
+            <ul>
+                <li><a href="#overview">Обзор</a></li>
+                <li><a href="#download">Скачать</a></li>
+                <li><a href="#mods">Моды</a></li>
+                <li><a href="#textures">Текстуры</a></li>
+                <li><a href="#system-requirements">Системные требования</a></li>
+            </ul>
+        </nav>
+        <div class="social-icons">
+            <a href="https://facebook.com" target="_blank" class="fab fa-facebook-f" title="Facebook"></a>
+            <a href="https://twitter.com" target="_blank" class="fab fa-twitter" title="Twitter"></a>
+            <a href="https://instagram.com" target="_blank" class="fab fa-instagram" title="Instagram"></a>
+            <a href="https://youtube.com" target="_blank" class="fab fa-youtube" title="YouTube"></a>
+            <a href="https://t.me/your_channel" target="_blank" class="fab fa-telegram" title="Telegram"></a>
+			<a href="https://github.com/Maxim1993271" target="_blank" class="fab fa-github" title="GitHub"></a>
+        </div>
+    </header>
+    <div class="container">
+	
+		
+		
+	
+        
+		<section id="rockstar-launcher" class="section">
+            <h2>Скачать Rockstar Launcher</h2>
+			<div>
+                <img src="https://s.rsg.sc/sc/images/react/launcher/rgl-rdr2-buynow.png" alt="GTA San Andreas" style="max-width: 100%; height: auto; border-radius: 20px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);">
+            </div>
+            <p>Для запуска игры вам потребуется Rockstar Launcher. Вы можете скачать его по следующей ссылке:</p>
+            <a href="https://gamedownloads.rockstargames.com/public/installer/Rockstar-Games-Launcher.exe" class="btn">Скачать Rockstar Launcher</a>
+        </section>
+		
+		<section id="overview" class="section">
+		<h2>Обзор</h2>
+		<p>Grand Theft Auto III – это культовая игра, изначально выпущенная в 2001 году. Игроки погружаются в мир криминального города Либерти-Сити, где им предстоит выполнять различные миссии, взаимодействовать с NPC и развивать своего персонажа. Сюжет игры следует за Клодом, который попадает в Либерти-Сити после того, как его предали, и пытается построить империю в этом опасном и ярком городе, сталкиваясь с преступными группировками и многими другими вызовами.</p>
+		<p>Либерти-Сити предлагает открытый мир с множеством активностей, включая гонки, спортивные мероприятия, квесты и многое другое. Эта игра остается одной из самых любимых частей серии Grand Theft Auto, и по сей день она привлекает внимание фанатов своими атмосферными декорациями и увлекательным геймплеем.</p>
+		</section>
+
+		<section id="download" class="section">
+			<h2>Grand Theft Auto III</h2>
+            <p>Здесь вы можете скачать последнюю версию Grand Theft Auto III и погружайтесь в мир захватывающих приключений:</p>
+            <div>
+                <img src="https://static.wikia.nocookie.net/gta/images/1/1a/GTA_III_boxart.svg/revision/latest/scale-to-width-down/1000?cb=20150101120129&path-prefix=ru" alt="Vice City" style="max-width: 100%; height: auto; border-radius: 20px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);">
+            </div>
+            <a href="https://drive.google.com/file/d/1tUktm3VXTLech5JJfDIbGSDh7RgCHX0s/view?usp=drive_link" class="btn">Скачать Grand Theft Auto III</a>
+		
+		<section id="overview" class="section">
+		<h2>Обзор</h2>
+		<p>Grand Theft Auto: Vice City – это культовая игра, изначально выпущенная в 2002 году. Игроки погружаются в мир криминального города Вайс-Сити, где им предстоит выполнять различные миссии, взаимодействовать с NPC и развивать своего персонажа. Сюжет игры следует за Томми Версетти, который возвращается в Вайс-Сити после долгого пребывания в тюрьме и пытается построить империю в этом опасном и ярком городе, сталкиваясь с преступными группировками и многими другими вызовами.</p>
+		<p>Вайс-Сити предлагает открытый мир с множеством активностей, включая гонки, спортивные мероприятия, квесты и многое другое. Эта игра остается одной из самых любимых частей серии Grand Theft Auto, и по сей день она привлекает внимание фанатов своими атмосферными декорациями и увлекательным геймплеем.</p>
+		</section>
+		
+		<section id="download" class="section">
+			<h2>Grand Theft Auto: Vice City</h2>
+            <p>Здесь вы можете скачать последнюю версию Grand Theft Auto: Vice City и погружайтесь в мир захватывающих приключений:</p>
+            <div>
+                <img src="https://static.wikia.nocookie.net/gta/images/3/36/GTA_Vice_City_Box_Art.jpg/revision/latest/scale-to-width-down/1000?cb=20230912195722&path-prefix=ru" alt="Vice City" style="max-width: 100%; height: auto; border-radius: 20px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);">
+            </div>
+            <a href="https://drive.google.com/file/d/1rvMTHS6PCxctcm5ZlGYrVSDTIDcgTd0g/view?usp=drive_link" class="btn">Скачать Grand Theft Auto: Vice City</a>
+			
+		<section id="overview" class="section">
+            <h2>Обзор</h2>
+            <p>Grand Theft Auto: San Andreas – это культовая игра, изначально выпущенная в 2004 году. Игроки погружаются в мир криминального города, где им предстоит выполнять различные миссии, взаимодействовать с NPC и развивать своего персонажа. Сюжет игры охватывает различные аспекты жизни главного героя, Карла Джонсона, в штате Сан-Андреас, где он сталкивается с опасностями, преступными группировками и многим другим.</p>
+            <p>Сан Андреас предлагает открытый мир с множеством активностей, включая гонки, спортивные мероприятия, квесты и многое другое. Это одна из самых любимых частей серии Grand Theft Auto, и по сей день она остается актуальной для фанатов.</p>
+        </section>	
+			
+			
+        <section id="download" class="section">
+            <h2>Скачать Grand Theft Auto: GTA San Andreas</h2>
+            <p>Здесь вы можете скачать последнюю версию Grand Theft Auto: GTA San Andreas и погружайтесь в мир захватывающих приключений:</p>
+            <div>
+                <img src="https://static.wikia.nocookie.net/gta/images/9/92/GTA_San_Andreas_Box_Art.jpg/revision/latest/scale-to-width-down/1000?cb=20220510003154&path-prefix=ru" alt="GTA San Andreas" style="max-width: 100%; height: auto; border-radius: 20px; margin-bottom: 20px; box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);">
+            </div>
+            <a href="https://drive.google.com/file/d/1F1zNlon5nnLPgKoXNGGxJDIwuZQ2JqLv/view?usp=drive_link" class="btn">Скачать Grand Theft Auto: GTA San Andreas</a>
+			
+			
+			<section id="download" class="section">
+            <h2>Скачать GTA Classic NOCD 1.0</h2>
+            <p>Здесь вы можете скачать NOCD</p>
+            <a href="https://github.com/Maxim1993271/GTA/releases/download/NOCD/GTA.Classic.NOCD.1.0.rar" class="btn">Скачать GTA Classic NOCD 1.0</a>
+        </section>
+        <section id="mods" class="section">
+            <h2>Моды</h2>
+            <p>Мы собрали самые полезные и популярные моды для GTA San Andreas. Установите их для улучшения игры:</p>
+            <ul class="download-list">
+                <li>
+                    <strong>Asi Plugins</strong>
+                    <br>
+                    <a href="https://github.com/Maxim1993271/GTA/releases/download/Asi/Asi.Plugins.rar" class="btn">Скачать Asi Plugins</a>
+                </li>
+                <li>
+                    <strong>Cars Plugins</strong>
+                    <br>
+                    <a href="https://github.com/Maxim1993271/GTA/releases/download/Cars/Cars.Plugins.rar" class="btn">Скачать Cars Plugins</a>
+                </li>
+                <li>
+                    <strong>Different Cleo Plugins</strong>
+                    <br>
+                    <a href="https://github.com/Maxim1993271/GTA/releases/download/DifferentCleoPlugins/Different.Cleo.Plugins.rar" class="btn">Скачать Different Cleo Plugins</a>
+                </li>
+                <li>
+                    <strong>Essentials Pack</strong>
+                    <br>
+                    <a href="https://github.com/Maxim1993271/GTA/releases/download/Essentials/Essentials.Pack.rar" class="btn">Скачать Essentials Pack</a>
+                </li>
+                <li>
+                    <strong>Graphic Mods</strong>
+                    <br>
+                    <a href="https://github.com/Maxim1993271/GTA/releases/download/Settings/Graphic.Mods.rar" class="btn">Скачать Graphic Mods</a>
+                </li>
+                <li>
+                    <strong>Peds Plugins</strong>
+                    <br>
+                    <a href="https://github.com/Maxim1993271/GTA/releases/download/Peds/Peds.Plugins.rar" class="btn">Скачать Peds Plugins</a>
+                </li>
+                <li>
+                    <strong>Timecyc</strong>
+                    <br>
+                    <a href="https://github.com/Maxim1993271/GTA/releases/download/Timecyc/Timecyc.rar" class="btn">Скачать Timecyc</a>
+                </li>
+            </ul>
+        </section>
+        <section id="textures" class="section">
+            <h2>Текстуры</h2>
+            <p>Установите новые текстуры и сделайте графику более реалистичной:</p>
+            <ul class="download-list">
+                <li>
+                    <strong>Proper Fixes PC v1.3</strong>
+                    <br>
+                    <a href="https://sharemods.com/r34nsqp7y3tp/Proper_Fixes.7z.html" class="btn">Скачать Proper Fixes для PC</a>
+                </li>
+                <li>
+                    <strong>Proper Fixes PC v1.3 для RoSA Evolved</strong>
+                    <br>
+                    <a href="https://sharemods.com/iwii6cygbj6n/Proper_Fixes_-_for_texture_packs.7z.html" class="btn">Скачать Proper Fixes PC для RoSA Evolved</a>
+                </li>
+                <li>
+                    <strong>Proper Fixes Android v1.3</strong>
+                    <br>
+                    <a href="https://sharemods.com/cn1e06h6lad5/SA_Mobile_-_Proper_Fixes.7z.html" class="btn">Скачать Proper Fixes для Android</a>
+                </li>
+                <li>
+                    <strong>Proper Player Retex 2.0</strong>
+                    <br>
+                    <a href="https://download2282.mediafire.com/hv67356k2lrg4s6MGbzBoUiYrwUJj6YCoD7N4JRenLV8KLUMrEnxhY-XYrB5JqH2h6OAf9VcxitCeuvy1CNVeykrNHa8Po1V6CXIcEzSW19vaBMc7f_XI3ECT5N_MrxJy3wsjcaH2h8ca3z8WGqEApOIWmPOmcnaG8hOwEkOQ_ed/fyvj3n9ow777olm/Proper+Player+Retex+2.0.7z" class="btn">Скачать Proper Player Retex 2.0</a>
+                </li>
+                <li>
+                    <strong>Revamped Vehicle Project Public Version</strong>
+                    <br>
+                    <a href="https://drive.google.com/drive/folders/1fMiwVO4Bs1agd5u9o0uE6sbSwbXV9qnR" class="btn">Скачать Revamped Vehicle Project Public Version</a>
+                </li>
+                <li>
+                    <strong>Revamped Vehicle Project ReSmooth Version</strong>
+                    <br>
+                    <a href="https://drive.google.com/drive/folders/1bwrApcMu8jZIX1kjgT5R8zRqB5bosQhL" class="btn">Скачать Revamped Vehicle Project ReSmooth Version</a>
+                </li>
+                <li>
+                    <strong>RoSA Project Evolved</strong>
+                    <br>
+                    <a href="https://download2360.mediafire.com/jgukd6veommgRliCWWtz-BKab8xeJpkX9ywv08M1HLANoO3gH9jOIfPxMRunZobHXP6vDcWBpCtsdpadPEbeDKghc49oXbKLeiPU0NsfprJ4mIGppzt4wYPkx4oQO7jSrDPKgkJI2lbvKDWNvTljlDOJokO8lmHefs-joEbDPgqX/ufosnuqqry15hsu/RoSA+Project+Evolved+-+June.7z" class="btn">Скачать RoSA Project Evolved</a>
+                </li>
+                <li>
+                    <strong>Beta Definitive & Leftovers Map</strong>
+                    <br>
+                    <a href="https://github.com/Maxim1993271/GTA/releases/download/Beta/Beta.Definitive.Leftovers.Map.rar" class="btn">Скачать Beta Definitive & Leftovers Map</a>
+                </li>
+                <li>
+                    <strong>GTA Night Mods</strong>
+                    <br>
+                    <a href="https://github.com/Maxim1993271/GTA/releases/download/GTNightMods/GTA.Night.Mods.rar" class="btn">Скачать GTA Night Mods</a>
+                </li>
+            </ul>
+        </section>
+		
+		<section id="system-requirements" class="section">
+    <section id="system-requirements" class="section">
+	
+	<h2>Системные требования Grand Theft Auto III</h2>
+<div class="system-requirements">
+    <table>
+        <caption>Минимальные системные требования</caption>
+        <thead>
+            <tr>
+                <th>Компонент</th>
+                <th>Минимальные требования</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Операционная система</td>
+                <td>Windows 7/8/10/11</td>
+            </tr>
+            <tr>
+                <td>Процессор</td>
+                <td>1.2 ГГц Dual-Core или выше</td>
+            </tr>
+            <tr>
+                <td>Оперативная память</td>
+                <td>2 ГБ</td>
+            </tr>
+            <tr>
+                <td>Видеокарта</td>
+                <td>128 МБ с поддержкой DirectX 9.0</td>
+            </tr>
+            <tr>
+                <td>Жесткий диск</td>
+                <td>4.7 ГБ свободного места</td>
+            </tr>
+            <tr>
+                <td>Звуковая карта</td>
+                <td>Совместимая с DirectX 9.0</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <caption>Рекомендуемые системные требования</caption>
+        <thead>
+            <tr>
+                <th>Компонент</th>
+                <th>Рекомендуемые требования</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Операционная система</td>
+                <td>Windows 10/11</td>
+            </tr>
+            <tr>
+                <td>Процессор</td>
+                <td>2.0 ГГц Dual-Core или выше</td>
+            </tr>
+            <tr>
+                <td>Оперативная память</td>
+                <td>4 ГБ</td>
+            </tr>
+            <tr>
+                <td>Видеокарта</td>
+                <td>256 МБ с поддержкой DirectX 9.0</td>
+            </tr>
+            <tr>
+                <td>Жесткий диск</td>
+                <td>4.7 ГБ свободного места</td>
+            </tr>
+            <tr>
+                <td>Звуковая карта</td>
+                <td>Совместимая с DirectX 9.0</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table>
+        <caption>Максимальные системные требования</caption>
+        <thead>
+            <tr>
+                <th>Компонент</th>
+                <th>Максимальные требования</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Операционная система</td>
+                <td>Windows 10/11</td>
+            </tr>
+            <tr>
+                <td>Процессор</td>
+                <td>3.0 ГГц Quad-Core или выше</td>
+            </tr>
+            <tr>
+                <td>Оперативная память</td>
+                <td>8 ГБ</td>
+            </tr>
+            <tr>
+                <td>Видеокарта</td>
+                <td>1 ГБ VRAM с поддержкой DirectX 11</td>
+            </tr>
+            <tr>
+                <td>Жесткий диск</td>
+                <td>4.7 ГБ свободного места (SSD рекомендован)</td>
+            </tr>
+            <tr>
+                <td>Звуковая карта</td>
+                <td>Совместимая с DirectX 11</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+	
+	
+	
+    <h2>Системные требования Grand Theft Auto: Vice City</h2>
+    <div class="system-requirements">
+        <table>
+            <caption>Минимальные системные требования</caption>
+            <thead>
+                <tr>
+                    <th>Компонент</th>
+                    <th>Минимальные требования</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Операционная система</td>
+                    <td>Windows 7/8/10/11</td>
+                </tr>
+                <tr>
+                    <td>Процессор</td>
+                    <td>1.2 ГГц Dual-Core или выше</td>
+                </tr>
+                <tr>
+                    <td>Оперативная память</td>
+                    <td>2 ГБ</td>
+                </tr>
+                <tr>
+                    <td>Видеокарта</td>
+                    <td>128 МБ с поддержкой DirectX 9.0</td>
+                </tr>
+                <tr>
+                    <td>Жесткий диск</td>
+                    <td>4.7 ГБ свободного места</td>
+                </tr>
+                <tr>
+                    <td>Звуковая карта</td>
+                    <td>Совместимая с DirectX 9.0</td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <caption>Рекомендуемые системные требования</caption>
+            <thead>
+                <tr>
+                    <th>Компонент</th>
+                    <th>Рекомендуемые требования</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Операционная система</td>
+                    <td>Windows 10/11</td>
+                </tr>
+                <tr>
+                    <td>Процессор</td>
+                    <td>2.0 ГГц Dual-Core или выше</td>
+                </tr>
+                <tr>
+                    <td>Оперативная память</td>
+                    <td>4 ГБ</td>
+                </tr>
+                <tr>
+                    <td>Видеокарта</td>
+                    <td>256 МБ с поддержкой DirectX 9.0</td>
+                </tr>
+                <tr>
+                    <td>Жесткий диск</td>
+                    <td>4.7 ГБ свободного места</td>
+                </tr>
+                <tr>
+                    <td>Звуковая карта</td>
+                    <td>Совместимая с DirectX 9.0</td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <caption>Максимальные системные требования</caption>
+            <thead>
+                <tr>
+                    <th>Компонент</th>
+                    <th>Максимальные требования</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Операционная система</td>
+                    <td>Windows 10/11</td>
+                </tr>
+                <tr>
+                    <td>Процессор</td>
+                    <td>3.0 ГГц Quad-Core или выше</td>
+                </tr>
+                <tr>
+                    <td>Оперативная память</td>
+                    <td>8 ГБ</td>
+                </tr>
+                <tr>
+                    <td>Видеокарта</td>
+                    <td>1 ГБ VRAM с поддержкой DirectX 11</td>
+                </tr>
+                <tr>
+                    <td>Жесткий диск</td>
+                    <td>4.7 ГБ свободного места (SSD рекомендован)</td>
+                </tr>
+                <tr>
+                    <td>Звуковая карта</td>
+                    <td>Совместимая с DirectX 11</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+
+		
+		
+        <section id="system-requirements" class="section">
+    <h2>Системные требования Grand Theft Auto: GTA San Andreas</h2>
+    <div class="system-requirements">
+        <table>
+            <caption>Минимальные системные требования</caption>
+            <thead>
+                <tr>
+                    <th>Компонент</th>
+                    <th>Минимальные требования</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Операционная система</td>
+                    <td>Windows 98/2000/XP</td>
+                </tr>
+                <tr>
+                    <td>Процессор</td>
+                    <td>800 МГц Intel Pentium III или аналогичный AMD</td>
+                </tr>
+                <tr>
+                    <td>Оперативная память</td>
+                    <td>256 МБ</td>
+                </tr>
+                <tr>
+                    <td>Видеокарта</td>
+                    <td>32 МБ с поддержкой DirectX 9.0</td>
+                </tr>
+                <tr>
+                    <td>Жесткий диск</td>
+                    <td>3.6 ГБ свободного места</td>
+                </tr>
+                <tr>
+                    <td>Звуковая карта</td>
+                    <td>Совместимая с DirectX 9.0</td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <caption>Рекомендуемые системные требования</caption>
+            <thead>
+                <tr>
+                    <th>Компонент</th>
+                    <th>Рекомендуемые требования</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Операционная система</td>
+                    <td>Windows XP</td>
+                </tr>
+                <tr>
+                    <td>Процессор</td>
+                    <td>1.2 ГГц Intel Pentium 4 или аналогичный AMD</td>
+                </tr>
+                <tr>
+                    <td>Оперативная память</td>
+                    <td>384 МБ</td>
+                </tr>
+                <tr>
+                    <td>Видеокарта</td>
+                    <td>64 МБ с поддержкой DirectX 9.0</td>
+                </tr>
+                <tr>
+                    <td>Жесткий диск</td>
+                    <td>4.7 ГБ свободного места</td>
+                </tr>
+                <tr>
+                    <td>Звуковая карта</td>
+                    <td>Совместимая с DirectX 9.0</td>
+                </tr>
+            </tbody>
+        </table>
+        <table>
+            <caption>Максимальные системные требования</caption>
+            <thead>
+                <tr>
+                    <th>Компонент</th>
+                    <th>Максимальные требования</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Операционная система</td>
+                    <td>Windows 10 / 11</td>
+                </tr>
+                <tr>
+                    <td>Процессор</td>
+                    <td>Intel Core i5-2500K / AMD Ryzen 5 1600</td>
+                </tr>
+                <tr>
+                    <td>Оперативная память</td>
+                    <td>8 ГБ RAM</td>
+                </tr>
+                <tr>
+                    <td>Видеокарта</td>
+                    <td>NVIDIA GeForce GTX 960 / AMD Radeon R9 380 или лучше</td>
+                </tr>
+                <tr>
+                    <td>Жесткий диск</td>
+                    <td>15 ГБ свободного места</td>
+                </tr>
+                <tr>
+                    <td>Звуковая карта</td>
+                    <td>Совместимая с DirectX 9.0</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</section>
+    </div>
+</body>
+<body>
+
+    <!-- Your content here -->
+
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTopBtn" title="Go to top">&#8679;</button>
+
+    <script src="script.js"></script>
+</html>
+    </div>
+    <footer>
+        <p>© 2024 Grand Theft Auto San Andreas. Все права защищены. <a href="#">Политика конфиденциальности</a></p>
+    </footer>
+</body>
+</html>
