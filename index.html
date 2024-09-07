@@ -549,6 +549,101 @@ body {
 #scrollToTopBtn:focus {
     outline: none; /* Убираем контур при фокусировке */
 }
+
+<!-- Стилизация для лучшего внешнего вида -->
+/* Основные стили для раздела */
+.section {
+    padding: 20px; /* Отступы внутри секции */
+    background-color: #f4f4f4; /* Цвет фона секции */
+    border-radius: 8px; /* Скругление углов секции */
+}
+
+/* Стили для модов */
+.mod {
+    margin-bottom: 40px; /* Отступ снизу от других элементов */
+    padding: 20px; /* Отступы внутри блока мода */
+    background-color: #fff; /* Цвет фона блока мода */
+    border-radius: 8px; /* Скругление углов блока мода */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Тень блока мода */
+}
+
+/* Заголовок мода */
+.mod-title {
+    font-size: 24px; /* Размер шрифта заголовка */
+    margin-bottom: 15px; /* Отступ снизу заголовка */
+    color: #333; /* Цвет текста заголовка */
+}
+
+/* Изображение мода */
+.mod-image {
+    max-width: 100%; /* Ограничение ширины изображения */
+    height: auto; /* Автоматическая высота изображения */
+    border-radius: 8px; /* Скругление углов изображения */
+}
+
+/* Описание мода */
+.mod-description {
+    margin-top: 15px; /* Отступ сверху от других элементов */
+}
+
+/* Параграфы внутри описания мода */
+.mod-description p {
+    margin: 10px 0; /* Отступы сверху и снизу параграфов */
+}
+
+/* Нумерованные списки внутри описания мода */
+.mod-description ol {
+    margin: 10px 0; /* Отступы сверху и снизу списка */
+    padding-left: 20px; /* Отступ слева для нумерованных списков */
+}
+
+/* Контейнер для видео */
+.video-container {
+    margin: 20px 0; /* Отступы сверху и снизу контейнера видео */
+}
+
+/* Кнопка скачивания */
+.btn {
+    display: inline-block; /* Отображение кнопки в одной строке */
+    padding: 10px 20px; /* Отступы внутри кнопки */
+    background-color: #007BFF; /* Цвет фона кнопки */
+    color: #fff; /* Цвет текста кнопки */
+    text-decoration: none; /* Удаление подчеркивания текста кнопки */
+    border-radius: 100px; /* Скругление углов кнопки */
+    font-weight: bold; /* Жирное начертание текста кнопки */
+}
+
+/* Эффект при наведении на кнопку */
+.btn:hover {
+    background-color: #0056b3; /* Цвет фона кнопки при наведении */
+}
+
+/* Стили для описания мода */
+.mod-description {
+    text-align: center; /* Центрирование текста и элементов внутри */
+    margin: 20px auto; /* Центрирование блока по горизонтали и отступы сверху и снизу */
+}
+
+.mod-description p {
+    margin: 20px 0; /* Отступы сверху и снизу для параграфов */
+    font-size: 18px; /* Размер шрифта для параграфов */
+    line-height: 1.5; /* Междустрочный интервал для лучшего восприятия текста *//
+}
+
+.description-content {
+    display: inline-block; /* Позволяет блоку быть выровненным по центру */
+    text-align: left; /* Выровнять текст внутри блока по левому краю */
+    margin-top: 10px; /* Отступ сверху */
+}
+
+.description-content ul {
+    list-style-position: inside; /* Размещение маркеров внутри блока списка */
+    padding-left: 20px; /* Отступ слева для списка */
+    margin: 0; /* Убирает отступы сверху и снизу у списка */
+}
+
+.description-content li {
+    margin-bottom: 10px; /* Отступ снизу для элементов спис
 </style>
 </head>
 <body>
@@ -765,12 +860,45 @@ body {
     <!-- Описание ссылки для скачивания NOCD -->
     <p>Здесь вы можете скачать NOCD</p>
     <!-- Кнопка для скачивания GTA Definitive Edition NOCD 1.17 -->
-    <a href="https://github.com/Maxim1993271/GTA/releases/download/GTA/GTA.Definitive.Edition.NOCD.1.17.rar" class="btn">Скачать GTA Definitive Edition NOCD 1.17</a>
+    <a href="https://github.com/Maxim1993271/GTA/releases/download/NOCD/GTA.Classic.NOCD.1.0.rar" class="btn">Скачать GTA Definitive Edition NOCD 1.17</a>
 </section>
 
 <!-- Раздел с модами для GTA San Andreas -->
 <section id="mods" class="section">
-    <h2>Моды</h2>
+    <h2>Моды для GTA San Andreas</h2>
+
+    <!-- Мод [SA] Урбанизация -->
+    <article class="mod">
+        <h3 class="mod-title">[SA] Урбанизация</h3>
+        <p>Добро пожаловать в мир Urbanize — уникального мод-проекта, который вдохнет новую жизнь в классическую версию GTA San Andreas. Этот мод добавляет множество новых неигровых персонажей по всему Сан-Андреасу, создавая более живое и динамичное окружение.</p>
+
+        <div class="mod-content">
+            <!-- Изображение мода [SA] Урбанизация -->
+            <img src="https://www.mixmods.com.br/wp-content/uploads/2022/10/urbanize-logo-catarse.png" alt="[SA] Урбанизация" class="mod-image">
+
+            <!-- Описание мода -->
+<div class="mod-description">
+    <center><p><strong>Версия:</strong> 09-24</p></center>
+    <center><p><strong>Что нового в этой версии:</strong></p></center>
+    <div class="description-content">
+        <center><ol></center>
+            <center><p>Добавлен коммерческий самолет, летающий, приземляющийся и взлетающий по всему Сан-Андреасу. Он использует искусственный интеллект и физику игры (он может взаимодействовать) и перемещается без коллайдеров за счет оптимизации.</p></center>
+            <center><p>В аэропортах LS, SF и LV есть сотрудники, которые ждут и приближаются к самолету, когда он приземляется и паркуется, имитируя проверку перед следующим рейсом.</p></center>
+            <center><p>Добавлено 300 горшков с растениями в Сан-Франциско и еще 200 мусорных баков в Сан-Франциско и Лос-Анджелесе.</p></center>
+        <center></ol></center>
+    </div>
+</div>
+
+            <!-- Вставка видео с YouTube -->
+            <div class="video-container">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/XZoMLOqUzpE" title="Обзор мода [SA] Урбанизация" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
+
+            <!-- Кнопка для скачивания [SA] Урбанизация -->
+            <a href="https://sharemods.com/wxia7jj19l7x/SA_-_Urbanize_07-24___40_zxai90hd__41_.zip.html" class="btn">Скачать [SA] Урбанизация</a>
+        </div>
+    </article>
+</section>
     <!-- Описание раздела с модами -->
     <p>Мы собрали самые полезные и популярные моды для GTA San Andreas. Установите их для улучшения игры:</p>
     <ul class="download-list">
