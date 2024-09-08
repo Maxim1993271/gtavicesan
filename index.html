@@ -24,7 +24,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 
     <!-- Подключение таблиц стилей CSS -->
-    <link rel="stylesheet" href="css/styles.css">
+   <link rel="stylesheet" href="styles.css">
     
     <!-- Подключение библиотек JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
@@ -35,11 +35,11 @@ body {
     font-family: 'Roboto', sans-serif; /* Шрифт для всего текста */
     margin: 0; /* Убираем отступы по умолчанию */
     padding: 0; /* Убираем внутренние отступы */
-    background: url('https://kartinki.pics/uploads/posts/2021-04/1617609533_13-p-gta-san-andreas-fon-13.jpg') no-repeat center center fixed; /* Фоновое изображение, которое не повторяется, центрируется и фиксировано */
+    background: url('https://kartinki.pics/uploads/posts/2021-04/1617609533_13-p-gta-san-andreas-fon-13.jpg') no-repeat center center fixed; /* Фоновое изображение: не повторяется, центрируется и фиксировано */
     background-size: cover; /* Масштабируем фоновое изображение по размеру экрана */
     color: #333; /* Цвет текста (темно-серый) */
-    overflow-x: hidden; /* Убираем горизонтальную прокрутку */
-    padding-top: 200px; /* Отступ сверху для избежания перекрытия фиксированного header */
+    overflow-x: hidden; /* Убираем горизонтальную прокрутку для предотвращения скролла по оси X */
+    padding-top: 200px; /* Отступ сверху для избегания перекрытия фиксированным header'ом */
 }
 
 /* Основной контейнер альбома */
@@ -696,10 +696,7 @@ body {
         </div>
         <!-- Инструкция по скачиванию Rockstar Launcher -->
         <p>Для запуска игры вам потребуется Rockstar Launcher. Вы можете скачать его по следующей ссылке:</p>
-        <!-- Кнопка для скачивания Rockstar Launcher -->
-        <a href="https://gamedownloads.rockstargames.com/public/installer/Rockstar-Games-Launcher.exe" class="btn">Скачать Rockstar Launcher</a>
-    </section>
-
+       </section>
     <!-- Раздел с обзором игры -->
     <section id="overview" class="section">
         <h2>Обзор</h2>
@@ -1008,6 +1005,23 @@ body {
             <!-- Кнопка для скачивания RoSA Project Evolved -->
             <a href="https://download2360.mediafire.com/jgukd6veommgRliCWWtz-BKab8xeJpkX9ywv08M1HLANoO3gH9jOIfPxMRunZobHXP6vDcWBpCtsdpadPEbeDKghc49oXbKLeiPU0NsfprJ4mIGppzt4wYPkx4oQO7jSrDPKgkJI2lbvKDWNvTljlDOJokO8lmHefs-joEbDPgqX/ufosnuqqry15hsu/RoSA+Project+Evolved+-+June.7z" class="btn">Скачать RoSA Project Evolved</a>
         </li>
+		
+		<!-- Ветер для GTA -->
+        <li>
+            <strong>[SA] Wind Project v1.0.2</strong>
+            <br>
+            <!-- Кнопка для скачивания Wind Project -->
+            <a href="https://sharemods.com/3b7uuwotoncu/SA_-_Wind_Project.7z.html" class="btn">Скачать [SA] Wind Project v1.0.2</a>
+        </li>
+		
+		<!-- Оригинальные пальмы для GTA -->
+        <li>
+            <strong>[SA|VC] Original HQ Palms</strong>
+            <br>
+            <!-- Кнопка для скачивания Original HQ Palms -->
+            <a href="https://sharemods.com/zh78dctl0sdc/SA_-_Original_HQ_Palms_-_wind.7z.html" class="btn">Скачать [SA|VC] Original HQ Palms</a>
+        </li>
+		
         <!-- Текстура Beta Definitive & Leftovers Map -->
         <li>
             <strong>Beta Definitive & Leftovers Map</strong>
@@ -1377,7 +1391,6 @@ body {
     </div>
 </body>
 <body>
-
     <!-- Ваш контент здесь -->
 
     <!-- Кнопка прокрутки вверх -->
@@ -1392,11 +1405,6 @@ body {
     </footer>
 <script>
 
-		document.addEventListener('contextmenu', function(e) {
-    e.preventDefault();
-		});
-	
-			
         // Отключаем правый клик по изображениям для предотвращения открытия контекстного меню
         document.addEventListener('contextmenu', function(event) {
             if (event.target.tagName === 'IMG') {
