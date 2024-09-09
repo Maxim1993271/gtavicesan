@@ -793,17 +793,19 @@ table {
     overflow: hidden; /* Прячем выходящие за границы элементы */
 }
 
+/* Эффект наведения */
 .btn:hover {
-    background: linear-gradient(135deg, #ff0066, #ff6600); /* Изменение градиента при наведении */
-    transform: scale(1.05); /* Немного увеличиваем кнопку при наведении */
+    background: linear-gradient(135deg, #ff8c00, #ff0081); /* Инвертируем градиент при наведении */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4); /* Увеличиваем тень при наведении */
+    transform: translateY(-4px); /* Поднимаем кнопку при наведении */
 }
 
+/* Эффект нажатия */
 .btn:active {
-    background: linear-gradient(135deg, #e6005c, #e65c00); /* Темнее градиент при нажатии */
-    transform: scale(1); /* Возвращаем кнопку к исходному размеру при нажатии */
+    background: linear-gradient(135deg, #ff0066, #ff6600); /* Более темный градиент при нажатии */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Уменьшаем тень при нажатии */
+    transform: translateY(2px); /* Сдвигаем кнопку вниз при нажатии */
 }
-
-
 </style>
 </head>
 <body>
@@ -871,7 +873,7 @@ table {
     <a href="https://gamedownloads.rockstargames.com/public/installer/Rockstar-Games-Launcher.exe" class="btn" style="display: inline-block; margin-top: 10px;">Скачать Rockstar Launcher</a>
 </section>
 
-    <!-- Раздел с обзором игры -->
+<!-- Раздел с обзором игры -->
     <section id="overview" class="section">
         <h2>Обзор</h2>
         <!-- Описание игры Grand Theft Auto III -->
@@ -932,8 +934,7 @@ table {
 <section id="mods" class="section">
     <h2>Моды для GTA III</h2>
 
-
-<!-- Раздел CLEO для GTA III -->
+<!-- Раздел [III] Essentials Pack -->
 <section id="cleo-iii" class="section">
     <h2>[III] Essentials Pack</h2>
     <p style="text-align: center;">
@@ -943,151 +944,92 @@ table {
         <strong>[III] Essentials Pack</strong> включает в себя следующие моды:
     </p>
     <ul class="download-list">
-        <li><a href="https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases/download/v7.7.0/Ultimate-ASI-Loader.zip" target="_blank" class="download-button">Ultimate ASI Loader</a></li>
-        <li><a href="https://github.com/cleolibrary/III.VC.CLEO/releases/download/2.0.0.6/III.CLEOv2.0.0.6.zip" target="_blank" class="download-button">CLEO</a></li>
-        <li><a href="https://github.com/thelink2012/modloader/releases/download/v0.3.7/modloader.zip" target="_blank" class="download-button">ModLoader</a></li>
-        <li><a href="https://silent.rockstarvision.com/uploads/SilentPatchIII.zip" target="_blank" class="download-button">SilentPatch</a></li>
-        <li><a href="https://silent.rockstarvision.com/uploads/SilentPatchDDraw.zip" target="_blank" class="download-button">DDraw Component</a></li>
-        <li><a href="https://sharemods.com/2m4sva2nlynv/_III__Widescreen_Fix.7z.html" target="_blank" class="download-button">Widescreen Fix by ThirteenAG</a></li>
-        <li><a href="https://sharemods.com/7g7ywlsbg7rh/FramerateVigilante.7z.html" target="_blank" class="download-button">Framerate Vigilante</a></li>
-        <li><a href="https://sharemods.com/pz6s2h82cz05/III_GInput.7z.html" target="_blank" class="download-button">GInput</a></li>
-        <li><a href="https://sharemods.com/oggcphktnnvq/RunDLL32_Fix_-_GameUX_Fix.7z.html" target="_blank" class="download-button">RunDLL32 Fix</a></li>
-        <li><a href="https://sharemods.com/v68td91645hi/NoDEP.7z.html" target="_blank" class="download-button">NoDEP</a></li>
-        <li><a href="https://sharemods.com/2roy08u4w46i/CrashInfo.zip.html" target="_blank" class="download-button">CrashInfo</a></li>
-        <li><a href="https://sharemods.com/13vlga0ctav7/Open_Limit_Adjuster.zip.html" target="_blank" class="download-button">Open Limit Adjuster v1.5.9</a></li>
-        <li><a href="https://download2331.mediafire.com/avkiy28bmz4g0J1Q3vvhrClsw38X7lUr-f5lvumKmA6spQBwGecVX-bhYWbTEC6XaOQQwr4UkbJu_uN--NFSlv9wmTFYkZrAkbT-ceQwHn45vDVg_N0h4b4mowg3FLpMEo80hQoa5m5GfiBhEQrRfwUg9IXem3KTdFB_cp9d_pTH/6kwmu30lvnjk6gu/fastman92_limit_adjuster_7_6.rar" target="_blank" class="download-button">fastman92 limit adjuster 7.6</a></li>
-        <li><a href="https://sharemods.com/njiymgti70u1/III_-_MixSets.7z.html" target="_blank" class="download-button">[III] MixSets</a></li>
-        <li><a href="https://sharemods.com/4fxxiv1fnwxr/III_VC_-_Classic_AXIS.7z.html" target="_blank" class="download-button">[III] Classic AXIS v0.225</a></li>
-        <li><a href="https://sharemods.com/evaad4hx63u6/III_VC_-_EAX_Alchemy_Fix.7z.html" target="_blank" class="download-button">[III] EAX Alchemy Fix</a></li>
-        <li><a href="https://sharemods.com/xyk4zxufe7hg/SA_VC_III_-_Windowed_Mode.zip.html" target="_blank" class="download-button">[III] Windowed Mode</a></li>
+        <li>
+            <a href="https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases/download/v7.7.0/Ultimate-ASI-Loader.zip" target="_blank" class="btn">Ultimate ASI Loader</a>
+            <p>Основной загрузчик для модов, который позволяет игре использовать дополнительные скрипты и модификации.</p>
+        </li>
+        <li>
+            <a href="https://github.com/cleolibrary/III.VC.CLEO/releases/download/2.0.0.6/III.CLEOv2.0.0.6.zip" target="_blank" class="btn">CLEO 2.0.0.6</a>
+            <p>Библиотека для запуска скриптов в GTA III, расширяющая возможности игры и добавляющая новые функции.</p>
+        </li>
+        <li>
+            <a href="https://github.com/thelink2012/modloader/releases/download/v0.3.7/modloader.zip" target="_blank" class="btn">ModLoader 0.3.7</a>
+            <p>Инструмент для удобного управления и установки модификаций в GTA III.</p>
+        </li>
+        <li>
+            <a href="https://silent.rockstarvision.com/uploads/SilentPatchIII.zip" target="_blank" class="btn">SilentPatch</a>
+            <p>Патч, исправляющий многочисленные проблемы и баги в игре, улучшая её стабильность.</p>
+        </li>
+        <li>
+            <a href="https://silent.rockstarvision.com/uploads/SilentPatchDDraw.zip" target="_blank" class="btn">DDraw Component</a>
+            <p>Компонент для улучшения совместимости игры с современными системами и исправления графических проблем.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/2m4sva2nlynv/_III__Widescreen_Fix.7z.html" target="_blank" class="btn">Widescreen Fix by ThirteenAG</a>
+            <p>Мод для поддержки широкоформатных экранов, который исправляет проблемы с отображением.</p>
+        </li>
+        <li>
+            <a href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/gta3/GTA3.WidescreenFrontend.zip" target="_blank" class="btn">Frontend Textures by ThirteenAG</a>
+            <p>Мод для исправления проблем с отображением фронтенда в широкоформатном режиме.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/7g7ywlsbg7rh/FramerateVigilante.7z.html" target="_blank" class="btn">Framerate Vigilante</a>
+            <p>Мод, позволяющий управлять частотой кадров и улучшать плавность игры.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/pz6s2h82cz05/III_GInput.7z.html" target="_blank" class="btn">GInput</a>
+            <p>Мод, добавляющий поддержку современных контроллеров и исправляющий проблемы с управлением.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/oggcphktnnvq/RunDLL32_Fix_-_GameUX_Fix.7z.html" target="_blank" class="btn">RunDLL32 Fix</a>
+            <p>Исправляет ошибки, связанные с библиотекой RunDLL32, что улучшает стабильность игры.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/v68td91645hi/NoDEP.7z.html" target="_blank" class="btn">NoDEP</a>
+            <p>Отключает защиту DEP (Data Execution Prevention), что может решить некоторые проблемы совместимости.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/2roy08u4w46i/CrashInfo.zip.html" target="_blank" class="btn">CrashInfo v1.2</a>
+            <p>Мод, предоставляющий подробную информацию о сбоях игры для диагностики и исправления проблем.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/sjmd1yxgpf08/SCRLog.zip.html" target="_blank" class="btn">SCRLog 2020.3</a>
+            <p>Мод, предоставляющий подробную информацию о сбоях игры для диагностики и исправления проблем.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/13vlga0ctav7/Open_Limit_Adjuster.zip.html" target="_blank" class="btn">Open Limit Adjuster v1.5.9</a>
+            <p>Мод, позволяющий изменять лимиты открытых объектов в игре для повышения производительности и улучшения игрового процесса.</p>
+        </li>
+        <li>
+            <a href="https://download2331.mediafire.com/avkiy28bmz4g0J1Q3vvhrClsw38X7lUr-f5lvumKmA6spQBwGecVX-bhYWbTEC6XaOQQwr4UkbJu_uN--NFSlv9wmTFYkZrAkbT-ceQwHn45vDVg_N0h4b4mowg3FLpMEo80hQoa5m5GfiBhEQrRfwUg9IXem3KTdFB_cp9d_pTH/6kwmu30lvnjk6gu/fastman92_limit_adjuster_7_6.rar" target="_blank" class="btn">fastman92 limit adjuster 7.6</a>
+            <p>Мод для увеличения различных игровых лимитов, таких как количество объектов и ландшафтных деталей.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/njiymgti70u1/III_-_MixSets.7z.html" target="_blank" class="btn">[III] MixSets</a>
+            <p>Набор модов, которые улучшают графику и геймплей, добавляя новые возможности и контент в игру.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/lkin1m2msdem/PortableGTA.7z.html" target="_blank" class="btn">[III] PortableGTA</a>
+            <p>Мод, восстанавливающий классические элементы управления и интерфейса из предыдущих версий игры.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/4fxxiv1fnwxr/III_VC_-_Classic_AXIS.7z.html" target="_blank" class="btn">[III] Classic AXIS v0.225</a>
+            <p>Мод, восстанавливающий классические элементы управления и интерфейса из предыдущих версий игры.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/evaad4hx63u6/III_VC_-_EAX_Alchemy_Fix.7z.html" target="_blank" class="btn">[III] EAX Alchemy Fix</a>
+            <p>Исправляет проблемы с поддержкой звуковых эффектов EAX в игре, улучшая качество звука.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/xyk4zxufe7hg/SA_VC_III_-_Windowed_Mode.zip.html" target="_blank" class="btn">[III] Windowed Mode</a>
+            <p>Мод, добавляющий поддержку оконного режима для игры, что позволяет играть в окно на рабочем столе.</p>
+        </li>
+		<li>
+		<a href="https://sharemods.com/82fetghs6l0z/III_VC_SA_-_SaveLoader.7z.html" target="_blank" class="btn">[III] SaveLoader</a>
+		<p>Мод, позволяющий загружать сохранения из других версий игры (GTA III, Vice City, San Andreas), упрощая процесс сохранения и загрузки игровых данных.</p>
+		</li>
     </ul>
 </section>
-
-
-
-
-    <!-- Кнопка для скачивания CLEO v2.0.0.6 -->
-    <a href="https://github.com/cleolibrary/III.VC.CLEO/releases/download/2.0.0.6/III.CLEOv2.0.0.6.zip" class="btn">Скачать CLEO v2.0.0.6</a>
-</section>
-	
- <!-- Раздел SilentPatch -->
-<div class="mod-description" style="text-align: center; max-width: 800px; margin: 0 auto;">
-    <h2>SilentPatch GTA III</h2>
-    
-    <img src="https://cookieplmonster.github.io/assets/img/games/gta-iii.jpg" alt="SilentPatch" class="mod-image" style="display: block; margin: 0 auto; max-width: 100%; height: auto;">
-    
-    <p>
-        <strong>SilentPatch GTA III</strong>
-    </p>
-    <p>
-        SilentPatch — это модификация, предназначенная для исправления различных ошибок и проблем в Grand Theft Auto III. Он включает в себя множество улучшений, которые исправляют проблемы с совместимостью и повышают стабильность игры. SilentPatch также добавляет поддержку современных операционных систем, улучшая общий опыт игры.
-    </p>
-    
-    <!-- Кнопка для скачивания SilentPatch -->
-    <a href="https://silent.rockstarvision.com/uploads/SilentPatchIII.zip" class="btn" style="display: inline-block; margin: 10px 0;">Скачать SilentPatch GTA III</a>
-    
-    <p>
-        <strong>DDraw Component</strong>
-    </p>
-    <p>
-        DDraw Component является частью SilentPatch и предназначен для исправления проблем с отображением и графикой в GTA III. Он улучшает работу с DirectDraw и помогает устранить различные графические артефакты и ошибки.
-    </p>
-    
-    <!-- Кнопка для скачивания DDraw Component -->
-    <a href="https://silent.rockstarvision.com/uploads/SilentPatchDDraw.zip" class="btn" style="display: inline-block; margin: 10px 0;">Скачать DDraw Component</a>
-</div>
-
-
-    
-<!-- Раздел CLEO для GTA III -->
-<section id="cleo-iii" class="section">
-    <h2>GTA III CLEO</h2>
-    <p style="text-align: center;">
-        <img src="https://cleo.li/images/icon_iii.png" alt="GTA III CLEO" class="mod-image">
-    </p>
-    <p>
-        <strong>CLEO v2.0.0.6</strong>
-    </p>
-    <p>
-        CLEO — это модификация, которая добавляет поддержку скриптов для игры Grand Theft Auto III. С помощью CLEO вы можете легко создавать и использовать скрипты, которые добавляют новые функции и возможности в игру. Версия 2.0.0.6 включает различные улучшения и исправления, обеспечивая более стабильную работу скриптов.
-    </p>
-    <!-- Кнопка для скачивания CLEO v2.0.0.6 -->
-    <a href="https://github.com/cleolibrary/III.VC.CLEO/releases/download/2.0.0.6/III.CLEOv2.0.0.6.zip" class="btn">Скачать CLEO v2.0.0.6</a>
-</section>
-
-
-		
-<!-- Раздел для Widescreen Fix -->
-<section id="widescreen-fix" class="section">
-    <h2>Widescreen Fix</h2>
-    <p style="text-align: center;">
-        <img src="https://camo.githubusercontent.com/1732f6647c6cd84050b9ce04e1191ba12dc0acc4604fcfa4b9d74ce1bacef346/687474703a2f2f746869727465656e61672e6769746875622e696f2f73637265656e732f677461332f6d61696e322e6a7067" alt="Widescreen Fix" class="mod-image">
-    </p>
-
-    <p>
-        <strong>Widescreen Fix</strong>
-        <br>
-        Этот мод исправляет проблемы с поддержкой широкоформатных экранов в игре, улучшая графику и интерфейс.
-    </p>
-    <!-- Кнопка для скачивания Widescreen Fix -->
-    <a href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/gta3/GTA3.WidescreenFix.zip" class="btn">Скачать Widescreen Fix</a>
-    <br><br>
-
-    <p>
-        <strong>Widescreen Frontend</strong>
-        <br>
-        Widescreen Frontend предоставляет дополнительные настройки для улучшения графики и интерфейса в широкоформатных разрешениях.
-    </p>
-    <!-- Кнопка для скачивания Widescreen Frontend -->
-    <a href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/gta3/GTA3.WidescreenFrontend.zip" class="btn">Скачать Widescreen Frontend</a>
-    <br><br>
-
-    <p>
-        <strong>Widescreen Fix ThirteenAG</strong>
-        <br>
-        Это улучшенная версия Widescreen Fix от ThirteenAG, которая предлагает дополнительные функции и исправления.
-    </p>
-    <!-- Кнопка для скачивания Widescreen Fix ThirteenAG -->
-    <a href="https://sharemods.com/2m4sva2nlynv/_III__Widescreen_Fix.7z.html" class="btn">Скачать Widescreen Fix ThirteenAG</a>
-    <br><br>
-
-    <p>
-        <strong>Widescreen Frontend ThirteenAG</strong>
-        <br>
-        Обновленная версия Widescreen Frontend от ThirteenAG, предоставляющая улучшенные функции и совместимость.
-    </p>
-    <!-- Кнопка для скачивания Widescreen Frontend ThirteenAG -->
-    <a href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/gta3/GTA3.WidescreenFrontend.zip" class="btn">Скачать Widescreen Frontend ThirteenAG</a>
-    <br><br>
-
-    <p style="text-align: center;">
-        <img src="https://camo.githubusercontent.com/96e9602ba1a7f6071d4011277d6e78ff5b9cbd644337f060cb5802914f379010/687474703a2f2f692e696d6775722e636f6d2f52586b6c5252672e706e67" alt="SkyGfx" width="500" height="150" class="mod-image">
-    </p>
-
-    <p>
-        <strong>SkyGfx 3.0b</strong>
-        <br>
-        SkyGfx — это мод, который улучшает графику и визуальные эффекты в игре, делая её более современной и привлекательной.
-    </p>
-    <!-- Кнопка для скачивания SkyGfx 3.0b -->
-    <a href="https://sharemods.com/mgtc7w565xr0/VC_SkyGfx.7z.html" class="btn">Скачать SkyGfx 3.0b</a>
-</section>
-
-<!-- Раздел MixSets -->
-<section id="fastman92" class="section">
-    <h2>MixSets</h2>
-    <p style="text-align: center;">
-        <img src="https://www.mixmods.com.br/wp-content/uploads/2021/08/gta-iii-3-mod-mixsets-tweak-fix-mixmods-7915943.png" alt="MixSets" class="mod-image">
-    </p>
-    <p>
-        <strong>MixSets</strong> - это модификация для улучшения производительности и стабильности игры GTA III.
-    </p>
-    <!-- Кнопка для скачивания MixSets -->
-    <p style="text-align: center;">
-        <a href="https://sharemods.com/njiymgti70u1/III_-_MixSets.7z.html" class="btn">Скачать MixSets</a>
-    </p>
-</section>
-
 
 <!-- Раздел с обзором игры -->
 <section id="overview" class="section">
@@ -1150,112 +1092,103 @@ table {
   </div>
 <section id="mods" class="section">
     <h2>Моды для Vice City</h2>
-    
-    <!-- Раздел для SilentPatch -->
-<section id="silentpatch" class="section">
-    <h2>SilentPatch для Vice City</h2>
-    <p style="text-align: center;">
-        <img src="https://cookieplmonster.github.io/assets/img/games/gta-vc.jpg" alt="SilentPatch" class="mod-image">
-    </p>
-    <p>
-        <strong>SilentPatch Vice City</strong>
-        <br>
-        SilentPatch — это мод, предназначенный для устранения различных проблем и багов в GTA Vice City. Он улучшает стабильность игры и устраняет ошибки, связанные с графикой и функциональностью.
-    </p>
-    <!-- Кнопка для скачивания SilentPatch -->
-    <a href="https://silent.rockstarvision.com/uploads/SilentPatchVC.zip" class="btn">Скачать SilentPatch</a>
-    <br><br>
-    <p>
-        <strong>DDraw Component</strong>
-        <br>
-        DDraw Component — это дополнение для SilentPatch, которое исправляет проблемы с DirectDraw и улучшает совместимость игры с современными операционными системами.
-    </p>
-    <!-- Кнопка для скачивания DDraw Component -->
-    <a href="https://silent.rockstarvision.com/uploads/SilentPatchDDraw.zip" class="btn">Скачать DDraw Component</a>
-</section>
-
-<!-- Раздел для CLEO -->
-<section id="cleo" class="section">
-    <h2>CLEO для Vice City</h2>
-    <p style="text-align: center;">
-        <img src="https://cleo.li/images/icon_vc.png" alt="Vice City CLEO" class="mod-image">
-    </p>
-    <p>
-        <strong>CLEO v2.0.0.6</strong>
-        <br>
-        CLEO — это мод, который добавляет поддержку скриптов для GTA Vice City. Версия 2.0.0.6 включает в себя обновления и исправления, улучшая работу скриптов и расширяя возможности моддинга.
-    </p>
-    <!-- Кнопка для скачивания Vice City CLEO v2.0.0.6 -->
-    <a href="https://github.com/cleolibrary/III.VC.CLEO/releases/download/2.0.0.6/VC.CLEOv2.0.0.6.zip" class="btn">Скачать CLEO v2.0.0.6</a>
-</section>
-
-
-<!-- Раздел для Widescreen Fix -->
-<section id="widescreen" class="section">
-    <h2>Widescreen Fix</h2>
-    <p style="text-align: center;">
-        <img src="https://camo.githubusercontent.com/512d041c7d5dac80a709df63458c4aad3431212d0572c347263966dbfc297a1d/687474703a2f2f746869727465656e61672e6769746875622e696f2f73637265656e732f67746176632f6d61696e322e6a7067" alt="Widescreen Fix" class="mod-image">
-    </p>
-    <p>
-        <strong>Widescreen Fix</strong>
-        <br>
-        Widescreen Fix — это модификация, предназначенная для того, чтобы улучшить поддержку широкоформатных экранов в играх. Он расширяет возможности настройки разрешения и поддерживает более высокие разрешения, что делает игру более приятной для современных мониторов.
-    </p>
-    <!-- Кнопка для скачивания Widescreen Fix -->
-    <a href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/gtavc/GTAVC.WidescreenFix.zip" class="btn">Скачать Widescreen Fix</a>
-    <br><br>
-    <p>
-        <strong>Widescreen Frontend</strong>
-        <br>
-        Widescreen Frontend — это вспомогательная утилита для Widescreen Fix, которая предоставляет пользовательский интерфейс для настройки параметров мода. Она позволяет легко управлять настройками и изменять параметры в удобном формате.
-    </p>
-    <!-- Кнопка для скачивания Widescreen Frontend -->
-    <a href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/gtavc/GTAVC.WidescreenFrontend.zip" class="btn">Скачать Widescreen Frontend</a>
-    <br><br>
-    <p>
-        <strong>Widescreen Fix ThirteenAG</strong>
-        <br>
-        Этот мод предлагает улучшения и исправления для существующего Widescreen Fix, адаптируя его для лучших результатов в различных играх. Обновления включают дополнительные функции и исправления, повышающие совместимость и стабильность.
-    </p>
-    <!-- Кнопка для скачивания Widescreen Fix ThirteenAG -->
-    <a href="https://sharemods.com/97q4g1m31p4b/_VC__Widescreen_Fix.7z.html" class="btn">Скачать Widescreen Fix ThirteenAG</a>
-    <br><br>
-    <p>
-        <strong>Widescreen Frontend ThirteenAG</strong>
-        <br>
-        Этот фронтенд — это обновленная версия утилиты для управления Widescreen Fix, созданная ThirteenAG. Она включает в себя улучшенные функции и поддержку для новых версий мода, обеспечивая лучшую настройку и управление.
-    </p>
-    <!-- Кнопка для скачивания Widescreen Frontend ThirteenAG -->
-    <a href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/gtavc/GTAVC.WidescreenFrontend.zip" class="btn">Скачать Widescreen Frontend ThirteenAG</a>
-    <br><br>
-    <p style="text-align: center;">
-        <img src="https://camo.githubusercontent.com/96e9602ba1a7f6071d4011277d6e78ff5b9cbd644337f060cb5802914f379010/687474703a2f2f692e696d6775722e636f6d2f52586b6c5252672e706e67" alt="SkyGfx" width="500" height="150" class="mod-image">
-    </p>
-    <p>
-        <strong>SkyGfx 3.0b</strong>
-        <br>
-        SkyGfx — это графический мод, который улучшает визуальные эффекты и графику в играх. Он предлагает улучшения текстур, освещения и других графических элементов, делая игру более красивой и современной.
-    </p>
-    <!-- Кнопка для скачивания SkyGfx 3.0b -->
-    <a href="https://sharemods.com/mgtc7w565xr0/VC_SkyGfx.7z.html" class="btn">Скачать SkyGfx 3.0b</a>
-</section>
-
 	
-	<!-- Раздел MixSets v1.0.3 -->
-<section id="fastman92" class="section">
-    <h2>MixSets v1.0.3</h2>
+<!-- Раздел [VC] Essentials Pack -->
+<section id="cleo-vc" class="section">
+    <h2>[VC] Essentials Pack</h2>
     <p style="text-align: center;">
-        <img src="https://www.mixmods.com.br/wp-content/uploads/2021/04/mix2Bsets2Brelease2Bvc-7205262.png" alt="MixSets v1.0.3" class="mod-image">
+        <img src="https://www.mixmods.com.br/wp-content/uploads/2020/08/gta-vc-mod-pack-essentials-6442267.png" alt="[VC] Essentials Pack" class="mod-image">
     </p>
     <p>
-        <strong>MixSets v1.0.3</strong> - это последняя версия модификации, которая улучшает производительность и стабильность игры.
+        <strong>[VC] Essentials Pack</strong> включает в себя следующие моды:
     </p>
-    <!-- Кнопка для скачивания MixSets v1.0.3 -->
-    <p style="text-align: center;">
-        <a href="https://sharemods.com/0y0izlymerg8/SA_-_Essentials_Pack.zip.html" class="btn">Скачать MixSets v1.0.3</a>
-    </p>
+    <ul class="download-list">
+        <li>
+            <a href="https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases/download/v7.7.0/Ultimate-ASI-Loader.zip" target="_blank" class="btn">Ultimate ASI Loader</a>
+            <p>Основной загрузчик для модов, который позволяет игре использовать дополнительные скрипты и модификации.</p>
+        </li>
+        <li>
+            <a href="https://github.com/cleolibrary/III.VC.CLEO/releases/download/2.0.0.6/VC.CLEOv2.0.0.6.zip" target="_blank" class="btn">CLEO 2.0.0.6</a>
+            <p>Библиотека для запуска скриптов в GTA Vice City, расширяющая возможности игры и добавляющая новые функции.</p>
+        </li>
+        <li>
+            <a href="https://github.com/thelink2012/modloader/releases/download/v0.3.7/modloader.zip" target="_blank" class="btn">ModLoader 0.3.7</a>
+            <p>Инструмент для удобного управления и установки модификаций в GTA Vice City.</p>
+        </li>
+        <li>
+            <a href="https://silent.rockstarvision.com/uploads/SilentPatchVC.zip" target="_blank" class="btn">SilentPatch</a>
+            <p>Патч, исправляющий многочисленные проблемы и баги в игре, улучшая её стабильность.</p>
+        </li>
+        <li>
+            <a href="https://silent.rockstarvision.com/uploads/SilentPatchDDraw.zip" target="_blank" class="btn">DDraw Component</a>
+            <p>Компонент для улучшения совместимости игры с современными системами и исправления графических проблем.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/97q4g1m31p4b/_VC__Widescreen_Fix.7z.html" target="_blank" class="btn">Widescreen Fix by ThirteenAG</a>
+            <p>Мод для поддержки широкоформатных экранов, который исправляет проблемы с отображением.</p>
+        </li>
+        <li>
+            <a href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/gtavc/GTAVC.WidescreenFrontend.zip" target="_blank" class="btn">Frontend Textures by ThirteenAG</a>
+            <p>Мод для улучшения текстур в меню игры, поддерживающий широкоформатные экраны.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/7g7ywlsbg7rh/FramerateVigilante.7z.html" target="_blank" class="btn">Framerate Vigilante</a>
+            <p>Мод, позволяющий управлять частотой кадров и улучшать плавность игры.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/y7d2pn2tyizs/VC_GInput.7z.html" target="_blank" class="btn">GInput</a>
+            <p>Мод, добавляющий поддержку современных контроллеров и исправляющий проблемы с управлением.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/oggcphktnnvq/RunDLL32_Fix_-_GameUX_Fix.7z.html" target="_blank" class="btn">RunDLL32 Fix</a>
+            <p>Исправляет ошибки, связанные с библиотекой RunDLL32, что улучшает стабильность игры.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/v68td91645hi/NoDEP.7z.html" target="_blank" class="btn">NoDEP</a>
+            <p>Отключает защиту DEP (Data Execution Prevention), что может решить некоторые проблемы совместимости.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/2roy08u4w46i/CrashInfo.zip.html" target="_blank" class="btn">CrashInfo v1.2</a>
+            <p>Мод, предоставляющий подробную информацию о сбоях игры для диагностики и исправления проблем.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/sjmd1yxgpf08/SCRLog.zip.html" target="_blank" class="btn">[VC] SCRLog 2020.3</a>
+            <p>Мод, предоставляющий подробную информацию о сбоях игры для диагностики и исправления проблем.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/13vlga0ctav7/Open_Limit_Adjuster.zip.html" target="_blank" class="btn">Open Limit Adjuster v1.5.9</a>
+            <p>Мод, позволяющий изменять лимиты открытых объектов в игре для повышения производительности и улучшения игрового процесса.</p>
+        </li>
+        <li>
+            <a href="https://download2331.mediafire.com/avkiy28bmz4g0J1Q3vvhrClsw38X7lUr-f5lvumKmA6spQBwGecVX-bhYWbTEC6XaOQQwr4UkbJu_uN--NFSlv9wmTFYkZrAkbT-ceQwHn45vDVg_N0h4b4mowg3FLpMEo80hQoa5m5GfiBhEQrRfwUg9IXem3KTdFB_cp9d_pTH/6kwmu30lvnjk6gu/fastman92_limit_adjuster_7_6.rar" target="_blank" class="btn">fastman92 limit adjuster 7.6</a>
+            <p>Мод для увеличения различных игровых лимитов, таких как количество объектов и ландшафтных деталей.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/62r32rtz9vu8/VC_-_MixSets.7z.html" target="_blank" class="btn">[VC] MixSets</a>
+            <p>Набор модов, которые улучшают графику и геймплей, добавляя новые возможности и контент в игру.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/lkin1m2msdem/PortableGTA.7z.html" target="_blank" class="btn">[VC] PortableGTA</a>
+            <p>Мод, восстанавливающий классические элементы управления и интерфейса из предыдущих версий игры.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/4fxxiv1fnwxr/III_VC_-_Classic_AXIS.7z.html" target="_blank" class="btn">[VC] Classic AXIS v0.225</a>
+            <p>Мод, восстанавливающий классические элементы управления и интерфейса из предыдущих версий игры.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/evaad4hx63u6/III_VC_-_EAX_Alchemy_Fix.7z.html" target="_blank" class="btn">[VC] EAX Alchemy Fix</a>
+            <p>Исправляет проблемы с поддержкой звуковых эффектов EAX в игре, улучшая качество звука.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/xyk4zxufe7hg/SA_VC_III_-_Windowed_Mode.zip.html" target="_blank" class="btn">[VC] Windowed Mode</a>
+            <p>Мод, добавляющий поддержку оконного режима для игры, что позволяет играть в окно на рабочем столе.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/82fetghs6l0z/III_VC_SA_-_SaveLoader.7z.html" target="_blank" class="btn">[VC] SaveLoader</a>
+            <p>Мод, позволяющий загружать сохранения из других версий игры (GTA III, Vice City, San Andreas), упрощая процесс сохранения и загрузки игровых данных.</p>
+        </li>
+    </ul>
 </section>
-
 
 <!-- Раздел с обзором игры -->
 <section id="overview" class="section">
@@ -1313,87 +1246,103 @@ table {
 </div>
 	<section id="mods" class="section">
     <h2>Моды для GTA San Andreas</h2>
-
-    <!-- Раздел для SilentPatch и ASI Loaders -->
-<section id="silentpatch" class="section">
-    <h3>SilentPatch San Andreas</h3>
+	
+<!-- Раздел [SA] Essentials Pack -->
+<section id="cleo-sa" class="section">
+    <h2>[SA] Essentials Pack</h2>
     <p style="text-align: center;">
-        <img src="https://cookieplmonster.github.io/assets/img/games/gta-sa.jpg" alt="SilentPatch" class="mod-image">
+        <img src="https://www.mixmods.com.br/wp-content/uploads/2019/06/gta-sa-mod-pack-essentials-1130704.png" alt="[SA] Essentials Pack" class="mod-image">
     </p>
     <p>
-        <strong>SilentPatch San Andreas</strong>
-        <br>
-        SilentPatch — это модификация, которая исправляет множество ошибок и недочетов в GTA San Andreas, улучшая стабильность и производительность игры. Это включает в себя исправления для графических багов и других проблем, которые могут возникнуть в оригинальной версии игры.
+        <strong>[SA] Essentials Pack</strong> включает в себя следующие моды:
     </p>
-    <!-- Кнопка для скачивания SilentPatch -->
-    <a href="https://silent.rockstarvision.com/uploads/SilentPatchSA.zip" class="btn">Скачать SilentPatch</a>
-    <br><br>
-    <p>
-        <strong>ASI Loaders v1.3</strong>
-        <br>
-        ASI Loaders позволяет загружать модификации в формате ASI в GTA San Andreas. Эта версия включает исправления и улучшения, которые обеспечивают лучшую совместимость и производительность для ASI-плагинов.
-    </p>
-    <!-- Кнопка для скачивания ASI Loader -->
-    <a href="https://silent.rockstarvision.com/uploads/silents_asi_loader_13.zip" class="btn">Скачать ASI Loader 1.3</a>
-    <br><br>
-    <p>
-        <strong>Ultimate ASI Loader v7.7.0</strong>
-        <br>
-        Ultimate ASI Loader — это расширенная версия ASI Loader, предоставляющая дополнительные функции и улучшения для загрузки и управления модификациями. Он обеспечивает максимальную совместимость и поддержку для большинства ASI-плагинов.
-    </p>
-    <!-- Кнопка для скачивания Ultimate ASI Loader v7.7.0 -->
-    <a href="https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases/download/v7.7.0/Ultimate-ASI-Loader.zip" class="btn">Скачать Ultimate ASI Loader</a>
+    <ul class="download-list">
+        <li>
+            <a href="https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases/download/v7.7.0/Ultimate-ASI-Loader.zip" target="_blank" class="btn">Ultimate ASI Loader</a>
+            <p>Основной загрузчик для модов, который позволяет игре использовать дополнительные скрипты и модификации.</p>
+        </li>
+        <li>
+            <a href="https://silent.rockstarvision.com/uploads/silents_asi_loader_13.zip" target="_blank" class="btn">Silent's ASI Loader</a>
+            <p>Альтернативный загрузчик для модов, поддерживающий дополнительные скрипты и модификации.</p>
+        </li>
+        <li>
+            <a href="https://github.com/cleolibrary/CLEO5/releases/download/v5.0.0-alpha.68/SA.CLEO_v5.0.0-alpha.68.zip" target="_blank" class="btn">CLEO 5.0</a>
+            <p>Библиотека для запуска скриптов в GTA San Andreas, расширяющая возможности игры и добавляющая новые функции.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/3yrdrs7l9v6r/CLEOPlus.zip.html" target="_blank" class="btn">CLEO+ v1.2.0</a>
+            <p>Расширенная версия CLEO с дополнительными функциями и улучшениями.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/69lwlady6yav/NewOpcodes.7z.html" target="_blank" class="btn">NewOpcodes.cleo v2.1</a>
+            <p>Библиотека для добавления новых опкодов в скрипты CLEO, расширяющая возможности моддинга.</p>
+        </li>
+        <li>
+            <a href="https://github.com/thelink2012/modloader/releases/download/v0.3.7/modloader.zip" target="_blank" class="btn">ModLoader 0.3.7</a>
+            <p>Инструмент для удобного управления и установки модификаций в GTA San Andreas.</p>
+        </li>
+        <li>
+            <a href="https://silent.rockstarvision.com/uploads/SilentPatchSA.zip" target="_blank" class="btn">SilentPatch</a>
+            <p>Патч, исправляющий многочисленные проблемы и баги в игре, улучшая её стабильность.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/ati4o4vcxk6c/SA_-_Widescreen_Fix.7z.html" target="_blank" class="btn">Widescreen Fix by ThirteenAG</a>
+            <p>Мод для поддержки широкоформатных экранов, который исправляет проблемы с отображением.</p>
+        </li>
+        <li>
+            <a href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/gtasa/GTASA.WidescreenFrontend.zip" target="_blank" class="btn">Widescreen Frontend</a>
+            <p>Мод для поддержки широкоформатных экранов, который исправляет проблемы с отображением фронтенда.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/7g7ywlsbg7rh/FramerateVigilante.7z.html" target="_blank" class="btn">Framerate Vigilante</a>
+            <p>Мод, позволяющий управлять частотой кадров и улучшать плавность игры.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/oggcphktnnvq/RunDLL32_Fix_-_GameUX_Fix.7z.html" target="_blank" class="btn">RunDLL32 Fix</a>
+            <p>Исправляет ошибки, связанные с библиотекой RunDLL32, что улучшает стабильность игры.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/v68td91645hi/NoDEP.7z.html" target="_blank" class="btn">NoDEP</a>
+            <p>Отключает защиту DEP (Data Execution Prevention), что может решить некоторые проблемы совместимости.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/2roy08u4w46i/CrashInfo.zip.html" target="_blank" class="btn">CrashInfo v1.2</a>
+            <p>Мод, предоставляющий подробную информацию о сбоях игры для диагностики и исправления проблем.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/sjmd1yxgpf08/SCRLog.zip.html" target="_blank" class="btn">SCRLog 2020.3</a>
+            <p>Мод, предоставляющий подробную информацию о сбоях игры для диагностики и исправления проблем.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/13vlga0ctav7/Open_Limit_Adjuster.zip.html" target="_blank" class="btn">Open Limit Adjuster v1.5.9</a>
+            <p>Мод, позволяющий изменять лимиты открытых объектов в игре для повышения производительности и улучшения игрового процесса.</p>
+        </li>
+        <li>
+            <a href="https://download2331.mediafire.com/avkiy28bmz4g0J1Q3vvhrClsw38X7lUr-f5lvumKmA6spQBwGecVX-bhYWbTEC6XaOQQwr4UkbJu_uN--NFSlv9wmTFYkZrAkbT-ceQwHn45vDVg_N0h4b4mowg3FLpMEo80hQoa5m5GfiBhEQrRfwUg9IXem3KTdFB_cp9d_pTH/6kwmu30lvnjk6gu/fastman92_limit_adjuster_7_6.rar" target="_blank" class="btn">fastman92 limit adjuster 7.6</a>
+            <p>Мод для увеличения различных игровых лимитов, таких как количество объектов и ландшафтных деталей.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/36to5h35fo36/SA_-_MixSets_-_password_mixmods.com.br.zip.html" target="_blank" class="btn">[SA] MixSets v4.3.7</a>
+            <p>Набор модов, которые улучшают графику и геймплей, добавляя новые возможности и контент в игру.</p>
+        </li>
+        <li>
+            <a href="https://github.com/m0b-x/SA-MixSets" target="_blank" class="btn">[SA] MixSets v4.3.8</a>
+            <p>Обновленная версия набора модов MixSets с новыми функциями и улучшениями.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/lkin1m2msdem/PortableGTA.7z.html" target="_blank" class="btn">[SA] PortableGTA</a>
+            <p>Мод, создающий портативную версию GTA San Andreas с улучшенным интерфейсом и управлением.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/gfzhwqjs2w9l/Improved_Fastloader_by_LINK2012.7z.html" target="_blank" class="btn">Improved Fastloader</a>
+            <p>Мод, улучшающий работу загрузчика, что ускоряет процесс запуска игры.</p>
+        </li>
+        <li>
+            <a href="https://sharemods.com/82fetghs6l0z/III_VC_SA_-_SaveLoader.7z.html" target="_blank" class="btn">[SA] SaveLoader</a>
+            <p>Мод, позволяющий загружать сохранения из других версий игры (GTA III, Vice City, San Andreas), упрощая процесс сохранения и загрузки игровых данных.</p>
+        </li>
+    </ul>
 </section>
-
-
-   <!-- Раздел для CLEO -->
-<section id="cleo" class="section">
-    <h3>San Andreas CLEO 5</h3>
-    <p style="text-align: center;">
-        <img src="https://cleo.li/images/icon_sa.png" alt="CLEO 5" class="mod-image">
-    </p>
-    <p>
-        <strong>CLEO 5 Silent ASI Loader</strong>
-        <br>
-        CLEO 5 Silent ASI Loader включает в себя CLEO 5 и Silent ASI Loader, который помогает загружать модификации, не изменяя оригинальные файлы игры.
-    </p>
-    <!-- Кнопка для скачивания CLEO 5 Silent ASI Loader -->
-    <a href="https://github.com/cleolibrary/CLEO5/releases/download/v5.0.0-alpha.68/SA.CLEO_v5.0.0-alpha.68+Silent_ASI_Loader.zip" class="btn">Скачать CLEO 5 Silent ASI Loader</a>
-    <br><br>
-    <p>
-        <strong>CLEO 5 Ultimate ASI Loader</strong>
-        <br>
-        CLEO 5 Ultimate ASI Loader представляет собой набор инструментов для работы с модификациями, включая расширенные функции для загрузки и управления ASI-модулями.
-    </p>
-    <!-- Кнопка для скачивания CLEO 5 Ultimate ASI Loader -->
-    <a href="https://github.com/cleolibrary/CLEO5/releases/download/v5.0.0-alpha.68/SA.CLEO_v5.0.0-alpha.68+Ultimate_ASI_Loader.zip" class="btn">Скачать CLEO 5 Ultimate ASI Loader</a>
-    <br><br>
-    <p>
-        <strong>CLEO 5</strong>
-        <br>
-        CLEO 5 — это последняя версия популярного инструмента для моддинга, который позволяет устанавливать и управлять скриптами и модификациями для GTA San Andreas.
-    </p>
-    <!-- Кнопка для скачивания CLEO 5 -->
-    <a href="https://github.com/cleolibrary/CLEO5/releases/download/v5.0.0-alpha.68/SA.CLEO_v5.0.0-alpha.68.zip" class="btn">Скачать CLEO 5</a>
-    <br><br>
-    <p>
-        <strong>CLEO+ v1.2.0</strong>
-        <br>
-        CLEO+ — это расширение для CLEO, добавляющее дополнительные возможности и улучшения для работы с модами и скриптами.
-    </p>
-    <!-- Кнопка для скачивания CLEO+ v1.2.0 -->
-    <a href="https://sharemods.com/3yrdrs7l9v6r/CLEOPlus.zip.html" class="btn">Скачать CLEO+ v1.2.0</a>
-    <br><br>
-    <p>
-        <strong>NewOpcodes.cleo v2.1</strong>
-        <br>
-        NewOpcodes.cleo добавляет новые команды и функции для CLEO, расширяя возможности скриптинга и моддинга для GTA San Andreas.
-    </p>
-    <!-- Кнопка для скачивания NewOpcodes.cleo v2.1 -->
-    <a href="https://sharemods.com/69lwlady6yav/NewOpcodes.7z.html" class="btn">Скачать NewOpcodes.cleo v2.1</a>
-</section>
-
-
 
 <!-- Раздел для скачивания GTA Classic NOCD 1.0 -->
 <section id="download-classic" class="section">
@@ -1425,30 +1374,6 @@ table {
     </p>
 </section>
 
-<!-- Раздел Ultimate ASI Loader для GTA San Andreas -->
-<section id="ultimate-asi-loader" class="section">
-    <h2>Ultimate ASI Loader</h2>
-    <p style="text-align: center;">
-        <img src="https://cdn2.steamgriddb.com/icon_thumb/37bdad8c38c1aa3dd703c1e8b84ef5fb.png" alt="Ultimate ASI Loader" class="mod-image">
-    </p>
-    <p>
-        <strong>Ultimate ASI Loader v7.7.0</strong> - это инструмент для загрузки и управления ASI плагинами в GTA San Andreas, улучшая функциональность и расширяя возможности игры.
-    </p>
-    <!-- Кнопка для скачивания Ultimate ASI Loader v7.7.0 -->
-    <p style="text-align: center;">
-        <a href="https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases/download/v7.7.0/Ultimate-ASI-Loader.zip" class="btn">Скачать Ultimate ASI Loader</a>
-    </p>
-    <br>
-    <p>
-        <strong>Ultimate ASI Loader x64 v7.7.0</strong> - это версия для 64-битных систем, обеспечивающая поддержку ASI плагинов в 64-битных сборках GTA San Andreas.
-    </p>
-    <!-- Кнопка для скачивания Ultimate ASI Loader x64 v7.7.0 -->
-    <p style="text-align: center;">
-        <a href="https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases/download/v7.7.0/Ultimate-ASI-Loader_x64.zip" class="btn">Скачать Ultimate ASI Loader x64</a>
-    </p>
-</section>
-
-
 <!-- Раздел CLEO (iOS) -->
 <section id="cleo-ios" class="section">
     <h2>CLEO (iOS)</h2>
@@ -1478,180 +1403,6 @@ table {
     <p style="text-align: center;">
         <a href="https://github.com/cleolibrary/CLEO-Redux/releases/download/1.2.2/cleo_redux_setup.exe" class="btn">Скачать CLEO Redux</a>
     </p>
-</section>
-
-
-<!-- Раздел fastman92 limit adjuster -->
-<section id="fastman92" class="section">
-    <h2>fastman92 Limit Adjuster 7.6</h2>
-    <p style="text-align: center;">
-        <img src="https://fastman92.com/images/FLA_brand_image.png" alt="fastman92 Limit Adjuster" class="mod-image">
-    </p>
-    <p>
-        <strong>fastman92 Limit Adjuster 7.6</strong> - это инструмент для повышения производительности и настройки лимитов в играх на базе GTA.
-    </p>
-    <!-- Кнопка для скачивания fastman92 Limit Adjuster -->
-    <p style="text-align: center;">
-        <a href="https://download2331.mediafire.com/6meynl8t1khg2GP7dHOR6kjamQX01ONK2z8or7w-nd6TOAcMTs7F4ZWgGlMO-7jE0ZvoNvBwsQYack8m6YEzeIhhDcHaE0Z-4C7QCA0JlS0_7zngw8ILYKIm6bp6-vIy6uCskg4n35o1CeZVN1VJjxwObgKGgtLLYhG1FW3UWZkY/6kwmu30lvnjk6gu/fastman92_limit_adjuster_7_6.rar" class="btn">Скачать fastman92 Limit Adjuster</a>
-    </p>
-</section>
-
-
-
-<!-- Раздел Open Limit Adjuster -->
-<section id="fastman92" class="section">
-    <h2>Open Limit Adjuster 1.5.8</h2>
-    <p style="text-align: center;">
-        <img src="https://opengraph.githubassets.com/25aa9de70b0288180c3fa1fc7e150720f4f727727853ef1f06a0effd57fbb0c8/GTAmodding/III.VC.SA.LimitAdjuster" alt="Open Limit Adjuster 1.5.8" class="mod-image">
-    </p>
-    <p>
-        <strong>Open Limit Adjuster 1.5.8</strong> - эта версия модификации увеличивает лимиты объектов и улучшает производительность игры.
-    </p>
-    <!-- Кнопка для скачивания Open Limit Adjuster 1.5.8 -->
-    <p style="text-align: center;">
-        <a href="https://github.com/GTAmodding/III.VC.SA.LimitAdjuster/releases/download/v1.5.8/III.VC.SA.LimitAdjuster.zip" class="btn">Скачать Open Limit Adjuster 1.5.8</a>
-    </p>
-
-    <h2>Open Limit Adjuster 1.5.9</h2>
-    <p style="text-align: center;">
-    </p>
-    <p>
-        <strong>Open Limit Adjuster 1.5.9</strong> - новая версия с дополнительными улучшениями и исправлениями.
-    </p>
-    <!-- Кнопка для скачивания Open Limit Adjuster 1.5.9 -->
-    <p style="text-align: center;">
-        <a href="https://sharemods.com/13vlga0ctav7/Open_Limit_Adjuster.zip.html" class="btn">Скачать Open Limit Adjuster 1.5.9</a>
-    </p>
-
-    <h2>Open Limit Adjuster для Windows XP</h2>
-    <p style="text-align: center;">
-    </p>
-    <p>
-        <strong>Open Limit Adjuster для Windows XP</strong> - версия, оптимизированная для работы на Windows XP.
-    </p>
-    <!-- Кнопка для скачивания Open Limit Adjuster для Windows XP -->
-    <p style="text-align: center;">
-        <a href="https://sharemods.com/rl25v7qrylbv/Open_Limit_Adjuster_Windows_XP.7z.html" class="btn">Скачать Open Limit Adjuster для Windows XP</a>
-    </p>
-</section>
-
-<!-- Раздел MixSets v4.3.7 -->
-<section id="fastman92" class="section">
-    <h2>MixSets v4.3.7</h2>
-    <p style="text-align: center;">
-        <img src="https://www.mixmods.com.br/wp-content/uploads/2021/08/gta-sa-mod-mixsets-3470629.png" alt="MixSets v4.3.7" class="mod-image">
-    </p>
-    <p>
-        <strong>MixSets v4.3.7</strong> - эта версия модификации улучшает производительность и стабильность игры. 
-    </p>
-    <!-- Кнопка для скачивания MixSets v4.3.7 -->
-    <p style="text-align: center;">
-        <a href="https://sharemods.com/36to5h35fo36/SA_-_MixSets_-_password_mixmods.com.br.zip.html" class="btn">Скачать MixSets v4.3.7</a>
-    </p>
-
-    <!-- Раздел MixSets v4.3.8 -->
-    <h2>MixSets v4.3.8</h2>
-    <p style="text-align: center;">
-    </p>
-    <p>
-        <strong>MixSets v4.3.8</strong> - обновлённая версия с новыми функциями и улучшениями.
-    </p>
-    <!-- Кнопка для скачивания MixSets v4.3.8 -->
-    <p style="text-align: center;">
-        <a href="https://github.com/m0b-x/SA-MixSets" class="btn">Скачать MixSets v4.3.8</a>
-    </p>
-</section>
-
-
-<!-- Раздел Mod Loader -->
-<section id="mod-loader" class="section">
-    <h2>Mod Loader 0.3.7</h2>
-    <p style="text-align: center;">
-        <img src="https://www.pngkit.com/png/detail/340-3408011_logotipo-modloader-grand-theft_auto-san-andreas.png" alt="Mod Loader 0.3.7" class="mod-image">
-    </p>
-    <p>
-        <strong>Mod Loader 0.3.7</strong> - модификация, позволяющая легко загружать и управлять модами для GTA San Andreas.
-    </p>
-    <!-- Кнопка для скачивания Mod Loader 0.3.7 -->
-    <p style="text-align: center;">
-        <a href="https://github.com/thelink2012/modloader/releases/download/v0.3.7/modloader.zip" class="btn">Скачать Mod Loader 0.3.7</a>
-    </p>
-</section>
-
-
-<!-- Раздел Widescreen Fix -->
-<section id="widescreen-fix" class="section">
-    <h2>Widescreen Fix</h2>
-    <p style="text-align: center;">
-        <img src="https://camo.githubusercontent.com/886afefcef193b264bbde9a6c39c2e5004191465067757d46cdfa6bb6eadd185/687474703a2f2f746869727465656e61672e6769746875622e696f2f73637265656e732f67746173612f6d61696e322e6a7067" alt="Widescreen Fix" class="mod-image">
-    </p>
-    <p>
-        <strong>Widescreen Fix</strong> - мод для улучшения поддержки широкоформатных экранов в игре GTA San Andreas.
-    </p>
-    <!-- Кнопка для скачивания Widescreen Fix -->
-    <p style="text-align: center;">
-        <a href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/gtasa/GTASA.WidescreenFix.zip" class="btn">Скачать Widescreen Fix</a>
-    </p>
-
-    <h2>Widescreen Fix by ThirteenAG</h2>
-    <p style="text-align: center;">
-    </p>
-    <p>
-        <strong>Widescreen Fix by ThirteenAG</strong> - специализированная версия Widescreen Fix от ThirteenAG с дополнительными настройками.
-    </p>
-    <!-- Кнопка для скачивания Widescreen Fix by ThirteenAG -->
-    <p style="text-align: center;">
-        <a href="https://sharemods.com/ati4o4vcxk6c/SA_-_Widescreen_Fix.7z.html" class="btn">Скачать Widescreen Fix by ThirteenAG</a>
-    </p>
-
-    <h2>Widescreen Frontend</h2>
-    <p style="text-align: center;">
-    </p>
-    <p>
-        <strong>Widescreen Frontend</strong> - мод, который добавляет дополнительные настройки и поддержку для широкоформатных экранов.
-    </p>
-    <!-- Кнопка для скачивания Widescreen Frontend -->
-    <p style="text-align: center;">
-        <a href="https://github.com/ThirteenAG/WidescreenFixesPack/releases/download/gtasa/GTASA.WidescreenFrontend.zip" class="btn">Скачать Widescreen Frontend</a>
-    </p>
-</section>
-
-<!-- Раздел Loadscreens и HD Movies -->
-<section id="screens-movies" class="section">
-    <h2>Loadscreens и HD Movies</h2>
-
-    <div class="mod-item">
-        <h3>Loadscreens 4K Definitive v1.1</h3>
-        <p>
-            <strong>Loadscreens 4K Definitive v1.1</strong> - мод, который заменяет стандартные загрузочные экраны на изображения в разрешении 4K для улучшенного визуального восприятия.
-        </p>
-        <!-- Кнопка для скачивания Loadscreens 4K Definitive -->
-        <p style="text-align: center;">
-            <a href="https://sharemods.com/5gz3lgwdq8y9/Loadscreens_4K_Definitive.7z.html" class="btn">Скачать Loadscreens 4K Definitive</a>
-        </p>
-    </div>
-
-    <div class="mod-item">
-        <h3>GTA SA HD Movies Folder Original Version</h3>
-        <p>
-            <strong>Оригинальная версия мода, улучшающая качество видео в игре GTA San Andreas.
-        </p>
-        <!-- Кнопка для скачивания GTA SA HD Movies Folder Original Version -->
-        <p style="text-align: center;">
-            <a href="https://sharemods.com/6ysfajjxysar/GTA_SA_HD_Movies_Folder.7z.html" class="btn">Скачать GTA SA HD Movies Folder Original Version</a>
-        </p>
-    </div>
-
-    <div class="mod-item">
-        <h3>GTA SA HD Movies Folder Young Maylay version (vocals)</h3>
-        <p>
-            <strong>Версия мода, включающая вокальные треки Young Maylay для улучшенного звучания в HD-качестве.
-        </p>
-        <!-- Кнопка для скачивания GTA SA HD Movies Folder Young Maylay version (vocals) -->
-        <p style="text-align: center;">
-            <a href="https://sharemods.com/fxvv6ovrondk/GTA_SA_HD_Movies_Folder__-_Young_Maylay_version.7z.html" class="btn">Скачать GTA SA HD Movies Folder Young Maylay version (vocals)</a>
-        </p>
-    </div>
 </section>
 
 <!-- Раздел Звуки -->
@@ -1701,35 +1452,6 @@ table {
         <p><strong>SAAS Lite Update:</strong> - Финальный пакет с премиум качеством звуков, предлагающий лучшие эффекты и высочайшую реалистичность. Идеален для тех, кто хочет наилучшего звукового опыта.</p>
         <p style="text-align: center;">
             <a href="https://mega.nz/file/JIhBlDDD#v6dgLHqlHYLVgy4cCJRLKdbxIe-TB2gWkJ0MAzJOArY" class="btn">Скачать SAAS Lite Update</a>
-        </p>
-    </div>
-</section>
-
-
-<!-- Раздел Оружие -->
-<section id="weapons" class="section">
-    <h2>Оружие</h2>
-    
-    <div class="mod-item">
-        <p style="text-align: center;">
-            <img src="https://www.mixmods.com.br/wp-content/uploads/2021/05/gta-sa-san-andreas-mod-hd-weapons-items-insanity-ezekiel-8971148.jpg" alt="NeXtGen Remaster Weapons" class="mod-image">
-        </p>
-        <p><strong>NeXtGen Remaster Weapons</strong> — это модификация для улучшения оружия в игре, которая предоставляет обновленную графику и улучшенные текстуры для всех видов оружия. Мод направлен на повышение визуального качества оружия, делая его более детализированным и современным.</p>
-        <p>Мод <strong>NeXtGen Remaster Weapons</strong> включает в себя следующие улучшения:</p>
-        <ul>
-            <li>Обновленные текстуры с высоким разрешением для более реалистичного вида оружия.</li>
-            <li>Улучшенные модели оружия с детализированными частями и эффектами.</li>
-            <li>Переработанные визуальные эффекты при стрельбе, включая улучшенные огонь и дым.</li>
-            <li>Совместимость с различными графическими модами и текстурными пакетами.</li>
-        </ul>
-        <p>Этот мод идеально подходит для игроков, стремящихся обновить внешний вид оружия в своей игре и насладиться более современным и реалистичным игровым опытом.</p>
-        
-        <p><strong>Дополнение:</strong> Я создал файл <code>weapon.dat</code> для этого мода, в котором установлены правильные координаты, чтобы вспышка огня (muzzle flash) появлялась точно на конце ствола каждого оружия, включая огнемет, баллон с краской и огнетушитель. Это улучшает визуальную точность и реализм оружия в игре.</p>
-        <p style="text-align: center;">
-            <a href="https://drive.google.com/file/d/1fAxvXqia40TEKuFvyDw-KGaQZEIBf3Wo/view" class="btn">Скачать NeXtGen Remaster Weapons</a>
-        </p>
-        <p style="text-align: center;">
-            <a href="https://download938.mediafire.com/x7njj0c0ztugVVMrOKt_msSh2yt41koJJMJxFF6e0H_Pwq0Q-4hsxQDqIpd48PuI2l9ABcaL6m5OisgrtaTCPcZO21-zzh5EzB-hq-WJsIG705GqUF83zjWIAypq5FxamWhDgs4Ncch_aqah2mYMd_a8aPlbQcaMlJJSjUe1l-J1/lr06hfrlnu8z7p4/weapon.dat" class="btn">Скачать weapon.dat для точной установки вспышек</a>
         </p>
     </div>
 </section>
@@ -1819,10 +1541,6 @@ table {
         <a href="https://drive.google.com/file/d/11fbal_nqnpDf6wusamD3sEqhKhLE5bhy/view" class="btn">Скачать NextGen and Combat FX Plus</a>
     </p>
 </div>
-
-
-
-
 			
 <!-- Раздел с модами для GTA San Andreas -->
 <section id="mods" class="section">
