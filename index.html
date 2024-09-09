@@ -41,15 +41,16 @@
     <style>
 /* Основные стили для body */
 body {
-    font-family: 'Roboto', sans-serif; /* Шрифт для всего текста */
-    margin: 0; /* Убираем отступы по умолчанию */
-    padding: 0; /* Убираем внутренние отступы */
-    background: url('https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/4bddd183ad5bce1fa0efdc5cbd958743.jpg') no-repeat center center fixed; /* Фоновое изображение, которое не повторяется, центрируется и фиксировано */
-    background-size: cover; /* Масштабируем фоновое изображение по размеру экрана */
-    color: #333; /* Цвет текста (темно-серый) */
-    overflow-x: hidden; /* Убираем горизонтальную прокрутку */
-    padding-top: 200px; /* Отступ сверху для избежания перекрытия фиксированного header */
+    font-family: 'Roboto', sans-serif; /* Шрифт для всего текста на странице */
+    margin: 0; /* Убираем стандартные внешние отступы у body */
+    padding: 0; /* Убираем стандартные внутренние отступы у body */
+    background: url('https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/4bddd183ad5bce1fa0efdc5cbd958743.jpg') no-repeat center center fixed; /* Устанавливаем фоновое изображение, которое не повторяется, центрируется и фиксировано относительно окна просмотра */
+    background-size: cover; /* Изображение фона масштабируется, чтобы покрыть весь экран, сохраняя пропорции */
+    color: #333; /* Основной цвет текста (темно-серый), для улучшения читаемости */
+    overflow-x: hidden; /* Отключаем горизонтальную прокрутку для предотвращения появления горизонтальной полосы прокрутки */
+    padding-top: 200px; /* Добавляем отступ сверху для предотвращения перекрытия содержимого фиксированным верхним элементом (header) */
 }
+
 
 /* Основной контейнер альбома */
 .album {
@@ -214,6 +215,18 @@ header {
     }
 }
 
+/* Анимация для мигания текста */
+@keyframes blink {
+    0%, 100% {
+        color: #ffd700; /* Золотой цвет текста в начале и конце анимации */
+        text-shadow: 0 0 20px #ffd700, 0 0 30px #ffd700; /* Яркая тень текста, создающая эффект свечения */
+    }
+    50% {
+        color: #fff; /* Белый цвет текста в середине анимации */
+        text-shadow: none; /* Без тени в середине анимации, чтобы создать эффект мигания */
+    }
+}
+
 /* Анимация для свечения текста */
 @keyframes textGlow {
     0% { 
@@ -226,6 +239,47 @@ header {
         text-shadow: 0 0 20px #ffd700, 0 0 30px #ffd700; /* Возвращаемся к исходной тени текста в конце анимации */
     }
 }
+
+/* Стиль контейнера с золотым неоном */
+.neon-container {
+    position: relative;
+    display: inline-block;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #222; /* Темный фон для контраста */
+    box-shadow: 
+        0 0 20px rgba(255, 215, 0, 0.6), 
+        0 0 40px rgba(255, 215, 0, 0.5), 
+        0 0 60px rgba(255, 215, 0, 0.4), 
+        0 0 80px rgba(255, 215, 0, 0.3); /* Многоуровневый неоновый эффект */
+}
+
+/* Применение анимаций к тексту внутри контейнера */
+.blinking-glowing-text {
+    animation: 
+        blink 2s step-start infinite, /* Анимация мигания */
+        glow 3s cubic-bezier(0.42, 0, 0.58, 1) infinite, /* Анимация свечения */
+        pulse 3s ease-in-out infinite; /* Анимация пульсации */
+    font-size: 2.5em; /* Увеличение размера шрифта для более заметного эффекта */
+    text-transform: uppercase; /* Заглавные буквы для усиления визуального эффекта */
+    letter-spacing: 0.1em; /* Увеличенное расстояние между буквами для лучшего восприятия */
+    color: #ffd700; /* Основной цвет текста */
+    transition: color 0.5s, text-shadow 0.5s, transform 0.5s, font-weight 0.5s; /* Плавные переходы для изменения цвета, тени, масштаба и толщины шрифта */
+}
+
+
+/* Применение анимаций к элементу */
+.blinking-glowing-text {
+    animation: 
+        blink 2s step-start infinite, /* Анимация мигания */
+        glow 3s cubic-bezier(0.42, 0, 0.58, 1) infinite, /* Анимация свечения */
+        pulse 3s ease-in-out infinite; /* Анимация пульсации */
+    font-size: 2.5em; /* Увеличение размера шрифта для более заметного эффекта */
+    text-transform: uppercase; /* Заглавные буквы для усиления визуального эффекта */
+    letter-spacing: 0.1em; /* Увеличенное расстояние между буквами для лучшего восприятия */
+    transition: color 0.5s, text-shadow 0.5s, transform 0.5s, font-weight 0.5s; /* Плавные переходы для изменения цвета, тени, масштаба и толщины шрифта */
+}
+
 
 /* Стили для заголовка в header */
 header h1 {
@@ -627,41 +681,95 @@ body {
     margin-bottom: 10px; /* Отступ снизу для элементов спис
 
 
-/* Стили для таблиц системных требований */
+/* Стили для секций с таблицами */
 .section {
     margin: 20px;
+    padding: 20px;
+    background-color: #f9f9f9; /* Легкий фон для секций */
+    border-radius: 16px; /* Закругленные углы для секций */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Тень для глубины */
 }
 
+/* Основные стили для таблицы */
 table {
     width: 100%;
-    border-collapse: collapse;
-    margin-bottom: 20px;
+    border-collapse: separate;
+    border-spacing: 0; /* Убирает пространство между ячейками */
+    margin-bottom: 30px;
+    border-radius: 16px; /* Закругление углов таблицы */
+    overflow: hidden; /* Применяется закругление к таблице */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* Тень для глубины */
+    background: linear-gradient(135deg, #ffffff, #f1f1f1); /* Градиентный фон таблицы */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+/* Стили для заголовка таблицы */
 caption {
-    font-size: 1.2em;
-    margin-bottom: 10px;
+    font-size: 1.8em;
+    margin: 20px 0;
     text-align: left;
+    font-weight: bold;
+    color: #333;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.15);
 }
 
+/* Стили для заголовков и ячеек таблицы */
 th, td {
-    border: 1px solid #ddd;
-    padding: 8px;
+    border: 1px solid #e0e0e0;
+    padding: 20px;
     text-align: left;
+    background-color: #fff;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    font-size: 1em;
+    border-radius: 8px; /* Скругление углов для современного вида */
 }
 
+/* Стили для заголовков таблицы */
 thead {
     background-color: #f4f4f4;
+    border-bottom: 3px solid #e0e0e0;
 }
 
+/* Стили для заголовков таблицы */
 th {
+    font-weight: bold;
+    color: #444;
+    font-size: 1.1em;
+    box-shadow: inset 0 -2px 0 rgba(0, 0, 0, 0.1);
+    text-transform: uppercase;
+}
+
+/* Стили для строк таблицы */
+tr:nth-child(even) {
+    background-color: #fafafa;
+}
+
+tr:nth-child(odd) {
+    background-color: #fff;
+}
+
+tr:hover {
+    background-color: #f0f0f0;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Стиль для первой колонки */
+td:first-child, th:first-child {
+    border-left: 4px solid #007bff; /* Добавление цвета акцента */
     font-weight: bold;
 }
 
-td {
-    font-size: 0.9em;
+/* Убираем внутренние отступы в заголовке */
+thead th {
+    padding: 25px;
 }
 
+/* Дополнительные стили для таблицы */
+table {
+    border-radius: 16px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    overflow: hidden;
+}
 </style>
 </head>
 <body>
@@ -671,20 +779,22 @@ td {
         <h1>Grand Theft Auto: San Andreas</h1>
         <!-- Навигационное меню -->
         <nav>
-            <ul>
-                <!-- Ссылка на главную страницу -->
-                <li><a href="index.html">Главная</a></li>
-                <!-- Ссылка на раздел "Обзор" -->
-                <li><a href="#overview">Обзор</a></li>
-                <!-- Ссылка на раздел "Скачать" -->
-                <li><a href="#download">Скачать</a></li>
-                <!-- Ссылка на раздел "Моды" -->
-                <li><a href="#mods">Моды</a></li>
-                <!-- Ссылка на раздел "Текстуры" -->
-                <li><a href="#textures">Текстуры</a></li>
-                <!-- Ссылка на раздел "Системные требования" -->
-                <li><a href="#system-requirements">Системные требования</a></li>
-            </ul>
+            <nav>
+    <ul class="navigation-menu">
+        <!-- Ссылка на главную страницу -->
+        <li><a href="index.html">Главная</a></li>
+        <!-- Ссылка на раздел "Обзор" -->
+        <li><a href="#overview">Обзор</a></li>
+        <!-- Ссылка на раздел "Скачать" -->
+        <li><a href="#download">Скачать</a></li>
+        <!-- Ссылка на раздел "Моды" -->
+        <li><a href="#mods">Моды</a></li>
+        <!-- Ссылка на раздел "Текстуры" -->
+        <li><a href="#textures">Текстуры</a></li>
+        <!-- Ссылка на раздел "Системные требования" -->
+        <li><a href="#system-requirements">Системные требования</a></li>
+    </ul>
+</nav>
         <!-- Контейнер для социальных иконок -->
 <div class="social-icons">
     <!-- Ссылка на страницу ВКонтакте -->
@@ -845,6 +955,22 @@ td {
 <a href="https://sharemods.com/xka2n54ytolh/III_SkyGfx.7z.html" class="btn">Скачать SkyGfx 3.0b</a>
 <br>
 
+<!-- Раздел MixSets -->
+<section id="fastman92" class="section">
+    <h2>MixSets</h2>
+    <p style="text-align: center;">
+        <img src="https://www.mixmods.com.br/wp-content/uploads/2021/08/gta-iii-3-mod-mixsets-tweak-fix-mixmods-7915943.png" alt="MixSets" class="mod-image">
+    </p>
+    <p>
+        <strong>MixSets</strong> - это модификация для улучшения производительности и стабильности игры GTA III.
+    </p>
+    <!-- Кнопка для скачивания MixSets -->
+    <p style="text-align: center;">
+        <a href="https://sharemods.com/njiymgti70u1/III_-_MixSets.7z.html" class="btn">Скачать MixSets</a>
+    </p>
+</section>
+
+
 <!-- Раздел с обзором игры -->
 <section id="overview" class="section">
     <h2>Обзор</h2>
@@ -975,7 +1101,22 @@ td {
     </p>
     <!-- Кнопка для скачивания SkyGfx 3.0b -->
     <a href="https://sharemods.com/mgtc7w565xr0/VC_SkyGfx.7z.html" class="btn">Скачать SkyGfx 3.0b</a>
+	
+	<!-- Раздел MixSets v1.0.3 -->
+<section id="fastman92" class="section">
+    <h2>MixSets v1.0.3</h2>
+    <p style="text-align: center;">
+        <img src="https://www.mixmods.com.br/wp-content/uploads/2021/04/mix2Bsets2Brelease2Bvc-7205262.png" alt="MixSets v1.0.3" class="mod-image">
+    </p>
+    <p>
+        <strong>MixSets v1.0.3</strong> - это последняя версия модификации, которая улучшает производительность и стабильность игры.
+    </p>
+    <!-- Кнопка для скачивания MixSets v1.0.3 -->
+    <p style="text-align: center;">
+        <a href="https://sharemods.com/0y0izlymerg8/SA_-_Essentials_Pack.zip.html" class="btn">Скачать MixSets v1.0.3</a>
+    </p>
 </section>
+
 
 <!-- Раздел с обзором игры -->
 <section id="overview" class="section">
@@ -1177,6 +1318,75 @@ td {
     <!-- Кнопка для скачивания fastman92 limit adjuster -->
     <a href="https://download2331.mediafire.com/6meynl8t1khg2GP7dHOR6kjamQX01ONK2z8or7w-nd6TOAcMTs7F4ZWgGlMO-7jE0ZvoNvBwsQYack8m6YEzeIhhDcHaE0Z-4C7QCA0JlS0_7zngw8ILYKIm6bp6-vIy6uCskg4n35o1CeZVN1VJjxwObgKGgtLLYhG1FW3UWZkY/6kwmu30lvnjk6gu/fastman92_limit_adjuster_7_6.rar" class="btn">Скачать fastman92 limit adjuster</a>
 </section>
+
+
+<!-- Раздел Open Limit Adjuster -->
+<section id="fastman92" class="section">
+    <h2>Open Limit Adjuster 1.5.8</h2>
+    <p style="text-align: center;">
+        <img src="https://opengraph.githubassets.com/25aa9de70b0288180c3fa1fc7e150720f4f727727853ef1f06a0effd57fbb0c8/GTAmodding/III.VC.SA.LimitAdjuster" alt="Open Limit Adjuster 1.5.8" class="mod-image">
+    </p>
+    <p>
+        <strong>Open Limit Adjuster 1.5.8</strong> - эта версия модификации увеличивает лимиты объектов и улучшает производительность игры.
+    </p>
+    <!-- Кнопка для скачивания Open Limit Adjuster 1.5.8 -->
+    <p style="text-align: center;">
+        <a href="https://github.com/GTAmodding/III.VC.SA.LimitAdjuster/releases/download/v1.5.8/III.VC.SA.LimitAdjuster.zip" class="btn">Скачать Open Limit Adjuster 1.5.8</a>
+    </p>
+
+    <h2>Open Limit Adjuster 1.5.9</h2>
+    <p style="text-align: center;">
+    </p>
+    <p>
+        <strong>Open Limit Adjuster 1.5.9</strong> - новая версия с дополнительными улучшениями и исправлениями.
+    </p>
+    <!-- Кнопка для скачивания Open Limit Adjuster 1.5.9 -->
+    <p style="text-align: center;">
+        <a href="https://sharemods.com/13vlga0ctav7/Open_Limit_Adjuster.zip.html" class="btn">Скачать Open Limit Adjuster 1.5.9</a>
+    </p>
+
+    <h2>Open Limit Adjuster для Windows XP</h2>
+    <p style="text-align: center;">
+    </p>
+    <p>
+        <strong>Open Limit Adjuster для Windows XP</strong> - версия, оптимизированная для работы на Windows XP.
+    </p>
+    <!-- Кнопка для скачивания Open Limit Adjuster для Windows XP -->
+    <p style="text-align: center;">
+        <a href="https://sharemods.com/rl25v7qrylbv/Open_Limit_Adjuster_Windows_XP.7z.html" class="btn">Скачать Open Limit Adjuster для Windows XP</a>
+    </p>
+</section>
+
+
+
+
+<!-- Раздел MixSets v4.3.7 -->
+<section id="fastman92" class="section">
+    <h2>MixSets v4.3.7</h2>
+    <p style="text-align: center;">
+        <img src="https://www.mixmods.com.br/wp-content/uploads/2021/08/gta-sa-mod-mixsets-3470629.png" alt="MixSets v4.3.7" class="mod-image">
+    </p>
+    <p>
+        <strong>MixSets v4.3.7</strong> - эта версия модификации улучшает производительность и стабильность игры. 
+    </p>
+    <!-- Кнопка для скачивания MixSets v4.3.7 -->
+    <p style="text-align: center;">
+        <a href="https://sharemods.com/36to5h35fo36/SA_-_MixSets_-_password_mixmods.com.br.zip.html" class="btn">Скачать MixSets v4.3.7</a>
+    </p>
+
+    <!-- Раздел MixSets v4.3.8 -->
+    <h2>MixSets v4.3.8</h2>
+    <p style="text-align: center;">
+    </p>
+    <p>
+        <strong>MixSets v4.3.8</strong> - обновлённая версия с новыми функциями и улучшениями.
+    </p>
+    <!-- Кнопка для скачивания MixSets v4.3.8 -->
+    <p style="text-align: center;">
+        <a href="https://github.com/m0b-x/SA-MixSets" class="btn">Скачать MixSets v4.3.8</a>
+    </p>
+</section>
+
 
 <!-- Раздел Mod Loader -->
 <section id="mod-loader" class="section">
