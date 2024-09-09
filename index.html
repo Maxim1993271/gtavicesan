@@ -771,6 +771,7 @@ table {
     overflow: hidden;
 }
 
+/* Стили для списка и кнопок */
 .download-list {
     list-style: none;
     padding: 0;
@@ -778,7 +779,7 @@ table {
 }
 
 .download-list li {
-    margin-bottom: 10px;
+    margin-bottom: 12px;
 }
 
 .download-button {
@@ -789,19 +790,33 @@ table {
     background-color: #007bff;
     text-align: center;
     text-decoration: none;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s, box-shadow 0.3s;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s, transform 0.3s;
 }
 
 .download-button:hover {
     background-color: #0056b3;
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+    transform: translateY(-2px);
 }
 
 .download-button:active {
     background-color: #004494;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+    transform: translateY(0);
+}
+
+/* Стили для дополнительных эффектов */
+.download-button::before {
+    content: '↓';
+    display: inline-block;
+    margin-right: 8px;
+    font-size: 18px;
+    vertical-align: middle;
+    transition: transform 0.3s;
+}
+
+.download-button:hover::before {
+    transform: translateY(-2px);
 }
 
 
@@ -963,6 +978,7 @@ table {
         <li><a href="https://sharemods.com/xyk4zxufe7hg/SA_VC_III_-_Windowed_Mode.zip.html" target="_blank" class="download-button">[III] Windowed Mode</a></li>
     </ul>
 </section>
+
 
 
 
