@@ -771,52 +771,36 @@ table {
     overflow: hidden;
 }
 
-/* Стили для списка и кнопок */
-.download-list {
-    list-style: none;
-    padding: 0;
-    margin: 0;
+
+/* Стили для кнопок */
+.btn {
+    display: inline-block; /* Блочное отображение для кнопки */
+    padding: 14px 28px; /* Внутренние отступы кнопки */
+    color: #fff; /* Цвет текста кнопки */
+    background: linear-gradient(135deg, #ff0081, #ff8c00); /* Яркий градиентный фон кнопки */
+    text-decoration: none; /* Убираем подчеркивание текста */
+    border-radius: 50px; /* Скругляем углы кнопки для более мягкого вида */
+    font-size: 1.2em; /* Размер шрифта кнопки */
+    font-family: 'Roboto', sans-serif; /* Шрифт для кнопки */
+    font-weight: bold; /* Жирный шрифт */
+    text-transform: uppercase; /* Верхний регистр текста */
+    letter-spacing: 1px; /* Расстояние между буквами */
+    transition: all 0.3s ease; /* Анимация переходов для всех свойств */
+    margin: 12px; /* Отступы между кнопками */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Тень для создания эффекта глубины */
+    border: none; /* Убираем границу кнопки */
+    cursor: pointer; /* Курсор в виде руки при наведении на кнопку */
+    overflow: hidden; /* Прячем выходящие за границы элементы */
 }
 
-.download-list li {
-    margin-bottom: 12px;
+.btn:hover {
+    background: linear-gradient(135deg, #ff0066, #ff6600); /* Изменение градиента при наведении */
+    transform: scale(1.05); /* Немного увеличиваем кнопку при наведении */
 }
 
-.download-button {
-    display: inline-block;
-    padding: 12px 24px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #007bff;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 12px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-    transition: background-color 0.3s, transform 0.3s;
-}
-
-.download-button:hover {
-    background-color: #0056b3;
-    transform: translateY(-2px);
-}
-
-.download-button:active {
-    background-color: #004494;
-    transform: translateY(0);
-}
-
-/* Стили для дополнительных эффектов */
-.download-button::before {
-    content: '↓';
-    display: inline-block;
-    margin-right: 8px;
-    font-size: 18px;
-    vertical-align: middle;
-    transition: transform 0.3s;
-}
-
-.download-button:hover::before {
-    transform: translateY(-2px);
+.btn:active {
+    background: linear-gradient(135deg, #e6005c, #e65c00); /* Темнее градиент при нажатии */
+    transform: scale(1); /* Возвращаем кнопку к исходному размеру при нажатии */
 }
 
 
