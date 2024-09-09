@@ -771,22 +771,39 @@ table {
     overflow: hidden;
 }
 
+.download-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.download-list li {
+    margin-bottom: 10px;
+}
+
 .download-button {
     display: inline-block;
-    padding: 10px 20px;
-    margin: 5px 0;
+    padding: 12px 24px;
     font-size: 16px;
     color: #fff;
     background-color: #007bff;
     text-align: center;
     text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, box-shadow 0.3s;
 }
 
 .download-button:hover {
     background-color: #0056b3;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
+
+.download-button:active {
+    background-color: #004494;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+}
+
 
 </style>
 </head>
@@ -926,7 +943,7 @@ table {
     <p>
         <strong>[III] Essentials Pack</strong> включает в себя следующие моды:
     </p>
-    <ul>
+    <ul class="download-list">
         <li><a href="https://github.com/ThirteenAG/Ultimate-ASI-Loader/releases/download/v7.7.0/Ultimate-ASI-Loader.zip" target="_blank" class="download-button">Ultimate ASI Loader</a></li>
         <li><a href="https://github.com/cleolibrary/III.VC.CLEO/releases/download/2.0.0.6/III.CLEOv2.0.0.6.zip" target="_blank" class="download-button">CLEO</a></li>
         <li><a href="https://github.com/thelink2012/modloader/releases/download/v0.3.7/modloader.zip" target="_blank" class="download-button">ModLoader</a></li>
@@ -946,6 +963,7 @@ table {
         <li><a href="https://sharemods.com/xyk4zxufe7hg/SA_VC_III_-_Windowed_Mode.zip.html" target="_blank" class="download-button">[III] Windowed Mode</a></li>
     </ul>
 </section>
+
 
 
     <!-- Кнопка для скачивания CLEO v2.0.0.6 -->
