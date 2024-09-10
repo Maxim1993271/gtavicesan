@@ -901,105 +901,6 @@ body {
     }
 }
 
-/* Основные стили */
-body {
-    margin: 0;
-    font-family: Arial, sans-serif;
-}
-
-header {
-    background: #333;
-    color: #fff;
-    padding: 10px;
-    position: relative;
-}
-
-h1 {
-    margin: 0;
-    font-size: 1.5em;
-    text-align: center;
-}
-
-/* Гамбургер-иконка */
-.menu-toggle {
-    display: none;
-    font-size: 1.5em;
-    cursor: pointer;
-    background: #333;
-    color: #fff;
-    padding: 10px;
-    border: none;
-    position: absolute;
-    top: 10px;
-    right: 10px; /* Положение иконки справа */
-}
-
-/* Стили для навигации */
-nav {
-    background: #333;
-    color: #fff;
-}
-
-.navigation-menu {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column; /* Вертикальное расположение элементов меню */
-    align-items: center; /* Центрирование по горизонтали */
-}
-
-.navigation-menu li {
-    margin: 0;
-}
-
-.navigation-menu li a {
-    display: block;
-    padding: 15px;
-    color: #fff;
-    text-decoration: none;
-    text-align: center;
-}
-
-.navigation-menu li a:hover {
-    background: #555;
-}
-
-/* Медиа-запросы для мобильных устройств */
-@media only screen and (max-width: 768px) {
-    .menu-toggle {
-        display: block; /* Показываем иконку гамбургера */
-    }
-
-    nav {
-        display: none; /* Скрываем меню по умолчанию */
-        position: fixed;
-        top: 0; /* Позиция меню от верхнего края */
-        left: 0;
-        width: 100%;
-        height: 100%; /* Высота меню на весь экран */
-        background: #333;
-        z-index: 1000; /* Положение поверх других элементов */
-    }
-
-    nav.active {
-        display: block; /* Показываем меню, когда оно активно */
-    }
-
-    .navigation-menu {
-        margin-top: 50px; /* Отступ от заголовка */
-    }
-
-    .navigation-menu li {
-        border-bottom: 1px solid #555;
-        width: 100%; /* Ширина каждого пункта меню на всю ширину экрана */
-    }
-
-    .navigation-menu li a {
-        padding: 15px;
-        text-align: center;
-    }
-}
 
 </style>
 </head>
@@ -1008,35 +909,31 @@ nav {
     <header>
         <!-- Основной заголовок сайта -->
         <h1>Grand Theft Auto: San Andreas</h1>
-        <!-- Гамбургер-иконка для мобильного меню -->
-        <div class="menu-toggle" id="menu-toggle">
-            &#9776; <!-- Гамбургер-иконка -->
-        </div>
         <!-- Навигационное меню -->
-        <nav id="nav">
-            <ul class="navigation-menu">
-                <!-- Ссылка на главную страницу -->
-                <li><a href="index.html">Главная</a></li>
-                <!-- Ссылка на раздел "Обзор" -->
-                <li><a href="#overview">Обзор</a></li>
-                <!-- Ссылка на раздел "Скачать" -->
-                <li><a href="#download">Скачать</a></li>
-                <!-- Ссылка на раздел "Моды" -->
-                <li><a href="#mods">Моды</a></li>
-                <!-- Ссылка на раздел "Текстуры" -->
-                <li><a href="#textures">Текстуры</a></li>
-                <!-- Ссылка на раздел "Системные требования" -->
-                <li><a href="#system-requirements">Системные требования</a></li>
-                <!-- Ссылка на GTA Radio SA -->
-                <li><a href="https://gtaradio.net/ru/sa/" target="_blank">GTA Radio SA</a></li>
-                <!-- Ссылка на GTA Radio VC -->
-                <li><a href="https://gtaradio.net/ru/vc/" target="_blank">GTA Radio VC</a></li>
-                <!-- Ссылка на GTA Radio 3 -->
-                <li><a href="https://gtaradio.net/ru/3/" target="_blank">GTA Radio 3</a></li>
-            </ul>
-        </nav>
-    </header>
-    <script src="script.js"></script>
+        <nav>
+<nav>
+   <ul class="navigation-menu">
+    <!-- Ссылка на главную страницу -->
+    <li><a href="index.html">Главная</a></li>
+    <!-- Ссылка на раздел "Обзор" -->
+    <li><a href="#overview">Обзор</a></li>
+    <!-- Ссылка на раздел "Скачать" -->
+    <li><a href="#download">Скачать</a></li>
+    <!-- Ссылка на раздел "Моды" -->
+    <li><a href="#mods">Моды</a></li>
+    <!-- Ссылка на раздел "Текстуры" -->
+    <li><a href="#textures">Текстуры</a></li>
+    <!-- Ссылка на раздел "Системные требования" -->
+    <li><a href="#system-requirements">Системные требования</a></li>
+    <!-- Ссылка на GTA Radio SA -->
+    <li><a href="https://gtaradio.net/ru/sa/" target="_blank">GTA Radio SA</a></li>
+    <!-- Ссылка на GTA Radio VC -->
+    <li><a href="https://gtaradio.net/ru/vc/" target="_blank">GTA Radio VC</a></li>
+    <!-- Ссылка на GTA Radio 3 -->
+    <li><a href="https://gtaradio.net/ru/3/" target="_blank">GTA Radio 3</a></li>
+</ul>
+</nav>
+</header>
 <div class="container">
 
     <!-- Раздел для скачивания Rockstar Launcher -->
