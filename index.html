@@ -808,65 +808,64 @@ table {
     transform: translateY(2px); /* Сдвигаем кнопку вниз при нажатии */
 }
 
-/* Медиа-запросы для адаптации под разные экраны */
-@media only screen and (max-width: 1024px) {
-    .features {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .feature {
-        margin-bottom: 20px;
-        max-width: 80%;
-    }
-}
-
+/* Основные настройки для мобильных устройств */
 @media only screen and (max-width: 768px) {
-    .nav-list {
-        display: none;
+    /* Настройки для контейнера */
+    .container {
+        display: flex;
         flex-direction: column;
-        background-color: #333;
-        position: absolute;
-        top: 60px;
-        right: 0;
+        justify-content: center;
+        align-items: center;
+        padding: 10px;
+        margin: 0 auto;
+        width: 100%;
+    }
+
+    /* Настройки для заголовка */
+    header {
         width: 100%;
         text-align: center;
+        padding: 10px 0;
+        background-color: #f8f8f8;
     }
 
-    .nav-list.active {
+    /* Настройки для навигационного меню */
+    nav {
         display: flex;
+        flex-direction: column;
+        align-items: center;
+        background-color: #333;
+        width: 100%;
     }
-
-    .nav-list li {
-        display: block;
-        margin: 10px 0;
+    nav ul {
+        list-style: none;
+        padding: 0;
     }
-
-    .hamburger {
-        display: block;
-    }
-
-    .logo, nav {
-        float: none;
-        text-align: center;
-    }
-}
-
-@media only screen and (max-width: 480px) {
-    .intro {
-        padding: 50px 0;
-    }
-
-    main h1 {
-        font-size: 1.5rem;
-    }
-
-    main p {
-        font-size: 1rem;
-    }
-
-    .feature {
+    nav ul li {
         padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+    nav ul li a {
+        text-decoration: none;
+        color: white;
+        display: block;
+        padding: 10px;
+    }
+
+    /* Настройки для центрального блока контента */
+    .content {
+        width: 100%;
+        padding: 15px;
+        text-align: justify;
+    }
+
+    /* Настройки для подвала */
+    footer {
+        width: 100%;
+        text-align: center;
+        padding: 10px 0;
+        background-color: #f8f8f8;
     }
 }
 </style>
