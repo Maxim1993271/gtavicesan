@@ -520,12 +520,10 @@ nav ul li a:hover {
 
 /* Стили для социальных иконок */
 .social-icons {
-    position: absolute; /* Меняем на absolute для более гибкого позиционирования */
-    top: 20px; /* Опускаем иконки ниже */
-    right: 20px; /* Оставляем иконки у правого края */
     display: flex;
+    justify-content: center; /* Центрирование иконок */
     gap: 8px;
-    z-index: 1000; /* Убедимся, что иконки не перекрывают другие элементы */
+    margin-top: 10px; /* Расстояние между заголовком и иконками */
 }
 
 /* Стандартные стили для иконок */
@@ -537,7 +535,7 @@ nav ul li a:hover {
     height: 30px;
     background: linear-gradient(145deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
     color: #ffd700;
-    border-radius: 100%;
+    border-radius: 50%;
     padding: 6px;
     transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
@@ -813,39 +811,167 @@ table {
     transform: translateY(2px); /* Сдвигаем кнопку вниз при нажатии */
 }
 
+/* Основные стили */
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 /* Медиа-запросы для мобильных устройств */
 @media only screen and (max-width: 768px) {
     body {
-        padding-top: 100px; /* Уменьшаем отступ для мобильных */
+        padding-top: 100px; /* Отступ для фиксированного заголовка */
     }
 
     .album {
-        grid-template-columns: 1fr; /* Меняем сетку на одну колонку */
-        gap: 10px; /* Уменьшаем расстояние между элементами */
+        display: grid;
+        grid-template-columns: 1fr; /* Одна колонка */
+        gap: 10px; /* Расстояние между элементами */
         padding: 10px;
     }
 
+    header {
+        background-color: #fff; /* Цвет фона для заголовка */
+        position: fixed; /* Фиксированный заголовок */
+        width: 100%;
+        top: 0;
+        left: 0;
+        z-index: 1000; /* Поверх других элементов */
+    }
+
     header h1 {
-        font-size: 2em; /* Уменьшаем размер заголовка */
+        font-size: 2em; /* Размер заголовка */
+        margin: 0;
+        padding: 15px; /* Отступы вокруг заголовка */
+        text-align: center;
+    }
+
+    nav ul {
+        display: flex;
+        flex-direction: column; /* Вертикальное расположение элементов */
+        padding: 0;
+        margin: 0;
+        list-style: none;
+    }
+
+    nav ul li {
+        margin: 0; /* Убираем маргин вокруг пунктов меню */
     }
 
     nav ul li a {
-        padding: 10px 15px; /* Уменьшаем кнопки навигации */
-        font-size: 1em;
+        display: block;
+        padding: 15px; /* Увеличиваем отступы для удобства нажатия */
+        font-size: 1.1em;
+        text-align: center;
+        color: #333; /* Цвет текста */
+        text-decoration: none;
+    }
+
+    nav ul li a:hover {
+        background-color: #f4f4f4; /* Цвет фона при наведении */
     }
 
     .container {
-        padding: 20px; /* Уменьшаем внутренние отступы */
+        padding: 20px; /* Внутренние отступы контейнера */
         max-width: 100%;
     }
 
     .section h2 {
-        font-size: 2em; /* Уменьшаем заголовки */
+        font-size: 2em; /* Размер заголовков секций */
+        margin-bottom: 10px; /* Отступ снизу */
     }
 
     .btn {
-        padding: 10px 20px;
+        padding: 12px 24px; /* Увеличиваем отступы кнопок */
         font-size: 1em;
+        display: inline-block;
+        text-align: center;
+        background-color: #007bff; /* Цвет фона кнопки */
+        color: #fff; /* Цвет текста кнопки */
+        border-radius: 5px; /* Скругление углов */
+        text-decoration: none;
+        border: none;
+    }
+
+    .btn:hover {
+        background-color: #0056b3; /* Цвет фона кнопки при наведении */
+    }
+}
+/* Основные стили */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    position: relative;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 1.5em;
+    cursor: pointer;
+}
+
+/* Стили для навигации */
+.nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+.nav ul li {
+    margin: 0;
+}
+
+.nav ul li a {
+    display: block;
+    padding: 15px;
+    color: #fff;
+    text-decoration: none;
+}
+
+.nav ul li a:hover {
+    background: #555;
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media only screen and (max-width: 768px) {
+    .menu-toggle {
+        display: block; /* Показываем иконку гамбургера */
+    }
+
+    .nav {
+        display: none; /* Скрываем меню по умолчанию */
+        position: absolute;
+        top: 50px; /* Позиция меню под заголовком */
+        left: 0;
+        width: 100%;
+        background: #333;
+    }
+
+    .nav.active {
+        display: block; /* Показываем меню, когда оно активно */
+    }
+
+    .nav ul {
+        display: block;
+    }
+
+    .nav ul li {
+        border-bottom: 1px solid #555;
+    }
+
+    .nav ul li a {
+        padding: 15px;
+        text-align: center;
     }
 }
 </style>
@@ -855,48 +981,35 @@ table {
     <header>
         <!-- Основной заголовок сайта -->
         <h1>Grand Theft Auto: San Andreas</h1>
+        <!-- Гамбургер-иконка для мобильного меню -->
+        <div class="menu-toggle" id="menu-toggle">
+            &#9776; <!-- Гамбургер-иконка -->
+        </div>
         <!-- Навигационное меню -->
-        <nav>
-<nav>
-   <ul class="navigation-menu">
-    <!-- Ссылка на главную страницу -->
-    <li><a href="index.html">Главная</a></li>
-    <!-- Ссылка на раздел "Обзор" -->
-    <li><a href="#overview">Обзор</a></li>
-    <!-- Ссылка на раздел "Скачать" -->
-    <li><a href="#download">Скачать</a></li>
-    <!-- Ссылка на раздел "Моды" -->
-    <li><a href="#mods">Моды</a></li>
-    <!-- Ссылка на раздел "Текстуры" -->
-    <li><a href="#textures">Текстуры</a></li>
-    <!-- Ссылка на раздел "Системные требования" -->
-    <li><a href="#system-requirements">Системные требования</a></li>
-    <!-- Ссылка на GTA Radio SA -->
-    <li><a href="https://gtaradio.net/ru/sa/" target="_blank">GTA Radio SA</a></li>
-    <!-- Ссылка на GTA Radio VC -->
-    <li><a href="https://gtaradio.net/ru/vc/" target="_blank">GTA Radio VC</a></li>
-    <!-- Ссылка на GTA Radio 3 -->
-    <li><a href="https://gtaradio.net/ru/3/" target="_blank">GTA Radio 3</a></li>
-</ul>
-</nav>
-        <!-- Контейнер для социальных иконок -->
-<div class="social-icons">
-    <!-- Ссылка на страницу ВКонтакте -->
-    <a href="https://vk.com/gtavicesan" target="_blank" class="fab fa-vk" title="ВКонтакте"></a>
-    <!-- Ссылка на страницу Facebook -->
-    <a href="https://www.facebook.com/profile.php?id=100052315240491" target="_blank" class="fab fa-facebook-f" title="Facebook"></a>
-    <!-- Ссылка на страницу Twitter -->
-    <a href="https://x.com/Maksim752571792" target="_blank" class="fab fa-twitter" title="Twitter"></a>
-    <!-- Ссылка на страницу Instagram -->
-    <a href="https://www.instagram.com/maxim1993271/" target="_blank" class="fab fa-instagram" title="Instagram"></a>
-    <!-- Ссылка на канал YouTube -->
-    <a href="https://www.youtube.com/@maximmelnikov1965" target="_blank" class="fab fa-youtube" title="YouTube"></a>
-    <!-- Ссылка на канал Telegram -->
-    <a href="https://t.me/+eURcrMc-eocyMzU6" target="_blank" class="fab fa-telegram" title="Telegram"></a>
-    <!-- Ссылка на профиль GitHub -->
-    <a href="https://github.com/Maxim1993271" target="_blank" class="fab fa-github" title="GitHub"></a>
-</div>
-</header>
+        <nav id="nav">
+            <ul class="navigation-menu">
+                <!-- Ссылка на главную страницу -->
+                <li><a href="index.html">Главная</a></li>
+                <!-- Ссылка на раздел "Обзор" -->
+                <li><a href="#overview">Обзор</a></li>
+                <!-- Ссылка на раздел "Скачать" -->
+                <li><a href="#download">Скачать</a></li>
+                <!-- Ссылка на раздел "Моды" -->
+                <li><a href="#mods">Моды</a></li>
+                <!-- Ссылка на раздел "Текстуры" -->
+                <li><a href="#textures">Текстуры</a></li>
+                <!-- Ссылка на раздел "Системные требования" -->
+                <li><a href="#system-requirements">Системные требования</a></li>
+                <!-- Ссылка на GTA Radio SA -->
+                <li><a href="https://gtaradio.net/ru/sa/" target="_blank">GTA Radio SA</a></li>
+                <!-- Ссылка на GTA Radio VC -->
+                <li><a href="https://gtaradio.net/ru/vc/" target="_blank">GTA Radio VC</a></li>
+                <!-- Ссылка на GTA Radio 3 -->
+                <li><a href="https://gtaradio.net/ru/3/" target="_blank">GTA Radio 3</a></li>
+            </ul>
+        </nav>
+    </header>
+    <script src="script.js"></script>
 <div class="container">
 
     <!-- Раздел для скачивания Rockstar Launcher -->
@@ -2156,6 +2269,23 @@ table {
         </table>
     </div>
 </section>
+       <!-- Контейнер для социальных иконок -->
+<div class="social-icons">
+    <!-- Ссылка на страницу ВКонтакте -->
+    <a href="https://vk.com/gtavicesan" target="_blank" class="fab fa-vk" title="ВКонтакте"></a>
+    <!-- Ссылка на страницу Facebook -->
+    <a href="https://www.facebook.com/profile.php?id=100052315240491" target="_blank" class="fab fa-facebook-f" title="Facebook"></a>
+    <!-- Ссылка на страницу Twitter -->
+    <a href="https://x.com/Maksim752571792" target="_blank" class="fab fa-twitter" title="Twitter"></a>
+    <!-- Ссылка на страницу Instagram -->
+    <a href="https://www.instagram.com/maxim1993271/" target="_blank" class="fab fa-instagram" title="Instagram"></a>
+    <!-- Ссылка на канал YouTube -->
+    <a href="https://www.youtube.com/@maximmelnikov1965" target="_blank" class="fab fa-youtube" title="YouTube"></a>
+    <!-- Ссылка на канал Telegram -->
+    <a href="https://t.me/+eURcrMc-eocyMzU6" target="_blank" class="fab fa-telegram" title="Telegram"></a>
+    <!-- Ссылка на профиль GitHub -->
+    <a href="https://github.com/Maxim1993271" target="_blank" class="fab fa-github" title="GitHub"></a>
+</div>
 
     </div>
 </body>
