@@ -900,6 +900,7 @@ body {
         background-color: #0056b3; /* Цвет фона кнопки при наведении */
     }
 }
+
 /* Основные стили */
 body {
     margin: 0;
@@ -913,32 +914,54 @@ header {
     position: relative;
 }
 
+h1 {
+    margin: 0;
+    font-size: 1.5em;
+    text-align: center;
+}
+
+/* Гамбургер-иконка */
 .menu-toggle {
     display: none;
     font-size: 1.5em;
     cursor: pointer;
+    background: #333;
+    color: #fff;
+    padding: 10px;
+    border: none;
+    position: absolute;
+    top: 10px;
+    right: 10px; /* Положение иконки справа */
 }
 
 /* Стили для навигации */
-.nav ul {
+nav {
+    background: #333;
+    color: #fff;
+}
+
+.navigation-menu {
     list-style: none;
     margin: 0;
     padding: 0;
     display: flex;
+    flex-direction: column; /* Вертикальное расположение элементов меню */
+    align-items: center; /* Центрирование по горизонтали */
 }
 
-.nav ul li {
+.navigation-menu li {
     margin: 0;
 }
 
-.nav ul li a {
+.navigation-menu li a {
     display: block;
     padding: 15px;
     color: #fff;
     text-decoration: none;
+    text-align: center;
 }
 
-.nav ul li a:hover {
+.navigation-menu li a:hover {
     background: #555;
 }
 
@@ -948,32 +971,36 @@ header {
         display: block; /* Показываем иконку гамбургера */
     }
 
-    .nav {
+    nav {
         display: none; /* Скрываем меню по умолчанию */
-        position: absolute;
-        top: 50px; /* Позиция меню под заголовком */
+        position: fixed;
+        top: 0; /* Позиция меню от верхнего края */
         left: 0;
         width: 100%;
+        height: 100%; /* Высота меню на весь экран */
         background: #333;
+        z-index: 1000; /* Положение поверх других элементов */
     }
 
-    .nav.active {
+    nav.active {
         display: block; /* Показываем меню, когда оно активно */
     }
 
-    .nav ul {
-        display: block;
+    .navigation-menu {
+        margin-top: 50px; /* Отступ от заголовка */
     }
 
-    .nav ul li {
+    .navigation-menu li {
         border-bottom: 1px solid #555;
+        width: 100%; /* Ширина каждого пункта меню на всю ширину экрана */
     }
 
-    .nav ul li a {
+    .navigation-menu li a {
         padding: 15px;
         text-align: center;
     }
 }
+
 </style>
 </head>
 <body>
