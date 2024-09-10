@@ -807,6 +807,68 @@ table {
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Уменьшаем тень при нажатии */
     transform: translateY(2px); /* Сдвигаем кнопку вниз при нажатии */
 }
+
+/* Медиа-запросы для адаптации под разные экраны */
+@media only screen and (max-width: 1024px) {
+    .features {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .feature {
+        margin-bottom: 20px;
+        max-width: 80%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .nav-list {
+        display: none;
+        flex-direction: column;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        width: 100%;
+        text-align: center;
+    }
+
+    .nav-list.active {
+        display: flex;
+    }
+
+    .nav-list li {
+        display: block;
+        margin: 10px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .logo, nav {
+        float: none;
+        text-align: center;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .intro {
+        padding: 50px 0;
+    }
+
+    main h1 {
+        font-size: 1.5rem;
+    }
+
+    main p {
+        font-size: 1rem;
+    }
+
+    .feature {
+        padding: 10px;
+    }
+}
 </style>
 </head>
 <body>
