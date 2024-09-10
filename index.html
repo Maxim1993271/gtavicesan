@@ -38,6 +38,8 @@
     <!-- Подключение библиотек JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" defer></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js" defer></script>
+
+    <!-- Вставка CSS медиа-запросов и адаптивных стилей -->
     <style>
 /* Основные стили для body */
 body {
@@ -518,34 +520,38 @@ nav ul li a:hover {
 
 /* Стили для социальных иконок */
 .social-icons {
-    position: fixed; /* Фиксированное положение */
-    bottom: 120px; /* Расстояние от нижнего края экрана */
-    right: 20px; /* Расстояние от правого края экрана */
-    display: flex; /* Используем flexbox для выравнивания иконок */
-    gap: 8px; /* Отступ между иконками */
+    position: absolute; /* Меняем на absolute для более гибкого позиционирования */
+    top: 20px; /* Опускаем иконки ниже */
+    right: 20px; /* Оставляем иконки у правого края */
+    display: flex;
+    gap: 8px;
+    z-index: 1000; /* Убедимся, что иконки не перекрывают другие элементы */
 }
 
+/* Стандартные стили для иконок */
 .social-icons a {
-    display: flex; /* Используем flexbox для выравнивания содержимого иконки */
-    align-items: center; /* Вертикальное выравнивание по центру */
-    justify-content: center; /* Горизонтальное выравнивание по центру */
-    width: 30px; /* Ширина контейнера иконки */
-    height: 30px; /* Высота контейнера иконки */
-    background: linear-gradient(145deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9)); /* Градиентный фон */
-    color: #ffd700; /* Цвет иконок */
-    border-radius: 100%; /* Круглая форма иконок */
-    padding: 6px; /* Внутренние отступы */
-    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease; /* Анимации переходов для фона, цвета и трансформации */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4); /* Тень для создания эффекта глубины */
-    font-size: 16px; /* Размер шрифта для иконок */
-    text-decoration: none; /* Убираем подчеркивание ссылок */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    background: linear-gradient(145deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.9));
+    color: #ffd700;
+    border-radius: 100%;
+    padding: 6px;
+    transition: background 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.4);
+    font-size: 16px;
+    text-decoration: none;
 }
 
+/* Эффект наведения для социальных иконок */
 .social-icons a:hover {
-    background: #ffd700; /* Цвет фона иконок при наведении */
-    color: #000; /* Цвет иконок при наведении */
-    transform: scale(1.05); /* Эффект увеличения иконок при наведении */
+    background: #ffd700;
+    color: #000;
+    transform: scale(1.05);
 }
+
 
 /* Основные стили для body */
 body {
@@ -805,6 +811,42 @@ table {
     background: linear-gradient(135deg, #ff0066, #ff6600); /* Более темный градиент при нажатии */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Уменьшаем тень при нажатии */
     transform: translateY(2px); /* Сдвигаем кнопку вниз при нажатии */
+}
+
+/* Медиа-запросы для мобильных устройств */
+@media only screen and (max-width: 768px) {
+    body {
+        padding-top: 100px; /* Уменьшаем отступ для мобильных */
+    }
+
+    .album {
+        grid-template-columns: 1fr; /* Меняем сетку на одну колонку */
+        gap: 10px; /* Уменьшаем расстояние между элементами */
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2em; /* Уменьшаем размер заголовка */
+    }
+
+    nav ul li a {
+        padding: 10px 15px; /* Уменьшаем кнопки навигации */
+        font-size: 1em;
+    }
+
+    .container {
+        padding: 20px; /* Уменьшаем внутренние отступы */
+        max-width: 100%;
+    }
+
+    .section h2 {
+        font-size: 2em; /* Уменьшаем заголовки */
+    }
+
+    .btn {
+        padding: 10px 20px;
+        font-size: 1em;
+    }
 }
 </style>
 </head>
