@@ -18,25 +18,32 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 
-window.addEventListener("resize", AutoScale); //Масштабируем страницу при растягивании окна
-
-AutoScale(); //Масштабируем страницу после загрузки
-
-function AutoScale()
-{
-    let width = window.innerWidth; //Ширина окна
-    //Если вы хотите проверять по размеру экрана, то вам нужно свойство window.screen.width
-
-    if(width > 1280)
-    {
-   	 ChangeScale("big");
+// Функция для настройки масштабирования в зависимости от устройства
+function scaleForMobile() {
+    var viewportMeta = document.querySelector('meta[name="viewport"]');
+    if (!viewportMeta) {
+        // Если мета-тег viewport отсутствует, создаем его
+        viewportMeta = document.createElement('meta');
+        viewportMeta.name = "viewport";
+        document.head.appendChild(viewportMeta);
     }
-    else if(width <= 1280 && width > 720)
-    {
-   	 ChangeScale("normal");
-    }
-    else if(width < 720)
-    {
-   	 ChangeScale("small");
+
+    // Определяем ширину экрана
+    var screenWidth = window.innerWidth;
+    
+    if (screenWidth < 768) {
+        // Для мобильных устройств
+        viewportMeta.content = "width=device-width, initial-scale=1, maximum-scale=1";
+    } else {
+        // Для планшетов и десктопов
+        viewportMeta.content = "width=device-width, initial-scale=1";
     }
 }
+
+// Выполняем функцию при загрузке страницы
+window.onload = scaleForMobile;
+
+// Обновляем масштаб при изменении размера окна
+window.onresize = scaleForMobile;
+
+
