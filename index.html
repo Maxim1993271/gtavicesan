@@ -58,7 +58,7 @@ body {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Колонки сетки, которые автоматически заполняются, минимальная ширина 250px, максимальная 1fr */
     gap: 20px; /* Расстояние между элементами сетки */
     width: 90%; /* Ширина контейнера 90% от ширины родительского элемента */
-    max-width: 1200px; /* Максимальная ширина контейнера 1200px */
+    max-width: 1000px; /* Максимальная ширина контейнера 1200px */
     padding: 20px; /* Внутренний отступ вокруг содержимого контейнера */
     background: rgba(255, 255, 255, 0.8); /* Полупрозрачный белый фон для контрастности */
     border-radius: 15px; /* Скругление углов контейнера */
@@ -189,7 +189,7 @@ body {
 /* Стили для header */
 header {
     background: rgba(0, 0, 0, 0.9); /* Полупрозрачный черный фон для заголовка */
-    padding: 20px 0; /* Вертикальные отступы сверху и снизу */
+    padding: 20px 30px; /* Вертикальные отступы сверху и снизу, горизонтальные отступы для улучшения внешнего вида */
     margin: 0; /* Убираем внешние отступы для заголовка */
     text-align: center; /* Выравнивание текста по центру внутри заголовка */
     color: #fff; /* Цвет текста белый */
@@ -201,7 +201,70 @@ header {
     z-index: 1000; /* Устанавливаем высокий уровень z-index, чтобы заголовок был поверх других элементов */
     backdrop-filter: blur(12px); /* Размытие фона под заголовком для создания эффекта прозрачности */
     box-sizing: border-box; /* Включаем отступы и границы в расчет ширины и высоты элемента */
+    font-family: 'Arial', sans-serif; /* Устанавливаем шрифт для заголовка */
+    font-size: 1.2em; /* Устанавливаем размер шрифта для улучшения читаемости */
+    line-height: 1.4; /* Межстрочный интервал для лучшего восприятия текста */
 }
+
+header h1 {
+    margin: 0; /* Убираем отступы у заголовка */
+    font-size: 2em; /* Размер заголовка h1 */
+}
+
+header nav {
+    margin-top: 10px; /* Отступ сверху для навигации */
+}
+
+header a {
+    color: #fff; /* Цвет ссылок белый */
+    text-decoration: none; /* Убираем подчеркивание у ссылок */
+    margin: 0 15px; /* Горизонтальные отступы для ссылок */
+    font-size: 1em; /* Размер шрифта для ссылок */
+}
+
+header a:hover {
+    text-decoration: underline; /* Подчеркивание ссылок при наведении */
+}
+
+
+/* Медиа-запросы для адаптации под мобильные устройства */
+@media (max-width: 1280px) and (max-height: 563px) {
+    header {
+        padding: 15px 20px; /* Уменьшаем паддинг для меньших экранов */
+        font-size: 1em; /* Уменьшаем размер шрифта */
+    }
+
+    header h1 {
+        font-size: 1.5em; /* Уменьшаем размер заголовка */
+    }
+
+    header a {
+        font-size: 0.9em; /* Уменьшаем размер шрифта ссылок */
+        margin: 0 10px; /* Уменьшаем горизонтальные отступы */
+    }
+}
+
+/* Оптимизация для очень маленьких экранов */
+@media (max-width: 767px) {
+    .container {
+        padding: 10px;
+    }
+
+    header {
+        padding: 10px;
+        font-size: 0.9em;
+    }
+
+    header h1 {
+        font-size: 1.2em;
+    }
+
+    header a {
+        font-size: 0.8em;
+        margin: 0 5px;
+    }
+}
+
  
 /* Анимация для мигания текста */
 @keyframes blink {
@@ -806,67 +869,6 @@ table {
     background: linear-gradient(135deg, #ff0066, #ff6600); /* Более темный градиент при нажатии */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3); /* Уменьшаем тень при нажатии */
     transform: translateY(2px); /* Сдвигаем кнопку вниз при нажатии */
-}
-
-/* Основные настройки для мобильных устройств */
-@media only screen and (max-width: 768px) {
-    /* Настройки для контейнера */
-    .container {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
-        padding: 10px;
-        margin: 0 auto;
-        width: 100%;
-    }
-
-    /* Настройки для заголовка */
-    header {
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-        background-color: #f8f8f8;
-    }
-
-    /* Настройки для навигационного меню */
-    nav {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        background-color: #333;
-        width: 100%;
-    }
-    nav ul {
-        list-style: none;
-        padding: 0;
-    }
-    nav ul li {
-        padding: 10px;
-        text-align: center;
-        width: 100%;
-    }
-    nav ul li a {
-        text-decoration: none;
-        color: white;
-        display: block;
-        padding: 10px;
-    }
-
-    /* Настройки для центрального блока контента */
-    .content {
-        width: 100%;
-        padding: 15px;
-        text-align: justify;
-    }
-
-    /* Настройки для подвала */
-    footer {
-        width: 100%;
-        text-align: center;
-        padding: 10px 0;
-        background-color: #f8f8f8;
-    }
 }
 </style>
 </head>
