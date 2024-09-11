@@ -57,4 +57,13 @@ document.addEventListener('DOMContentLoaded', function() {
     // Выполняем масштабирование при загрузке страницы и при изменении размера окна
     scaleForMobile();
     window.addEventListener('resize', scaleForMobile);
+	
+	document.addEventListener('DOMContentLoaded', function () {
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+
+    menuToggle.addEventListener('click', function () {
+        nav.classList.toggle('active');
+    });
+});
 });
