@@ -16,7 +16,7 @@
     <meta name="twitter:title" content="Grand Theft Auto San Andreas">
     <meta name="twitter:description" content="Официальная страница посвященная игре Grand Theft Auto San Andreas. Узнайте все о геймплейе, персонажах и мире игры.">
     <meta name="twitter:image" content="https://example.com/images/gta-san-andreas-cover.jpg">
-    <title>Grand Theft Auto</title>
+    <title>Grand Theft Auto: San Andreas</title>
 
     <!-- Значок сайта (favicon) -->
     <link rel="icon" href="images/Rockstar Games Logo.png" type="image/x-icon">
@@ -188,8 +188,8 @@ body {
 
 /* Стили для header */
 header {
-    background: rgba(0, 0, 0, 0.8); /* Легко затемненный фон для улучшения контраста */
-    padding: 15px 0; /* Уменьшены вертикальные отступы для более компактного вида */
+    background: rgba(0, 0, 0, 0.9); /* Полупрозрачный черный фон для заголовка */
+    padding: 20px 0; /* Вертикальные отступы сверху и снизу */
     margin: 0; /* Убираем внешние отступы для заголовка */
     text-align: center; /* Выравнивание текста по центру внутри заголовка */
     color: #fff; /* Цвет текста белый */
@@ -197,83 +197,11 @@ header {
     top: 0; /* Располагаем заголовок в верхней части экрана */
     left: 0; /* Располагаем заголовок в левой части экрана */
     width: 100%; /* Заголовок занимает всю ширину экрана */
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5); /* Более мягкая тень для создания эффекта глубины */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.7); /* Тень для создания эффекта глубины и отделения от остального контента */
     z-index: 1000; /* Устанавливаем высокий уровень z-index, чтобы заголовок был поверх других элементов */
-    backdrop-filter: blur(8px); /* Уменьшенное размытие фона для улучшения читаемости */
+    backdrop-filter: blur(12px); /* Размытие фона под заголовком для создания эффекта прозрачности */
     box-sizing: border-box; /* Включаем отступы и границы в расчет ширины и высоты элемента */
-    display: flex; /* Используем Flexbox для выравнивания элементов */
-    justify-content: space-between; /* Располагаем элементы по краям */
-    align-items: center; /* Выравнивание элементов по вертикали */
 }
-
-/* Стили для логотипа */
-header .logo {
-    font-size: 1.5em; /* Размер шрифта для логотипа */
-    font-weight: bold; /* Полужирное начертание для логотипа */
-}
-
-/* Стили для навигационного меню */
-nav {
-    display: flex; /* Используем Flexbox для меню */
-    gap: 20px; /* Расстояние между ссылками */
-}
-
-/* Стили для навигационных ссылок */
-nav a {
-    color: #fff; /* Цвет текста ссылок */
-    text-decoration: none; /* Убираем подчеркивание */
-    font-size: 1em; /* Размер шрифта */
-    padding: 10px 15px; /* Отступы для удобства клика */
-    border-radius: 5px; /* Скругление углов */
-    transition: background 0.3s, color 0.3s; /* Плавные переходы */
-}
-
-nav a:hover {
-    background: rgba(255, 255, 255, 0.2); /* Цвет фона при наведении */
-    color: #f0f0f0; /* Цвет текста при наведении */
-}
-
-/* Медиа-запросы для мобильных устройств */
-@media (max-width: 1280px) and (max-height: 563px) {
-    header {
-        padding: 10px 0; /* Уменьшаем паддинг */
-        flex-direction: column; /* Выравнивание элементов по вертикали */
-    }
-
-    nav {
-        flex-direction: column; /* Располагаем ссылки по вертикали */
-        align-items: center; /* Центрируем ссылки */
-        gap: 15px; /* Расстояние между ссылками */
-        display: none; /* Скрываем меню по умолчанию на мобильных устройствах */
-    }
-
-    nav.active {
-        display: flex; /* Показываем меню, когда оно активно */
-    }
-
-    .menu-toggle {
-        display: block; /* Показываем кнопку для открытия/закрытия меню */
-        background: none; /* Фон для кнопки */
-        border: none; /* Убираем границу */
-        color: #fff; /* Цвет текста кнопки */
-        font-size: 1.5em; /* Размер шрифта */
-        cursor: pointer; /* Указатель для клика */
-        padding: 0; /* Убираем паддинг */
-        margin: 0; /* Убираем внешние отступы */
-    }
-}
-
-@media (max-width: 767px) {
-    nav {
-        gap: 10px; /* Уменьшаем расстояние между ссылками */
-    }
-
-    nav a {
-        font-size: 0.9em; /* Уменьшаем размер шрифта */
-        padding: 8px; /* Уменьшаем отступы */
-    }
-}
-
  
 /* Анимация для мигания текста */
 @keyframes blink {
@@ -885,7 +813,7 @@ table {
     <!-- Заголовок страницы -->
     <header>
         <!-- Основной заголовок сайта -->
-        <h1>Grand Theft Auto</h1>
+        <h1>Grand Theft Auto: San Andreas</h1>
         <!-- Навигационное меню -->
         <nav>
 <nav>
