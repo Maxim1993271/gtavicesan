@@ -7,135 +7,174 @@
 	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
     <style>
         body {
-            font-family: 'Arial', sans-serif;
-            background-color: #f4f4f4;
-            color: #333;
-            margin: 0;
-            padding: 0;
-            line-height: 1.6; /* Улучшает читаемость */
-        }
+    font-family: 'Arial', sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease; /* Плавное изменение цвета */
+}
 
-        .container {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 20px;
-        }
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
 
-        h1 {
-            text-align: center;
-            color: #FF8000;
-            font-size: 2.5em; /* Увеличенный размер заголовка */
-            margin: 20px 0;
-            text-transform: uppercase;
-            font-weight: bold; /* Сделаем заголовок жирным */
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1); /* Добавляем тень для текста */
-        }
+/* Главный заголовок */
+h1 {
+    text-align: center;
+    color: #FF8000;
+    font-size: 2.5em;
+    margin: 20px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
 
-        .mod-category {
-            margin: 20px 0;
-            padding: 20px;
-            background-color: #ffffff;
-            border-radius: 10px; /* Более округлые углы */
-            box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-            transition: transform 0.3s ease, box-shadow 0.3s ease; /* Плавное изменение тени */
-        }
+/* Категории модов */
+.mod-category {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Плавные эффекты */
+}
 
-        .mod-category:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
-        }
+.mod-category:hover {
+    transform: translateY(-5px);
+    background-color: #fafafa;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
-        .mod-category h2 {
-            color: #333;
-            font-size: 1.8em; /* Увеличенный размер подзаголовка */
-            margin: 0;
-            border-left: 5px solid #FF8000;
-            padding-left: 15px; /* Увеличенный отступ */
-            font-weight: 600; /* Более жирный текст */
-        }
+.mod-category h2 {
+    color: #333;
+    font-size: 1.8em;
+    margin: 0;
+    border-left: 5px solid #FF8000;
+    padding-left: 15px;
+    font-weight: 600;
+}
 
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-        }
+/* Стили для списка */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
 
-        li {
-            padding: 10px 0; /* Увеличенный отступ */
-            border-bottom: 1px solid #eee;
-            font-size: 1.2em; /* Увеличенный размер текста для списка */
-            transition: background-color 0.3s; /* Плавное изменение фона */
-        }
+li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1.2em;
+    transition: background-color 0.3s, color 0.3s; /* Плавные переходы фона и цвета */
+}
 
-        li:hover {
-            background-color: #f9f9f9; /* Цвет фона при наведении */
-        }
+li:hover {
+    background-color: #f9f9f9;
+    color: #FF8000; /* Изменение цвета текста при наведении */
+}
 
-        li:last-child {
-            border-bottom: none;
-        }
+li:last-child {
+    border-bottom: none;
+}
 
-        /* Стиль кнопки скачать */
-        .download-btn {
-            display: inline-block; /* Чтобы кнопки не занимали всю ширину */
-            background-color: #FF8000;
-            color: #fff;
-            border: none;
-            padding: 10px 20px; /* Увеличенный отступ */
-            border-radius: 5px;
-            cursor: pointer;
-            text-decoration: none;
-            font-size: 1em; /* Увеличенный размер текста кнопки */
-            transition: background-color 0.3s ease, transform 0.3s ease; /* Плавное изменение фона и увеличение */
-            margin: 10px 0; /* Отступ между кнопками */
-        }
+/* Стиль кнопки скачать */
+.download-btn {
+    display: inline-block;
+    background-color: #FF8000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 10px 0;
+}
 
-        .download-btn:hover {
-            background-color: #e07a00;
-            transform: scale(1.05); /* Увеличение кнопки при наведении */
-        }
+.download-btn:hover {
+    background-color: #e07a00;
+    transform: scale(1.05);
+}
 
-        /* Кнопка прокрутки вверх */
 .scroll-to-top {
     position: fixed;
     bottom: 20px;
     right: 20px;
-    background-color: #FF8000;
-    color: #fff;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #FF8000, #FF5722); /* Яркий градиент */
     border: none;
-    padding: 12px 18px; /* Увеличенный отступ */
-    border-radius: 5px;
+    border-radius: 50%;
     cursor: pointer;
-    display: none; /* Скрыть кнопку по умолчанию */
-    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease; /* Плавные переходы */
-    z-index: 1000; /* Чтобы кнопка была над остальными элементами */
-    font-size: 1em; /* Увеличенный размер шрифта */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для кнопки */
+    display: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), inset 0 2px 6px rgba(255, 255, 255, 0.3); /* Внутренняя и внешняя тень */
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .scroll-to-top:hover {
-    background-color: #e07a00; /* Изменение цвета при наведении */
-    transform: scale(1.1); /* Увеличение кнопки при наведении */
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Увеличение тени при наведении */
+    transform: scale(1.1); /* Увеличение при наведении */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4), inset 0 3px 6px rgba(255, 255, 255, 0.4);
+    background: linear-gradient(135deg, #FFA726, #FF7043); /* Изменение градиента при наведении */
 }
 
-/* Иконка для кнопки (например, стрелка вверх) */
-.scroll-to-top::before {
-    content: '↑'; /* Символ стрелки вверх */
-    margin-right: 5px; /* Отступ между иконкой и текстом */
-    font-size: 1.2em; /* Размер иконки */
+.scroll-to-top:active {
+    transform: scale(0.95); /* Лёгкое уменьшение при клике */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4), inset 0 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+/* Анимация пульсации */
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), inset 0 2px 6px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4), inset 0 3px 8px rgba(255, 255, 255, 0.4);
+    }
+}
+
+/* Применение пульсации */
+.scroll-to-top:hover::before {
+    animation: pulse 1.5s infinite;
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255, 128, 0, 0.3); /* Полупрозрачное кольцо вокруг кнопки */
+    top: -10px;
+    left: -10px;
+    z-index: -1; /* За кнопкой */
 }
 
 
-        /* Медиа-запрос для мобильных устройств */
-        @media (max-width: 600px) {
-            h1 {
-                font-size: 2em; /* Уменьшение размера заголовка на мобильных */
-            }
 
-            .mod-category {
-                padding: 15px; /* Уменьшение отступов на мобильных */
-            }
-        }
+
+
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .mod-category {
+        padding: 15px;
+    }
+
+    .download-btn,
+    .scroll-to-top {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+}
     </style>
 </head>
 <body>
