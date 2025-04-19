@@ -1,0 +1,1117 @@
+<!DOCTYPE html>
+<!DOCTYPE html>
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>List of GTA San Andreas Mods</title>
+	<link rel="icon" href="images/favicon.ico" type="image/x-icon">
+    <style>
+body {
+    font-family: 'Arial', sans-serif;
+    background: url('https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/4bddd183ad5bce1fa0efdc5cbd958743.jpg') no-repeat center center fixed; /* Укажите путь к вашему изображению */
+    background-size: cover;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    line-height: 1.6;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+/* Главный заголовок */
+h1 {
+    text-align: center;
+    color: #FF8000;
+    font-size: 2.5em;
+    margin: 20px 0;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Категории модов */
+.mod-category {
+    margin: 20px 0;
+    padding: 20px;
+    background-color: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease; /* Плавные эффекты */
+}
+
+.mod-category:hover {
+    transform: translateY(-5px);
+    background-color: #fafafa;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.mod-category h2 {
+    color: #333;
+    font-size: 1.8em;
+    margin: 0;
+    border-left: 5px solid #FF8000;
+    padding-left: 15px;
+    font-weight: 600;
+}
+
+/* Стили для списка */
+ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee;
+    font-size: 1.2em;
+    transition: background-color 0.3s, color 0.3s; /* Плавные переходы фона и цвета */
+}
+
+li:hover {
+    background-color: #f9f9f9;
+    color: #FF8000; /* Изменение цвета текста при наведении */
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+/* Стиль кнопки скачать */
+.download-btn {
+    display: inline-block;
+    background-color: #FF8000;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-decoration: none;
+    font-size: 1em;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin: 10px 0;
+}
+
+.download-btn:hover {
+    background-color: #e07a00;
+    transform: scale(1.05);
+}
+
+.scroll-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, #FF8000, #FF5722); /* Яркий градиент */
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), inset 0 2px 6px rgba(255, 255, 255, 0.3); /* Внутренняя и внешняя тень */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.scroll-to-top:hover {
+    transform: scale(1.1); /* Увеличение при наведении */
+    box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4), inset 0 3px 6px rgba(255, 255, 255, 0.4);
+    background: linear-gradient(135deg, #FFA726, #FF7043); /* Изменение градиента при наведении */
+}
+
+.scroll-to-top:active {
+    transform: scale(0.95); /* Лёгкое уменьшение при клике */
+    box-shadow: 0 3px 8px rgba(0, 0, 0, 0.4), inset 0 4px 8px rgba(255, 255, 255, 0.3);
+}
+
+/* Анимация пульсации */
+@keyframes pulse {
+    0%, 100% {
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3), inset 0 2px 6px rgba(255, 255, 255, 0.3);
+    }
+    50% {
+        box-shadow: 0 6px 14px rgba(0, 0, 0, 0.4), inset 0 3px 8px rgba(255, 255, 255, 0.4);
+    }
+}
+
+/* Применение пульсации */
+.scroll-to-top:hover::before {
+    animation: pulse 1.5s infinite;
+    content: '';
+    position: absolute;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    background: rgba(255, 128, 0, 0.3); /* Полупрозрачное кольцо вокруг кнопки */
+    top: -10px;
+    left: -10px;
+    z-index: -1; /* За кнопкой */
+}
+
+/* Медиа-запрос для мобильных устройств */
+@media (max-width: 600px) {
+    h1 {
+        font-size: 2em;
+    }
+
+    .mod-category {
+        padding: 15px;
+    }
+
+    .download-btn,
+    .scroll-to-top {
+        font-size: 0.9em;
+        padding: 8px 16px;
+    }
+}
+    </style>
+</head>
+<body>
+
+<h1>Список модов GTA San Andreas</h1>
+<h1>List of GTA San Andreas Mods</h1>
+
+<div class="mod-category">
+    <h2>Rockstar Launcher</h2>
+    <ul>
+        <li>Rockstar Launcher</li>
+		<a href="https://gamedownloads.rockstargames.com/public/installer/Rockstar-Games-Launcher.exe" class="download-btn">Download Rockstar Launcher</a> <!-- Кнопка скачивания -->
+		
+        <!-- Добавьте остальные моды из Rockstar Launcher по необходимости -->
+    </ul>
+    <div>
+    </div>
+</div>
+
+<div class="mod-category">
+    <h2>Grand Theft Auto</h2>
+    <ul>
+        <li>
+            <li>Grand Theft Auto: Vice City</li>
+            <a href="https://drive.google.com/file/d/1rvMTHS6PCxctcm5ZlGYrVSDTIDcgTd0g/view" class="download-btn">Download Grand Theft Auto: Vice City</a>
+        </li>
+        <li>
+            <li>Grand Theft Auto: San Andreas</li>
+            <a href="https://drive.google.com/file/d/1F1zNlon5nnLPgKoXNGGxJDIwuZQ2JqLv/view" class="download-btn">Download Grand Theft Auto: San Andreas</a>
+        </li>
+        <li>
+            <li>Grand Theft Auto: III</li>
+            <a href="https://drive.google.com/file/d/1tUktm3VXTLech5JJfDIbGSDh7RgCHX0s/view" class="download-btn">Download Grand Theft Auto: III</a>
+        </li>
+    </ul>
+</div>
+
+
+<div class="mod-category">
+    <h2>GTA Classic NOCD 1.0</h2>
+    <ul>
+        <li>GTA Classic NOCD 1.0</li>
+		<a href="https://github.com/Maxim1993271/GTA/releases/download/NOCD/GTA.Classic.NOCD.1.0.rar" class="download-btn">Download GTA Classic NOCD 1.0</a> <!-- Кнопка скачивания -->
+        <li>GTA Definitive Edition NOCD 1.112</li>
+		        <a href="https://github.com/Maxim1993271/GTA/releases/download/GTA/GTA.Definitive.Edition.NOCD.1.112.rar" class="download-btn">Download GTA Definitive Edition NOCD 1.112</a> <!-- Кнопка скачивания -->
+        <!-- Добавьте остальные моды из GTA Classic NOCD 1.0 по необходимости -->
+    </ul>
+    <div>
+    </div>
+</div>
+
+<div class="mod-category">
+    <h2>SA Essentials Pack</h2>
+    <ul>
+        <li>Ultimate ASI Loader v8.2.0</li>
+        <li>CLEO v4.4.4</li>
+        <li>CLEO+ v1.2.0</li>
+        <li>NewOpcodes.cleo v2.1</li>
+        <li>ModLoader v0.3.7</li>
+        <li>SilentPatch v1.1</li>
+        <li>Widescreen Fix</li>
+        <li>Windowed Mode</li>
+        <li>Framerate Vigilante</li>
+        <li>CrashInfo v1.2</li>
+		<li>RunDLL32.exe Fix</li>
+		<li>NoDEP</li>
+		<li>RepairGTA build 5</li>
+		<li>SCRLog v2020.3</li>
+		<li>Open Limit Adjuster v1.5.9</li>
+		<li>Fastman92 Limit Adjuster v7.6</li>
+		<li>MixSets v4.3.7</li>
+		<li>PortableGTA</li>
+		<li>Improved Fastloader</li>
+		<li>MoonLoader v026.5-beta</li>
+        <!-- Добавьте остальные моды из Essentials Pack по необходимости -->
+    </ul>
+	<a href="https://github.com/Maxim1993271/GTA/releases/download/Essentials/Essentials.Pack.rar" class="download-btn">Download SA Essentials Pack</a> <!-- Кнопка скачивания -->
+</div>
+
+<div class="mod-category">
+    <h2>Graphic Mods</h2>
+    <ul>
+		<li>ColorMod v2</li>
+		<li>Enhance ParticleTXD v1.0</li>
+		<li>GraphicsTweaker v1.3</li>
+		<li>IMFX v17.11.2017t</li>
+		<li>Improved Streaming v1.0.1</li>
+		<li>Mobile Font Fixed</li>
+		<li>Mobile Hud</li>
+		<li>NextGen and Combat FX Plus</li>
+		<li>SA.Project2DFX v4.4</li>
+		<li>Real Skybox v1.3.4</li>
+		<li>ReShade v6.4.1</li>
+        <li>Shadows Settings Extender v2.1.2</li>
+        <li>SkyGfx Extended v1.7</li>
+        <li>SkyGrad</li>
+		<li>FxsFuncs v1.1b47</li>
+		<li>Dynamic Shadow Color v1.0</li>
+		<li>ECG – Enhanced Classic Graphics v16/10/19</li>
+		<li>ENB Series Auto Toggle</li>
+		<li>Enhanced Classic Graphics v1.2</li>
+		<li>SAMP Graphic Restore</li>
+        <!-- Добавьте остальные моды из Graphic Mods по необходимости -->
+    </ul>
+	<a href="https://github.com/Maxim1993271/GTA/releases/download/Settings/Graphic.Mods.rar" class="download-btn">Download Graphic Mods</a> <!-- Кнопка скачивания -->
+</div>
+
+<div class="mod-category">
+    <h2>Timecyc</h2>
+    <ul>
+        <li>24h TimeCycle</li>
+        <li>Real Linear Graphics v2.6</li>
+        <li>Timecyc Cinematic v1.3</li>
+        <li>Improved California Weather Timecyc v3.0.1</li>
+        <li>Timecyc Cinematic v1.3</li>
+		<li>Updated TimeCycle (24h TimeCycle)</li>
+        <!-- Добавьте остальные моды из Timecyc по необходимости -->
+    </ul>
+	<a href="https://github.com/Maxim1993271/GTA/releases/download/Timecyc/Timecyc.rar" class="download-btn">Download Timecyc</a> <!-- Кнопка скачивания -->
+</div>
+
+<div class="mod-category">
+    <h2>Textures</h2>
+    <ul>
+		<li>Proper Fixes PC v1.5</li>
+		<a href="https://sharemods.com/40qofhsfm3bx/Proper_Fixes.7z.html" class="download-btn">Download Proper Fixes PC 1.5</a> <!-- Кнопка скачивания -->
+        <li>Proper PC Fixes v1.5 for RoSA Evolved</li>
+		<a href="https://sharemods.com/hqraq7shn7jf/Proper_Fixes_-_for_texture_packs.7z.html" class="download-btn">Download Proper PC Fixes 1.5 for RoSA Evolved</a> <!-- Кнопка скачивания -->
+        <li>RoSA Project Evolved - February v1.4</li>
+		<a href="https://www.mediafire.com/file/zhice02azu354ap/RoSA+Project+Evolved+-+FEB.7z/file" class="download-btn">Download RoSA Evolved v1.4</a> <!-- Кнопка скачивания -->
+        <li>Original HQ Palms</li>
+		<a href="https://sharemods.com/zh78dctl0sdc/SA_-_Original_HQ_Palms_-_wind.7z.html" class="download-btn">Download Original HQ Palms</a> <!-- Кнопка скачивания -->
+		<li>Revamped Vehicles Project [Public]</li>
+		<a href="https://drive.google.com/drive/folders/11FWbZ2fN20OuV_fSUc18o5UO3wXKUdRr" class="download-btn">Download Revamped Vehicles Project [PUBLIC]</a> <!-- Кнопка скачивания -->
+        <li>Revamped Vehicles Project [New ReSmooth]</li>
+		<a href="https://drive.google.com/drive/folders/1eLgkZfOOvI8a6Z-742Bm34bo-uzbb0q5" class="download-btn">Download Revamped Vehicles Project [New ReSmooth]</a> <!-- Кнопка скачивания -->
+        <li>Proper Vehicles Retex v2.1</li>
+		<a href="https://sharemods.com/xd5lex6v5pme/Proper_Vehicles_Retex_v2.1_2K_VERSION.7z.html" class="download-btn">Download Proper Vehicles Retex v2.1</a> <!-- Кнопка скачивания -->
+		<li>Proper Player Retex v2.0</li>
+		<a href="https://download2282.mediafire.com/56iw5tm4wbdgYblulpK0Qq8tX-d5gOEh62TdhX2PIV1XPROvS6HIfjB0X0TqNLSFksuBgR-wpHDgKpO-eFzt0LKX-M9NY0FSVJKzrfzoFYu4RHZqeu8NIrkgNQ6kLx89ZJ2yVmWmZsn8Bybf-8GzMbc73XUmM9meJ1dCgBa2fff_/fyvj3n9ow777olm/Proper+Player+Retex+2.0.7z" class="download-btn">Download Proper Player Retex v2.0</a> <!-- Кнопка скачивания -->
+		<li>Proper Player Retex v3</li>
+		<a href="https://sharemods.com/py0xnfo09h2j/Proper_Player_Retex.7z.html" class="download-btn">Download Proper Player Retex v3</a> <!-- Кнопка скачивания -->
+		<li>Proper Characters Retex v1.3</li>
+		<a href="https://sharemods.com/eo1e9wvp3ank/SA_-_Proper_Characters_Retex_HD.7z.html" class="download-btn">Download Proper Characters Retex v1.3</a> <!-- Кнопка скачивания -->
+		<li>Proper Weapons Retex v1.3</li>
+		<a href="https://sharemods.com/zh4lmnw9s3m4/Proper_Weapon_Retex.7z.html" class="download-btn">Download Proper Weapons Retex v1.3</a> <!-- Кнопка скачивания -->
+		<li>Proper Vegetation Retex</li>
+		<a href="https://sharemods.com/wddepz99ep69/Proper_Vegetation_Retex.7z.html" class="download-btn">Download Proper Vegetation Retex</a> <!-- Кнопка скачивания -->
+		<li>Proper HD Plants v1.1</li>
+		<a href="https://sharemods.com/vnjtkx3iomla/SA_-_Proper_HD_Plants.7z.html" class="download-btn">Download Proper HD Plants v1.1</a> <!-- Кнопка скачивания -->
+		<li>SA Cutscene Characters HD Ryder Fix</li>
+		<a href="https://mega.nz/file/4tYRSTyQ#p2496zFWj3baodQv02zJTdWdqcDWY9Se94TuF4M3eAY" class="download-btn">Download SA Cutscene Characters HD Ryder Fix</a> <!-- Кнопка скачивания -->
+		<li>HD Underwater v2.0</li>
+		<a href="https://sharemods.com/vhm7q61koy0g/SA_-_HD_Underwater.7z.html" class="download-btn">Download HD Underwater v2.0</a> <!-- Кнопка скачивания -->
+		<li>Candy Suxx Neon</li>
+		<a href="https://sharemods.com/8v092vb8nb3k/Candy_Suxx_Neon.7z.html" class="download-btn">Download Candy Suxx Neon</a> <!-- Кнопка скачивания -->
+		<li>Remastered Pictures Mod v1.1</li>
+		<a href="https://sharemods.com/ehdslx8agqi1/Remastered_Pictures_Mod.7z.html" class="download-btn">Download Remastered Pictures Mod v1.1</a> <!-- Кнопка скачивания -->
+		<li>SA Cutscene Characters for gameplay</li>
+		<a href="https://sharemods.com/0bnmdnz6crll/SA_Cutscene_Characters_HD.7z.html" class="download-btn">Download SA Cutscene Characters for gameplay HD</a> <!-- Кнопка скачивания -->
+		<li>Original Peds Vary Extended (Fixed)</li>
+		<a href="https://mega.nz/file/uF9mRYJS#WCiFs7empazXLkdEPUY0nj8PIMYi3A0KAmsERHnVy4Y" class="download-btn">Download Original Peds Vary Extended (Fixed)</a> <!-- Кнопка скачивания -->
+		<li>Animal Statues Remastered</li>
+		<a href="https://sharemods.com/03fwl48o3999/Animal_Statues_Remastered.7z.html" class="download-btn">Download Animal Statues Remastered</a> <!-- Кнопка скачивания -->
+		<li>Vending Machines Remastered</li>
+		<a href="https://sharemods.com/1ubf13f0pter/Vending_Machines_Remastered.7z.html" class="download-btn">Download Vending Machines Remastered</a> <!-- Кнопка скачивания -->
+		<li>Improved Original Weapons</li>
+		<a href="https://sharemods.com/jwztx8xur9nc/AI_Upscaled_Weapon_Textures_and_Icons.7z.html" class="download-btn">Download Improved Original Weapons</a> <!-- Кнопка скачивания -->
+		<li>SA:Roads</li>
+		<a href="https://drive.google.com/file/d/1If7Z29tKDGcI4TdBleZIGlhDb7Xoo45U/view" class="download-btn">Download SA:Roads</a> <!-- Кнопка скачивания -->
+		<li>Roads of Los Santos v1.0</li>
+		<a href="https://mega.nz/file/N1YVlYaK#xWqfJouwOtPjdofEU0in0ystqz1jMxI1bJAW0ncMfDA" class="download-btn">Download Roads of Los Santos v1.0</a> <!-- Кнопка скачивания -->
+		<li>AnimatedAC</li>
+		<a href="https://drive.google.com/file/d/0B1sAJQAUfOOYQlJHX1NoZVF1Slk/view?resourcekey=0-NXGvUNeIelpLmAsqxwa7zg" class="download-btn">Download AnimatedAC</a> <!-- Кнопка скачивания -->
+		<li>Santa Maria Pier Extended</li>
+		<a href="https://sharemods.com/8wiecht5r6bn/SA_-_Santa_Maria_Pier_Extended.7z.html" class="download-btn">Download Santa Maria Pier Extended</a> <!-- Кнопка скачивания -->
+		<li>HD Basketball Court</li>
+		<a href="https://mega.nz/file/YogRAZrQ#VBotvYPLf0AVyoRqVn-qrrk5eI7TEltS3MNB6OE0d5M" class="download-btn">Download HD Basketball Court</a> <!-- Кнопка скачивания -->
+		<li>Los Santos Bridge The Prism</li>
+		<a href="https://libertycity.net/files/load/187142-c880d2bde173484d4e539b432c95874c/" class="download-btn">Download Los Santos Bridge The Prism</a> <!-- Кнопка скачивания -->
+		<li>Rockshore Bridge</li>
+		<a href="https://libertycity.net/files/load/158680-6845109e44dbf75f0bf8305a3bf4d8f9/" class="download-btn">Download Rockshore Bridge</a> <!-- Кнопка скачивания -->
+		
+        <!-- Добавьте остальные моды из Textures по необходимости -->
+    </ul>
+</div>
+
+<div class="mod-category">
+    <h2>Maps and Objects</h2>
+    <ul>
+        <li>Tree House v1.1</li>
+		<a href="https://sharemods.com/mp9nw280czh8/SA_-_Tree_House.7z.html" class="download-btn">Download Tree House v1.1</a> <!-- Кнопка скачивания -->
+        <li>Wind Project v1.0.2</li>
+		<a href="https://sharemods.com/3b7uuwotoncu/SA_-_Wind_Project.7z.html" class="download-btn">Download Wind Project v1.0.2</a> <!-- Кнопка скачивания -->
+        <li>Cyber ​​Cafe Interior</li>
+		<a href="https://sharemods.com/jvdsgr5n0kf9/SA_-_Cyber_Cafe_Interior.7z.html" class="download-btn">Download Cyber ​​Cafe Interior</a> <!-- Кнопка скачивания -->
+        <li>Proper HD Models</li>
+		<a href="https://sharemods.com/uj564y9f94iy/SA_-_Proper_HD_Models.7z.html" class="download-btn">Download Proper HD Models</a> <!-- Кнопка скачивания -->
+        <li>Wind Farm Mod</li>
+		<a href="https://sharemods.com/mctpg0y5r8hb/SA_-_Wind_Farm_Mod.7z.html" class="download-btn">Download Wind Farm Mod</a> <!-- Кнопка скачивания -->
+		<li>SADE Big Ear Telescope to SA</li>
+		<a href="https://sharemods.com/kcmovu4eds1m/SADE_Big_Ear_Telescope_to_SA.7z.html" class="download-btn">Download SADE Big Ear Telescope to SA</a> <!-- Кнопка скачивания -->
+		<li>HD Carls Home</li>
+		<a href="https://sharemods.com/rn5e5axm0zny/HD_Carl_Home_by_Zeneric.7z.html" class="download-btn">Download HD Carls Home</a> <!-- Кнопка скачивания -->
+		<li>Beach Club Safehouse Fixed</li>
+		<a href="https://sharemods.com/j2kn7x805shg/Beach_Club_Safehouse.7z.html" class="download-btn">Download Beach Club Safehouse Fixed</a> <!-- Кнопка скачивания -->
+		<li>Sidewalk Weeds</li>
+		<a href="https://sharemods.com/97vjpz8y3fck/SA_-_Sidewalk_Weeds.7z.html" class="download-btn">Download Sidewalk Weeds</a> <!-- Кнопка скачивания -->
+		<li>Walk Of Fame</li>
+		<a href="https://sharemods.com/ra4awj3oijdx/Walk_Of_Fame_-_Voice_Actors.7z.html" class="download-btn">Download Walk Of Fame</a> <!-- Кнопка скачивания -->
+		<li>Eclipse Tower</li>
+		<a href="https://sharemods.com/4fxuftn8b0vb/SA_-_Eclipse_Tower.7z.html" class="download-btn">Download Eclipse Tower</a> <!-- Кнопка скачивания -->
+		<li>Missing Smokes Fix</li>
+		<a href="https://sharemods.com/0ff3q5jkuabp/Missing_Smokes_Fix.7z.html" class="download-btn">Download Missing Smokes Fix</a> <!-- Кнопка скачивания -->
+		<li>Vice City Lighthouse</li>
+		<a href="https://sharemods.com/a9y4mwyxzvl9/Vice_City_Lighthouse.7z.html" class="download-btn">Download Vice City Lighthouse</a> <!-- Кнопка скачивания -->
+		<li>MW Project</li>
+		<a href="https://sharemods.com/l01yekk929dh/MW_Project.7z.html" class="download-btn">Download MW Project</a> <!-- Кнопка скачивания -->
+		<li>HD Tags</li>
+		<a href="https://mega.nz/file/49xExS5J#HHaMXhuzAxYnNB7OCcnAOpNQ43IBUtsjQjhxv7zkFY8" class="download-btn">Download HD Tags</a> <!-- Кнопка скачивания -->
+		<li>Remake Street Art</li>
+		<a href="https://mega.nz/file/4owQACIK#JYpGh1we7kh4ptpi-0ptPtpcqys4s2SvG6rOMVkt1qE" class="download-btn">Download Remake Street Art</a> <!-- Кнопка скачивания -->
+		<li>Gloria Trevi Graffiti Restored</li>
+		<a href="https://drive.google.com/file/d/1XLBRyc8jiiNPaclDQQCfN3AFtW8mdWRR/view" class="download-btn">Download Gloria Trevi Graffiti Restored</a> <!-- Кнопка скачивания -->
+		<li>Ufo Photos Fix</li>
+		<a href="https://mega.nz/file/E1JU2RTb#krMPgbz2z55h0B6pdT_M7ydf6uqW_sMCsSVDYTkpWPQ" class="download-btn">Download Ufo Photos Fix</a> <!-- Кнопка скачивания -->
+		<li>Objectopia v1.4.0</li>
+		<a href="https://sharemods.com/bal7bxp6045p/Objectopia-v1.4.0.7z.html" class="download-btn">Download Objectopia v1.4.0</a> <!-- Кнопка скачивания -->
+		<li>Traincross Fix</li>
+		<a href="https://mega.nz/file/IoJ20QaZ#RhJCtpMfPkT5H1JWC9u7lK3AnnjaiMateSwDzS7X1ts" class="download-btn">Download Traincross Fix</a> <!-- Кнопка скачивания -->
+		<li>LV Planning Department Fix</li>
+		<a href="https://mega.nz/file/p0RgnbwB#ry6bAgmdm9mrrcFvfr9DaR4yxWe1Z7zQUD6CgaxJOBw" class="download-btn">Download LV Planning Department Fix</a> <!-- Кнопка скачивания -->
+		<li>Collision Interiors Fix</li>
+		<a href="https://sharemods.com/7nw6maqft937/Collision_Interiors_Fix.7z.html" class="download-btn">Download Collision Interiors Fix</a> <!-- Кнопка скачивания -->
+		<li>Ped Attractor Chair Anim Fix</li>
+		<a href="https://sharemods.com/2zotdl4rhyoc/Ped_Attractor_Chair_Anim_Fix.7z.html" class="download-btn">Download Ped Attractor Chair Anim Fix</a> <!-- Кнопка скачивания -->
+		<li>Project Props</li>
+		<a href="https://mega.nz/file/t8JTVI6A#-HdDKt_nR2bpCx9T41vGrpz5wza0BSbochskqGgjmTs" class="download-btn">Download Project Props</a> <!-- Кнопка скачивания -->
+		<li>Improved Lamps v0.8</li>
+		<a href="https://sharemods.com/iwbbggdxsnhy/Improved_Lamps.7z.html" class="download-btn">Download Improved Lamps v0.8</a> <!-- Кнопка скачивания -->
+		<li>Improved Dumpsters</li>
+		<a href="https://sharemods.com/lzfsmv2gz51b/Improved_Dumpsters.7z.html" class="download-btn">Download Improved Dumpsters</a> <!-- Кнопка скачивания -->
+		<li>Functional Clock Townhall HD</li>
+		<a href="https://sharemods.com/fq2a6ot1ie4o/Functional_Clock_Townhall_HD.7z.html" class="download-btn">Download Functional Clock Townhall HD</a> <!-- Кнопка скачивания -->
+		<li>Improved and Fixed Original Vegetation</li>
+		<a href="https://sharemods.com/5yp7irnohr6a/Improved_and_Fixed_Original_Vegetation.7z.html" class="download-btn">Download Improved and Fixed Original Vegetation</a> <!-- Кнопка скачивания -->
+		<li>More Doors In Interiors</li>
+		<a href="https://sharemods.com/lfcziwm51vow/More_Interior_Doors.7z.html" class="download-btn">Download More Doors In Interiors</a> <!-- Кнопка скачивания -->
+		<li>Lamppost Fix</li>
+		<a href="https://sharemods.com/40svbfnk6cbt/Lamppost_Fix.rar.html" class="download-btn">Download Lamppost Fix</a> <!-- Кнопка скачивания -->
+		<li>LS County General Hospital Interior</li>
+		<a href="https://sharemods.com/bnylxhb4z9z8/LS_County_General_Hospital_Interior.7z.html" class="download-btn">Download LS County General Hospital Interior</a> <!-- Кнопка скачивания -->
+		<li>Hospital With Interior</li>
+		<a href="https://drive.google.com/file/d/19JTB9zb0CkQa8avj_5x52-zH3gZw3iWP/view" class="download-btn">Download Hospital With Interior</a> <!-- Кнопка скачивания -->
+		<li>Grass Fix</li>
+		<a href="https://sharemods.com/g6sbt6lx59cq/Modelos_de_grama_originais_corrigidos.7z.html" class="download-btn">Download Grass Fix</a> <!-- Кнопка скачивания -->
+		<li>Electrical</li>
+		<a href="https://mega.nz/file/51AxwbBb#EqaHn5j0SgoqQA8QmXpaLZh9ondBRZG8ZyuD6CiLffs" class="download-btn">Download Electrical</a> <!-- Кнопка скачивания -->
+		<li>Improved Ammunation</li>
+		<a href="https://mega.nz/file/Z4BjVJ7Z#s3CPTnEcwzYVlHFudOgfpXA6z2NnFCMyKdcEnnN-j4g" class="download-btn">Download Improved Ammunation</a> <!-- Кнопка скачивания -->
+		<li>LaeJeffers10 Meshsmooth</li>
+		<a href="https://download1322.mediafire.com/ntbzc2oi31cg3vSYMYtwDVrPFMaYb60q_hSTMNGBvN-Dmr3JddWe7iJPjFkUOtlhrDCIgMvnPicVWasDQ0MRIITB4XwOQQU2UjwUcBFXN_a2Ggqe9P6ajOoJAKR0Qwv3cswV8namyUbaKTjNvJ4zuVZ9YNIOigSj2BRU0sID_YQJ/zqska6hh723l5go/LaeJeffers10+Meshsmooth.rar" class="download-btn">Download LaeJeffers10 Meshsmooth</a> <!-- Кнопка скачивания -->
+        <!-- Добавьте остальные моды из Maps and Objects по необходимости -->
+    </ul>
+</div>
+
+<div class="mod-category">
+    <h2>GTA Night Mods</h2>
+    <ul>
+        <li>2dfx Snack Vending Machine</li>
+        <li>Illuminated Vinewood Sign</li>
+        <li>Improved Night Windows</li>
+        <li>Lighthouse & Pyramid Fix</li>
+        <li>Lit Gant Bridge</li>
+		<li>Lit LS Forum</li>
+		<li>Lit Ocean Docks Bridge</li>
+		<li>LS Downtown Night Windows</li>
+		<li>LS Lit Church</li>
+		<li>Missing Lampposts Fix</li>
+		<li>Pre-light Night Lights</li>
+		<li>Project Immerse-Yourself v0.3</li>
+		<li>Project reLIT v1.0.7</li>
+		<li>Roadblock Lights</li>
+		<li>UFO Bar Lit</li>
+		<li>Welcome Las Venturas</li>
+        <!-- Добавьте остальные моды из GTA Night Mods по необходимости -->
+    </ul>
+	<a href="https://github.com/Maxim1993271/GTA/releases/download/GTNightMods/GTA.Night.Mods.rar" class="download-btn">Download GTA Night Mods</a> <!-- Кнопка скачивания -->
+</div>
+
+<div class="mod-category">
+    <h2>Beta Definitive & Leftovers Map</h2>
+    <ul>
+        <li>Beta Definitive & Leftovers Map</li>
+        <li>Beta Mulholland Safehouse</li>
+        <li>CJ Portrait Card Fix</li>
+        <li>Improved Models by StreetFonso</li>
+        <li>Parked Binary IPL Fixes</li>
+		<li>Beta Fence Smash</li>
+		<li>Grotti Showroom</li>
+        <!-- Добавьте остальные моды из Beta Definitive & Leftovers Map по необходимости -->
+    </ul>
+	<a href="https://github.com/Maxim1993271/GTA/releases/download/Beta/Beta.Definitive.Leftovers.Map.rar" class="download-btn">Download Beta Definitive & Leftovers Map</a> <!-- Кнопка скачивания -->
+</div>
+
+<div class="mod-category">
+    <h2>Asi Plugins</h2>
+	<ul>
+	<li>Asset Autocollector v1.3.2</li>
+	<li>AutoID</li>
+	<li>Beard Grow Mod</li>
+	<li>Black Roads Fix</li>
+	<li>Blip Size v1.3</li>
+	<li>Blur effect for club</li>
+	<li>Blur Effect For Stick</li>
+	<li>BodyOutlinesSA v1.0</li>
+	<li>Bullethole</li>
+	<li>Camera Point Fix</li>
+	<li>Camera shaking at high speeds v1.1</li>
+	<li>Cheat Menu v3.52</li>
+	<li>Cigarette and Antenna</li>
+	<li>ClassicHud</li>
+	<li>Cold Steam</li>
+	<li>Disable Radar On Foot</li>
+	<li>Enterable Hidden Interiors Update (01.04.25)</li>
+	<li>Explosions</li>
+	<li>Explosionsshake</li>
+	<li>Extended Gang Wars</li>
+	<li>Fires & flames</li>
+	<li>First Person Mod</li>
+	<li>First Person Mod</li>
+	<li>Fix Damage From Explosions Through Walls v1.0</li>
+	<li>Fixed dialogues with gangs</li>
+	<li>Fixed Mouse Flight</li>
+	<li>FluffyClouds</li>
+	<li>Friendly Triads And Los Aztecas Fix</li>
+	<li>Full Stream Radar</li>
+	<li>Functional Components</li>
+	<li>GInput</li>
+	<li>Glowing Pickups</li>
+	<li>Graffiti Anywhere</li>
+	<li>Pager from GTA 3 v1.0</li>
+	<li>HeliFix</li>
+	<li>Hud Definitive Edition</li>
+	<li>Improved Lamppost Lights</li>
+	<li>ImprovedMove</li>
+	<li>Inventory System</li>
+	<li>JetPack Hover Mode Fix</li>
+	<li>LaserScopeDotVC v1.0.2</li>
+	<li>Light on bullet impact</li>
+	<li>MapFix</li>
+	<li>Mod Shell</li>
+	<li>Model Variations v9.9</li>
+	<li>Money Messages v1.1</li>
+	<li>MovingMoon v1.1</li>
+	<li>MovingSirenLightsSA v1.1</li>
+	<li>Multiplemarkers</li>
+	<li>NoMoreDeletedSaves</li>
+	<li>Open Door Anim</li>
+	<li>Pager</li>
+	<li>Quebrar Motor</li>
+	<li>Ragdoll Mod for GTA-SAMP</li>
+	<li>Rain Extinguish Fire</li>
+	<li>Rainbow With All the Colors v1.0</li>
+	<li>Asi Real time</li>
+	<li>ReverbSA</li>
+	<li>Road Reflection Fix</li>
+	<li>Roadsign Font HD</li>
+	<li>Rubbish</li>
+	<li>SA H-Optimize</li>
+	<li>SA Rampages</li>
+	<li>Save License Plate</li>
+	<li>III.VC.SA.SaveLoader v2.7</li>
+	<li>Script Fixes</li>
+	<li>Spread Fix</li>
+	<li>SprintEverywhere</li>
+	<li>Starry Skies v1.3.0</li>
+	<li>Story Mode 2.0 Bug Fixes</li>
+	<li>StreamMemFix</li>
+	<li>The Birds Update</li>
+	<li>VC Plane Trails And Banners</li>
+	<li>VCBannersAndTrails v1.0.1</li>
+	<li>VCBulletTrails v1.2</li>
+	<li>VCMarkersSA</li>
+	<li>VCParticles v1.0.2</li>
+	<li>VCStuffSA</li>
+	<li>VHud</li>
+	<li>Weapon Icons TXD</li>
+	<li>WeaponRecoilRE</li>
+	<li>Wheel Cam from VC v1.0</li>
+           <!-- Добавьте остальные моды из Asi Plugins по необходимости -->
+    </ul>
+	<a href="https://github.com/Maxim1993271/GTA/releases/download/Asi/Asi.Plugins.rar" class="download-btn">Download ASI Plugins</a> <!-- Кнопка скачивания -->
+</div>
+
+<div class="mod-category">
+    <h2>Cars Plugins</h2>
+	<ul>
+	<li>1 Star Motorbike Cop Fix</li>
+	<li>007car</li>
+	<li>Abs System</li>
+	<li>Advanced Nitro System v2.2</li>
+	<li>Advanced Track Player</li>
+	<li>Air Brake Sound</li>
+	<li>Alarm Touching Cars</li>
+	<li>Ambient Taxi</li>
+	<li>Arrange Cars</li>
+	<li>Attach Vehicle</li>
+	<li>Auto Car Lock</li>
+	<li>Autodrive</li>
+	<li>Back Fire Low Speed</li>
+	<li>Backfire with light</li>
+	<li>Bike Customization</li>
+	<li>Bike Flip Fix</li>
+	<li>Bike Lean</li>
+	<li>Bike Shop</li>
+	<li>Bike Spin</li>
+	<li>Burnout 360 Fix</li>
+	<li>Call TowTruck</li>
+	<li>CamShake</li>
+	<li>Car Air Reaction</li>
+	<li>Car Crash Anim</li>
+	<li>Car Crash Inertia</li>
+	<li>Car Dealership</li>
+	<li>Car Door Chime-Beep</li>
+	<li>Car Explodes In Huge Falls</li>
+	<li>Car Get Dirty Slower</li>
+	<li>Car Idle</li>
+	<li>Car Mechanic Simulator</li>
+	<li>Car Wash</li>
+	<li>Car Collision Light</li>
+	<li>Carcols Fix</li>
+	<li>Carcols Update</li>
+	<li>CarCrashCameraEffect</li>
+	<li>CarHP</li>
+	<li>Cars Driving To The Challenge</li>
+	<li>Cars On Dirt Roads</li>
+	<li>Cars On Platforms</li>
+	<li>Change Gear Anim</li>
+	<li>Collision Tweaker</li>
+	<li>Cop Cars Unlocked</li>
+	<li>CopVehCoronas</li>
+	<li>Cruise Control</li>
+	<li>Cursing While Honking</li>
+	<li>Dead Car</li>
+	<li>Death In Car</li>
+	<li>Destructive Rhino Mod</li>
+	<li>Detach Trailer</li>
+	<li>Diesel</li>
+	<li>Doherty Garage v1.4.5</li>
+	<li>DrIVe Mod Update (14.03.2025)</li>
+	<li>Dynamic Motorway Traffic</li>
+	<li>Emergency Lights Mod</li>
+	<li>Engine Off On Vehicle Exit</li>
+	<li>Engine On-Off</li>
+	<li>Engine Overheat</li>
+	<li>Exhaust Tweaker</li>
+	<li>Exit from the other side</li>
+	<li>Extra Car Functions</li>
+	<li>Extra Colors On Paintjob Fix</li>
+	<li>Fire On Driver</li>
+	<li>Fix Bike Transfender Glitch</li>
+	<li>Fix Car Fire On Water</li>
+	<li>Fuel Leak</li>
+	<li>Fuel System v0.9</li>
+	<li>Fuel+</li>
+	<li>Full Radio Control</li>
+	<li>Functional firefighter ladder</li>
+	<li>Gasoline Mod v2.5</li>
+	<li>Gear Control</li>
+	<li>GPS Redux v1.4.6</li>
+	<li>GTA V to SA Burnout RRMS Edition</li>
+	<li>Handbrake Mod</li>
+	<li>Headlight Destroyer</li>
+	<li>Helmet Mod</li>
+	<li>Improved Change Gear Anim</li>
+	<li>Improved Garages</li>
+	<li>Improved Handling</li>
+	<li>ImVehFt</li>
+	<li>ImVehSys</li>
+	<li>IndieVehicles</li>
+	<li>Invisible Car Fix</li>
+	<li>Lean On The Bike</li>
+	<li>Lock And Park</li>
+	<li>Lock Car Doors</li>
+	<li>Luxury Cars Attract The Attention Of Pedestrians</li>
+	<li>Manual Driveby Refixed Update v.25.04.14</li>
+	<li>Manual DriveBy Remake</li>
+	<li>Mid Air Car Control</li>
+	<li>Minimalist Speedometer</li>
+	<li>ModelExtras v1.6</li>
+	<li>More Locked Cars</li>
+	<li>Moving Siren Lights</li>
+	<li>Music from cars</li>
+	<li>New Car Camera</li>
+	<li>No Aggressive Drivers</li>
+	<li>No Radio Auto Change</li>
+	<li>No Rhino</li>
+	<li>NPC Lowrider</li>
+	<li>NPC Tuning</li>
+	<li>Oil Leaking</li>
+	<li>Open Doors</li>
+	<li>Open Trunk And Hood</li>
+	<li>Attach Vehicles to Packer</li>
+	<li>Park Car</li>
+	<li>Parked Car Maker</li>
+	<li>Parking Save Garages Extended</li>
+	<li>Pay ‘N’ Spray Select Color</li>
+	<li>Pixar Cars</li>
+	<li>Police ResponseTto Traffic Violations</li>
+	<li>Prizep Fix</li>
+	<li>Radio Off On Water</li>
+	<li>Random Events With Drivers</li>
+	<li>RC Tiger Fix</li>
+	<li>Real Life Vehicle Options</li>
+	<li>Real Traffic Fix</li>
+	<li>Rear Lights Mod v3.4 Update 11.03.2025</li>
+	<li>Remote Lock Car </li>
+	<li>Rhino noEP</li>
+	<li>Rules Mod</li>
+	<li>Rural Car Repairs</li>
+	<li>SA Styled Speedometer Update v(1/3/2025)</li>
+	<li>Save License Plate</li>
+	<li>Siren And Vigilante</li>
+	<li>SkidBlow</li>
+	<li>Speedo2077</li>
+	<li>Speedometer</li>
+	<li>Speedometer v2</li>
+	<li>SpeedometerSA</li>
+	<li>SpeedoSA</li>
+	<li>Stay On Bike</li>
+	<li>Stealing A Car Like In GTA 4</li>
+	<li>Steering Wheel</li>
+	<li>Stop Lights For Trailers</li>
+	<li>Taxi Ride Mod</li>
+	<li>Taxi77</li>
+	<li>Traffic Light</li>
+	<li>Traffic Path Fix</li>
+	<li>Trailer Lights v1</li>
+	<li>Trailers Lights Fix</li>
+	<li>Truck Sound</li>
+	<li>Truck Sounds v2</li>
+	<li>Truck Trailer</li>
+	<li>Trucks&Trailers</li>
+	<li>Tunnel Car Echo Sound Effect</li>
+	<li>Unflip Your Cars Like in GTA V</li>
+	<li>Universal Vehicle Lights</li>
+	<li>Unlock Car Door</li>
+	<li>VCStuffSA.SA</li>
+	<li>VehFuncs</li>
+	<li>Vehicle Collision Cam Shake</li>
+	<li>Vehicle Collision Shake</li>
+	<li>Vehicle Door Unlocker</li>
+	<li>Vehicle Flags Changer v1.1</li>
+	<li>Vehicle Immunities</li>
+	<li>Voodoo Physics Fix</li>
+	<li>Wheel bump sound v1.0</li>
+	<li>Wheel Detach</li>
+	<li>Winch Taking Cars</li>
+	<li>Wind noise at high speeds</li>
+	<li>WorkingHorn</li>
+	<li>Worn Brake Pad Sound</li>
+	<li>Zero's RC</li>
+
+	       <!-- Добавьте остальные моды из Cars Plugins по необходимости -->
+    </ul>
+	<a href="https://github.com/Maxim1993271/GTA/releases/download/Asi/Asi.Plugins.rar" class="download-btn">Download Cars Plugins</a> <!-- Кнопка скачивания -->
+</div>
+
+<div class="mod-category">
+    <h2>Cutscene Fix</h2>
+	<ul>
+	<li>Big Smoke, Sweet & Kendl Cutscene Fix (Final)</li>
+	<li>Cleaning the Hood Cutscene Fix</li>
+	<li>Drive By Cutscene Fix</li>
+	<li>Drive Thru Cutscene Fix (Final)</li>
+	<li>End of The Line Fix & Improvements</li>
+	<li>High Noon Fix</li>
+	<li>Install Guide</li>
+	<li>Intro Cutscenes Fix (Final Update)</li>
+	<li>Nines and AK's Cutscene Fix</li>
+	<li>Ryder Cutscene Fix & Improvements (Final)</li>
+	<li>Ryder Cutscene Fix</li>
+	<li>Tagging up Turf Fix + Improvements</li>
+	<li>Little Smoke Skin Pack Cutscene</li>
+       <!-- Добавьте остальные моды из Cutscene Fix по необходимости -->
+    </ul>
+	<a href="https://github.com/Maxim1993271/GTA/releases/download/CutsceneFix/Cutscene.Fix.rar" class="download-btn">Download Cutscene Fix</a> <!-- Кнопка скачивания -->
+</div>
+
+<div class="mod-category">
+    <h2>Different Cleo Plugins</h2>
+	<ul>
+	<li>Additional Fixes</li>
+	<li>Advanced Aiming Mod (Presets)</li>
+	<li>Advanced Aiming Mod 1.4</li>
+	<li>Aimless Mode v3</li>
+	<li>Aimless Mode</li>
+	<li>Air Traffic</li>
+	<li>Air Traffic Pro</li>
+	<li>Air Traffic Realism</li>
+	<li>Airplane Tire Skid</li>
+	<li>Ammunition Seller v2.1</li>
+	<li>Anim Train</li>
+	<li>Arrest Like In GTA 4 v1.1</li>
+	<li>Auto Remove Marker</li>
+	<li>Autosave & Checkpoint v1.1</li>
+	<li>Ballas Greet You</li>
+	<li>Ballas Pull Up On You</li>
+	<li>Basketball Fix</li>
+	<li>Beach ball</li>
+	<li>Being Taken To The Hospital</li>
+	<li>BetterHeliCoronas</li>
+	<li>BigMap</li>
+	<li>Boat Radar</li>
+	<li>Body Stats Fix</li>
+	<li>Burnout With Space</li>
+	<li>Properties Plus, Buy Properties mod v1.2.1</li>
+	<li>Camera Settings</li>
+	<li>Ceiling Bird Chirp</li>
+	<li>Chainsaw Smoke</li>
+	<li>Ciggy & Antenna</li>
+	<li>CJ Look Interest</li>
+	<li>CJ Startup Settings</li>
+	<li>Club Front Noise</li>
+	<li>Clube Front Noise</li>
+	<li>Colored Crosshair</li>
+	<li>Combat improvement and Melee overhaul</li>
+	<li>Commercial Mod</li>
+	<li>Cop N Threat Radar</li>
+	<li>Cops bulletproof</li>
+	<li>Cops Faster and Climbing</li>
+	<li>CoverMod</li>
+	<li>Create Pickups Mod</li>
+	<li>Damage mark on the screen</li>
+	<li>Dealer Weapons</li>
+	<li>DeathAnimsMod v2.0 (13.01.2025)</li>
+	<li>Death animations Ragdoll Style v2.0</li>
+	<li>Difficult Move In Water</li>
+	<li>Disable jetpack heat effect</li>
+	<li>Diving Mod</li>
+	<li>Dodo With Ad Banner</li>
+	<li>DriveByOnOff</li>
+	<li>Driver</li>
+	<li>Drop Weapons Like In GTA IV v3.1</li>
+	<li>Drug Dealer Fix</li>
+	<li>Dynamic FOV</li>
+	<li>Dyom Сleo Fix</li>
+	<li>Ear Ringing Simple</li>
+	<li>EchoWeapons</li>
+	<li>EchoWeapons</li>
+	<li>Engine Volume</li>
+	<li>Enhanced Jetpack</li>
+	<li>Faster animation of sellers Update (11.03.2025)</li>
+	<li>Fireman Fireproof Fix</li>
+	<li>Fix Plane Speed After Explodes</li>
+	<li>Fix Vision</li>
+	<li>Fix Water Square</li>
+	<li>Fixed Cam</li>
+	<li>Fixed Cam Mod</li>
+	<li>Flashing Wanted Stars</li>
+	<li>Fix Handle By Orion SR</li>
+	<li>Food Eating Fix</li>
+	<li>Galo Cinza</li>
+	<li>Gang Weapons Unlimited Randomizer (beta)</li>
+	<li>Gangs Guns Variations</li>
+	<li>Garbage Mans</li>
+	<li>Generate Free IDs List</li>
+	<li>Gifted Rides - New Parked Vehicles</li>
+	<li>Gravity Fix</li>
+	<li>Grenade mod Update v17.02.2005</li>
+	<li>Grove In Ganton</li>
+	<li>GTA V Quick Cinematic Camera</li>
+	<li>GTA V Sniper Vision</li>
+	<li>Hard Rain Remake</li>
+	<li>HeadSetRadio</li>
+	<li>Health Recovery And Blood Screen</li>
+	<li>Changeable health bar colors (depending on health %)</li>
+	<li>Heli Cam Lock</li>
+	<li>Heli Pilots</li>
+	<li>Helicopter in the sky</li>
+	<li>Helicopter Plane Traffic</li>
+	<li>Helicopter Traffic</li>
+	<li>Helicopters In The Sky</li>
+	<li>HeliEngineFix</li>
+	<li>Hidden Adrenaline Pickup</li>
+	<li>Hide Radar While Aiming</li>
+	<li>Hide Zone and Vehicle Displays</li>
+	<li>HideFromCops</li>
+	<li>High Noon Fix</li>
+	<li>Hospital Health Pickups</li>
+	<li>HUD Colors</li>
+	<li>Improved Barber</li>
+	<li>Improved Club</li>
+	<li>Improved Gangs War v1.1</li>
+	<li>Improved Jetpack Control</li>
+	<li>IndieVehHandlings</li>
+	<li>Inmune Headshot</li>
+	<li>Insects Mod</li>
+	<li>Instakill</li>
+	<li>Inventory System</li>
+	<li>Jetpack Adjuster</li>
+	<li>Kill Cam v1.5</li>
+	<li>Lamppost Insects</li>
+	<li>Lampposts FX v1.1</li>
+	<li>Leviathan</li>
+	<li>Light Destroyer</li>
+	<li>Long Trains</li>
+	<li>Manhunt Sneak Kills v2.0</li>
+	<li>Mission Balancing Tool Update v.(25.04.18)</li>
+	<li>Mod Suck Rolls For 50 Stories</li>
+	<li>Modernized DriveBy</li>
+	<li>Money Drop Fix</li>
+	<li>More Radar Icons Update (17/1/2025)</li>
+	<li>News papers v2.1 Update (11.03.2025)</li>
+	<li>Night Pimpin</li>
+	<li>No Extra Air Resistance v1.1</li>
+	<li>NoRadio</li>
+	<li>NPC Health Indicator</li>
+	<li>One Wanted Star Melee Fix</li>
+	<li>Original Drug Dealers</li>
+	<li>Ovens Catch On Fire</li>
+	<li>PerPixel Lighting Mod</li>
+	<li>Phone Mod</li>
+	<li>Pickups Mod</li>
+	<li>Pills Bottle</li>
+	<li>Plane Beep</li>
+	<li>Plane Explode Fix</li>
+	<li>Planes Inertia</li>
+	<li>Planning Department v1.0</li>
+	<li>Player Move Head</li>
+	<li>Police Dept Fix</li>
+	<li>Quick Map v29.05.2024</li>
+	<li>Quick Weapon Draw</li>
+	<li>Radar Zoom</li>
+	<li>Radio Effects v1.1</li>
+	<li>Rain Audio Fix</li>
+	<li>Rain Mods</li>
+	<li>Rampage Fury Missions</li>
+	<li>Random Events Project</li>
+	<li>Random Train Drivers</li>
+	<li>Cleo Real Time</li>
+	<li>Real Weapons Names</li>
+	<li>Realistic Beach</li>
+	<li>Realistic Weapons Settings</li>
+	<li>Reload Mod</li>
+	<li>Restore Original Mouse Sensibility</li>
+	<li>Restore Stealth Voices</li>
+	<li>Restored Icons</li>
+	<li>Rubbish like in GTA 4 v2.0</li>
+	<li>Run</li>
+	<li>Rusty Brown's Ring Donuts</li>
+	<li>RZL-Trainer v5.0.0</li>
+	<li>SA Homies Mod</li>
+	<li>SA Sonic Adventure 2</li>
+	<li>SA switch weapon</li>
+	<li>SACamFX</li>
+	<li>SAFighting Extended</li>
+	<li>SAMP Adjustments</li>
+	<li>Sawn Off Dual Wield Fix</li>
+	<li>Searchlights</li>
+	<li>Securicar Drop Money</li>
+	<li>Security Van Heist</li>
+	<li>SFDP Heli Fix</li>
+	<li>Shoot After Death</li>
+	<li>Shoreline Waves</li>
+	<li>Show ammo over</li>
+	<li>Show Date</li>
+	<li>Show Dirt</li>
+	<li>Siren On Without Driver</li>
+	<li>Skate Extra Sounds</li>
+	<li>Skate Mod Remake</li>
+	<li>SkatePopSound</li>
+	<li>Sleep</li>
+	<li>Smarter Cop Decisions</li>
+	<li>Sniper Realism</li>
+	<li>Sniper Scope</li>
+	<li>Sparky</li>
+	<li>Spider Man Mod</li>
+	<li>Split Screen for 2 Player Mode v1.2</li>
+	<li>Spray Can Stunlock Fix</li>
+	<li>Star For Red</li>
+	<li>Stealth Kill Camera</li>
+	<li>Store Expulsion v1.0</li>
+	<li>Stowaway Mission Weapons Fix</li>
+	<li>Street Art</li>
+	<li>Suicidal Photographers Fix</li>
+	<li>Sun</li>
+	<li>SWAT Helicopter</li>
+	<li>SWAT Helicopter with 5 stars Plus</li>
+	<li>Swat Pos</li>
+	<li>Teargas Fix</li>
+	<li>The holster on the cops v1.1</li>
+	<li>The Weapon Is On The Player</li>
+	<li>Throw Rotate Fix</li>
+	<li>Time Payn Spray</li>
+	<li>Tiring Sounds</li>
+	<li>TweaksVv70</li>
+	<li>Unlimited Camera Ammo</li>
+	<li>VCS&LCS Side Missions</li>
+	<li>Void Weapon Wheel</li>
+	<li>VoidRadioWheel</li>
+	<li>Wagon Detach</li>
+	<li>Walk Targeting Fix</li>
+	<li>Wanted Music</li>
+	<li>Wanted Radar Warning</li>
+	<li>Water Hurt</li>
+	<li>Weapon dat Professional Killer</li>
+	<li>Weapon Dealer</li>
+	<li>Weapon Detaills Update v3.1 (30.03.2025)</li>
+	<li>weapon pickup</li>
+	<li>Weapon Pickup Maker Update (4/4/2025)</li>
+	<li>Weapon Zoom Unlimited Update v.25.03.30</li>
+	<li>WeaponRecoilAuto</li>
+	<li>WeaponTweaks</li>
+	<li>Weather Forecast</li>
+	<li>Hit Scan Sniper</li>
+	<li>Hit the Entity Fix</li>
+	<li>Hood Fellas Greeting You</li>
+	<li>Hood Fellas Shooting Dice</li>
+	<li>Lighted barriers</li>
+	
+       <!-- Добавьте остальные моды из Different Cleo Plugins по необходимости -->
+    </ul>
+	<a href="https://github.com/Maxim1993271/GTA/releases/download/DifferentCleoPlugins/Different.Cleo.Plugins.rar" class="download-btn">Download Different Cleo Plugins</a> <!-- Кнопка скачивания -->
+</div>
+
+<div class="mod-category">
+    <h2>Peds Plugins</h2>
+	<ul>
+	<li>Activation Of Unused Hidden Pedestrians</li>
+	<li>All Pedestrians</li>
+	<li>Animation Fix</li>
+	<li>Assaltar pedestres com uma arma</li>
+	<li>Burned Peds</li>
+	<li>Busy Pedestrians (Peds Events Project) Update (01.03.2025)</li>
+	<li>Busy Pedestrians mod</li>
+	<li>ChatWithPeds</li>
+	<li>Communication Repairers</li>
+	<li>Crowds Of People</li>
+	<li>Cyber Cafe Interior</li>
+	<li>Devil Town Gang</li>
+	<li>DYOM Gangs Addon</li>
+	<li>Fall Bike Ped Reaction</li>
+	<li>Fix Npc</li>
+	<li>Fix People Fighting Cops</li>
+	<li>Gangs With Music</li>
+	<li>Gangster Sit Fix</li>
+	<li>Gangster Swat Fix</li>
+	<li>Gangster Walk Fix</li>
+	<li>Garbage Truck Driver v1.2</li>
+	<li>Grove Vs Ballas Fight</li>
+	<li>Hands Up Fix</li>
+	<li>Hats for Peds v1.0 + Winter Edition</li>
+	<li>Interior and Peds</li>
+	<li>LV Planning Department Fix</li>
+	<li>Normal Map Plugin</li>
+	<li>Original Peds</li>
+	<li>Palisades Park Pedestrian Path Fix</li>
+	<li>Panic Face</li>
+	<li>Ped Attractor Chair Anim Fix</li>
+	<li>Ped Dead Float Fix</li>
+	<li>Ped Fear Fix</li>
+	<li>Ped Fire Fix</li>
+	<li>Ped Interior Light Fix v1.0</li>
+	<li>Ped Money Tweaker</li>
+	<li>Ped Run Fix</li>
+	<li>Ped Spawn Creator</li>
+	<li>Ped Tweaks</li>
+	<li>PedFuncs</li>
+	<li>Peds Are Scared By RPG</li>
+	<li>Peds Bleeding</li>
+	<li>Peds Buy Food</li>
+	<li>Peds Extender</li>
+	<li>Peds Get Scared With RPG</li>
+	<li>Peds Hands Up Fix</li>
+	<li>Peds jump at shot</li>
+	<li>Peds Resist Headshot</li>
+	<li>Peds use Vend</li>
+	<li>PedsDontDrown</li>
+	<li>PedSkills</li>
+	<li>Police Searching v1.5</li>
+	<li>Postman</li>
+	<li>Ragdoll Bullet Physics</li>
+	<li>Real Multiple Protagonists v1.0</li>
+	<li>Real Peds</li>
+	<li>Realistic Population</li>
+	<li>Restored Unused Peds</li>
+	<li>Revamped Peds.ide</li>
+	<li>Star For Attack Dead Ped</li>
+	<li>Street Cleaners</li>
+	<li>Street musicians</li>
+	<li>Tired Peds</li>
+	<li>Total Peds</li>
+	<li>Total Peds 2</li>
+	<li>Urbanize Project Version 04-25</li>
+	<li>Wang Cars Peds</li>
+	  <!-- Добавьте остальные моды из Peds Plugins по необходимости -->
+    </ul>
+	<a href="https://github.com/Maxim1993271/GTA/releases/download/Peds/Peds.Plugins.rar" class="download-btn">Download Peds Plugins</a> <!-- Кнопка скачивания -->
+</div>
+
+<div class="mod-category">
+    <h2>Sound Plugins</h2>
+    <ul>
+        <li>Audio Remaster SACSFX 2K22</li>
+        <li>Open Door Signal in Vehicles</li>
+        <li>Pier 69 Cesar phone voice Fix</li>
+        <li>SA Restore Android Radios</li>
+        <li>SAAS</li>
+		<li>Uncompressed SFX Pack</li>
+		<li>Vehicles Sound Revamped</li>
+        <!-- Добавьте остальные моды из Sound Plugins по необходимости -->
+    </ul>
+	<a href="https://github.com/Maxim1993271/GTA/releases/download/SoundPlugins/Sound.Plugins.rar" class="download-btn">Download Sound Plugins</a> <!-- Кнопка скачивания -->
+</div>
+   
+    <!-- Пример ссылки на другие страницы -->
+	<p style="color: #ffffff;">For Additional Mods, Visit <a href="https://maxim1993271.github.io/gtavicesan/" target="_blank" style="color: #FF8000;">Our website</a>.</p>
+		<!-- Кнопка прокрутки вверх -->
+    <button class="scroll-to-top" id="scrollToTopBtn">To The Top</button>
+
+    <script>
+        // Получаем кнопку
+        const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+
+        // Показываем или скрываем кнопку в зависимости от прокрутки
+        window.onscroll = function() {
+            if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+                scrollToTopBtn.style.display = 'block';
+            } else {
+                scrollToTopBtn.style.display = 'none';
+            }
+        };
+
+        // Прокрутка вверх при нажатии на кнопку
+        scrollToTopBtn.onclick = function() {
+            window.scrollTo({top: 0, behavior: 'smooth'});
+        };
+    </script>
+</body>
+</html>
